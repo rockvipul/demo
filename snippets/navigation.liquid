@@ -1,0 +1,280 @@
+{% comment %} Site Navigation {% endcomment %}
+{%- assign menuPrimary = section.settings.menu_list -%}
+{%- assign image = section.settings.meganav_image -%}
+{%- assign image_heading = section.settings.meganav_image_heading -%}
+{%- assign image_link = section.settings.meganav_image_link -%}
+{%- assign image_aspect_ratio = section.settings.image_aspect_ratio | times: 100 -%}
+
+{%- assign has_meganav = false -%}
+{%- if linklists[menuPrimary].levels == 3 and is_hamburger_nav == false -%}
+	{%- assign has_meganav = true -%}
+{%- endif -%}
+
+<ul class="menu {% if has_meganav %}menu--has-meganav{% endif %}">
+	{% comment %}
+		Loop through the first link list.
+	{% endcomment %}
+	{%- if menuPrimary != blank -%}
+		{%- for link in linklists[menuPrimary].links -%}
+			{%- assign has_sub_menu = false -%}
+
+			{%- for sublink in link.links -%}
+				{%- if link.levels > 0 -%}
+					{%- assign has_sub_menu = true -%}
+				{%- endif -%}
+			{%- endfor -%}
+
+			{%- assign is_meganav = false -%}
+			{%- if link.levels >= 1 and is_hamburger_nav == false -%}
+				{%- assign is_meganav = true -%}
+			{%- endif -%}
+
+			<li class="menu-item{% if has_sub_menu == true %} has-submenu{% endif %} {% if is_meganav %}menu-item--meganav{% else %}menu-item--dropdown{% endif %}">
+				<!-- LINKS -->
+				<a href="{{ link.url }}">{{ link.title | escape }}</a>
+				{%- if has_sub_menu and is_hamburger_nav == false -%}
+					<button class="toggle-submenu" aria-haspopup="true" aria-expanded="false" aria-label="{{ link.title | escape }}">
+						{%- render 'icon-arrow' -%}
+					</button>
+				{%- endif -%}
+
+				{%- if link.levels > 0 -%}
+					{%- if is_meganav -%}
+						<div class="megamenu-wrapper">
+							<div class="megamenu-inner">
+								<div class="container">
+					{%- endif -%}
+
+					{%- capture submenuClass -%}
+						{%- if is_meganav -%}
+							submenu--items-5
+						{%- endif -%}
+					{%- endcapture -%}
+
+					{%- comment -%} MEGAMENU IMAGE AND TEXT {%- endcomment -%}
+					{%- if is_meganav -%}
+						{%- if image != blank or image_heading != blank -%}
+							<div class="megamenu__image">
+								{%- if image != blank -%}
+									{%- capture megamenu_image -%}
+										<div class="megamenu__image-bg lazyload"
+											data-bgset="{% render 'bgset', image: image %}"
+											data-sizes="auto"
+											data-parent-fit="cover"
+											style="padding-top: {{ image_aspect_ratio }}%;">
+										</div>
+										<noscript>
+											<div class="megamenu__image-bg" style="background-image: url({{ image | img_url: '1024x' }}); padding-top: {{ image_aspect_ratio }}%;"></div>
+										</noscript>
+									{%- endcapture -%}
+
+									{%- unless image_link == blank -%}
+										<a href="{{ image_link }}" class="megamenu__image-inner">
+											{{- megamenu_image -}}
+										</a>
+									{%- else -%}
+										<div class="megamenu__image-inner">
+											{{- megamenu_image -}}
+										</div>
+									{%- endunless -%}
+								{%- endif -%}
+
+								{%- unless image_heading == blank -%}
+									<h4>
+										<span>
+											{%- if image_link != blank -%}
+												<a href="{{ image_link }}">{{ image_heading }}</a>
+											{%- else -%}
+												{{- image_heading -}}
+											{%- endif -%}
+										</span>
+									</h4>
+								{%- endunless -%}
+							</div>
+						{%- endif -%}
+					{%- endif -%}
+					{%- comment -%} END MEGANAV IMAGE AND TEXT {%- endcomment -%}
+
+					{%- if link.levels > 0 and is_hamburger_nav -%}
+						<button class="dropdown-arrow" aria-expanded="false" aria-haspopup="true" aria-label="{{ link.title | escape }}">
+							{%- render 'icon-arrow' -%}
+						</button>
+					{%- endif -%}
+
+					<ul class="submenu {{ submenuClass }}">
+						{%- comment -%} SUBMENU LINKS {%- endcomment -%}
+						{%- for sublink in link.links -%}
+                      
+                      <li data-levels = "{{ sublink.levels }}" class="submenu-item {% if sublink.levels > 0 %}has-submenu{% endif %}">
+                         {% if sublink.levels > 0 %}
+                        {%- for block in section.blocks -%}
+						{%- if block.settings.enable_menu_icon_svg_tag != blank -%}
+                        {%- assign icon_svg = block.settings.svg_icon_name -%}
+                              		{%- if block.settings.svg_icon_name != blank and block.settings.menu_icon_svg_tag !=blank -%}
+                             			 {%- if sublink.title == block.settings.menu_icon_svg_tag -%}
+											{% if icon_svg != blank %}
+                        						{%- case icon_svg -%}
+													{%- when 'header_beaute' -%}
+                        						<span class="mega_menu_icon">{%- render 'header_beaute' -%}</span>
+													{%- when 'header_bienetre' -%}
+                        						<span class="mega_menu_icon">{%- render 'header_bienetre' -%}</span>
+													{%- when 'header_defenses' -%}
+                        						<span class="mega_menu_icon">{%- render 'header_defenses' -%}</span>
+													{%- when 'header_energie' -%}
+                        						<span class="mega_menu_icon">{%- render 'header_energie' -%}</span>
+													{%- when 'header_minceur' -%}
+                        						<span class="mega_menu_icon">{%- render 'header_minceur' -%}</span>
+													{%- when 'header_sante' -%}
+                        						<span class="mega_menu_icon">{%- render 'header_sante' -%}</span>
+													{%- when 'header_sommeil' -%}
+                        						<span class="mega_menu_icon">{%- render 'header_sommeil' -%}</span>
+													{%- when 'header_transit' -%}
+                        						<span class="mega_menu_icon">{%- render 'header_transit' -%}</span>
+                                  				{% endcase %}
+                        				{% endif %}
+                        				 {% endif %}
+                        			 {% endif %}
+                        			 {% endif %}
+                        {% endfor %}
+                              {% endif %}
+                              <a class="{% if is_meganav %}submenu-item__title {% endif %}visible-nav-link {% if sublink.levels > 0 %}{%- for block in section.blocks -%}{%- if block.settings.enable_menu_icon_svg_tag != blank -%}
+                              {%- if block.settings.svg_icon_name != blank and block.settings.menu_icon_svg_tag !=blank -%} {%- if sublink.title == block.settings.menu_icon_svg_tag -%} image-with-href {% endif %}{% endif %}{% endif %} {% endfor %}{% endif %}" href="{{ sublink.url }}" aria-expanded="false"{% if has_sub_menu %} aria-haspopup="true"{% endif %} tabindex="-1">
+                                  {{- sublink.title -}}
+                              </a>
+                              {%- if sublink.levels > 0 and is_hamburger_nav -%}
+                                  <button class="dropdown-arrow" aria-expanded="false" aria-haspopup="true" aria-label="{{ sublink.title | escape }}">
+                                      {%- render 'icon-arrow' -%}
+                                  </button>
+                              {%- endif -%}
+                              {%- if sublink.levels > 0 -%}
+                                  <ul class="submenu {% if sublink.levels > 0 %}{%- for block in section.blocks -%}{%- if block.settings.enable_menu_icon_svg_tag != blank -%}
+                              {%- if block.settings.svg_icon_name != blank and block.settings.menu_icon_svg_tag !=blank -%} {%- if sublink.title == block.settings.menu_icon_svg_tag -%} image-with-pedding {% endif %}{% endif %}{% endif %} {% endfor %}{% endif %}">
+                                    
+                                      {%- for subsublink in sublink.links -%}
+                                          <li class="submenu-item">
+                                              <a {% if forloop.last == true  %} data-last="true" {% endif %} class="visible-nav-link" href="{{ subsublink.url }}" tabindex="-1">{{ subsublink.title }}</a>
+                                          </li>
+                                      {%- endfor -%}
+                                   {% if sublink.levels > 0 %}
+                                    {%- for block in section.blocks -%}
+                              			{%- if block.settings.menu_view_all_button_text_svg != blank and block.settings.menu_view_all_button_link_svg !=blank -%} 
+                                    		{%- if sublink.title == block.settings.menu_icon_svg_tag -%}
+                                    			<a href="{{ block.settings.menu_view_all_button_link_svg }}" style="color: #e73439;text-decoration: underline;"> {{ block.settings.menu_view_all_button_text_svg }}</a>
+                                    		{% endif %}
+                                    	{% endif %}
+                                    {% endfor %}
+                                   {% endif %}
+                                  </ul>
+                              {%- endif -%}
+                      </li>
+							{%- comment -%} END SUBSUBLINK {%- endcomment -%}
+						{%- endfor -%}
+
+					</ul>
+
+					{%- if is_meganav -%}
+								</div>
+							</div>
+						</div>
+						{%- comment -%} END MEGAMENU WRAPPER {%- endcomment -%}
+					{%- endif -%}
+				{%- endif -%}
+
+			</li>
+		{%- endfor -%}
+	{%- endif -%}
+</ul>
+
+{%- if is_hamburger_nav -%}
+	<div class="nav-user">
+		<ul>
+			{%- if shop.customer_accounts_enabled -%}
+				{%- if customer -%}
+					<li class="nav-user__item nav-user__item--account"><a href="{{ routes.account_url }}" class="nav-user__link" tabindex="-1">{{ 'customer.link.my_account' | t }}</a></li>
+				{%- else -%}
+					<li class="nav-user__item nav-user__item--account"><a href="{{ routes.account_login_url }}" class="nav-user__link" tabindex="-1">{{ 'customer.link.login' | t }}</a></li>
+				{%- endif -%}
+			{%- endif -%}
+
+			{%- if settings.show_search -%}
+				<li class="nav-user__item nav-user__item--search"><a href="{{ routes.search_url }}" class="nav-user__link" tabindex="-1">{{ 'general.slide_out_navigation.search_label' | t }}</a></li>
+			{%- endif -%}
+		</ul>
+	</div>
+<div class="mobile_icon_header">
+<svg width="20" height="21" viewBox="0 0 20 21" fill="#d02e2e" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975388 17.8126C1.60054 18.4377 2.44844 18.7889 3.33254 18.7889H7.87825V16.9706H3.33254C2.93068 16.9706 2.54527 16.811 2.26111 16.5268C1.97695 16.2427 1.81731 15.8573 1.81731 15.4554V5.75789C1.81731 5.35603 1.97695 4.97062 2.26111 4.68646C2.54527 4.4023 2.93068 4.24266 3.33254 4.24266H13.03C13.4319 4.24266 13.8173 4.4023 14.1015 4.68646C14.3856 4.97062 14.5453 5.35603 14.5453 5.75789V8.48532H16.3636V5.75789C16.3627 5.03298 16.1256 4.3281 15.6881 3.75008C15.2506 3.17205 14.6366 2.75239 13.9392 2.55469V0H12.1209V2.42438H9.09044V0H7.27215V2.42438H4.24168V0H2.4234V2.55469C1.72596 2.75239 1.11198 3.17205 0.674501 3.75008C0.237019 4.3281 -0.000119355 5.03298 -0.000976562 5.75789V15.4554C-0.000976562 16.3395 0.350232 17.1874 0.975388 17.8126ZM17.3757 9.69749C17.031 9.69677 16.6896 9.76444 16.3713 9.89656C16.0529 10.0287 15.764 10.2227 15.5211 10.4672L10.6723 15.316C10.3622 15.6246 10.1163 15.9915 9.94886 16.3957C9.78137 16.7998 9.6956 17.2332 9.69651 17.6707V20.0011H12.0269C12.4649 20.0024 12.8988 19.9168 13.3035 19.7493C13.7082 19.5818 14.0757 19.3357 14.3847 19.0253L19.2334 14.1765C19.6002 13.8093 19.8498 13.3416 19.9508 12.8325C20.0518 12.3235 19.9996 11.7959 19.8008 11.3165C19.6019 10.8371 19.2654 10.4274 18.8338 10.1392C18.4021 9.85103 17.8947 9.69731 17.3757 9.69749ZM17.9455 12.8916L13.0967 17.7404C12.8127 18.0236 12.428 18.1827 12.0269 18.1828H11.5148V17.6707C11.5144 17.4715 11.5533 17.2743 11.6293 17.0902C11.7052 16.9062 11.8166 16.7388 11.9572 16.5979L16.806 11.7491C16.9586 11.6057 17.1611 11.5273 17.3706 11.5305C17.58 11.5338 17.7799 11.6184 17.9281 11.7665C18.0762 11.9146 18.1608 12.1146 18.1641 12.324C18.1673 12.5335 18.0889 12.7359 17.9455 12.8886V12.8916ZM11.2944 9.21733C11.2944 8.08911 10.5694 7.33 9.66476 7.27614C9.18223 7.24742 8.7222 7.4237 8.3732 7.766C8.02188 7.42356 7.55708 7.24987 7.0653 7.29403C6.14398 7.37677 5.45386 8.1896 5.45386 9.34957C5.45386 10.5042 6.17252 11.49 6.77711 12.128C7.0912 12.4595 7.40324 12.727 7.63613 12.9116C7.75305 13.0042 7.85125 13.0769 7.92143 13.1272C7.95655 13.1524 7.98475 13.1721 8.00486 13.1859L8.02886 13.2022L8.03606 13.2071L8.03842 13.2087L8.03928 13.2092L8.03963 13.2095C8.03979 13.2096 8.03993 13.2097 8.37413 12.704L8.03993 13.2097C8.25643 13.3527 8.54 13.3421 8.74519 13.1833L8.37413 12.704C8.74519 13.1833 8.74531 13.1832 8.74543 13.1831L8.74647 13.1823L8.7486 13.1806L8.75534 13.1753L8.77837 13.1571C8.79782 13.1415 8.82532 13.1193 8.85972 13.0909C8.92846 13.0341 9.02506 12.9521 9.14026 12.8489C9.36983 12.6431 9.67745 12.3488 9.98694 11.9958C10.5755 11.3246 11.2944 10.3046 11.2944 9.21733ZM9.0755 11.1967C8.81435 11.4945 8.55145 11.7478 8.34937 11.9299C8.15366 11.7725 7.90442 11.5553 7.65697 11.2942C7.10447 10.7112 6.66605 10.0199 6.66605 9.34957C6.66605 8.68243 7.00297 8.5167 7.17373 8.50136C7.35034 8.4855 7.68542 8.59516 7.77505 9.17922C7.82043 9.475 8.07489 9.69339 8.37413 9.69339C8.67337 9.69339 8.92782 9.475 8.97321 9.17922C9.06207 8.60011 9.3989 8.47465 9.59272 8.48619C9.78016 8.49735 10.0822 8.65068 10.0822 9.21733C10.0822 9.82488 9.64405 10.5482 9.0755 11.1967Z" fill="white"/>
+                                    </svg>
+</div>
+<a href="{{ section.settings.header_button_text_link }}" class="button button--primary">
+                      			
+{% if section.settings.header_button_text %}
+                              		
+                                     {{ section.settings.header_button_text }}
+                              	{% endif %}
+                      		</a>
+	{%- if settings.twitter_url != '' or settings.facebook_url != '' or settings.instagram_url != '' or settings.pinterest_url != '' or settings.youtube_url != '' or settings.tumblr_url != '' or settings.rss_url != '' -%}
+		<div class="nav-footer">
+			<div class="nav-social">
+				<ul class="social-links social-links--nav">
+					{%- if settings.twitter_url != '' -%}
+						<li>
+							<a aria-label="{{ 'general.footer.twitter' | t }}" href="{{ settings.twitter_url }}" target="_blank" tabindex="-1" class="social-link">
+								{%- render 'icon-twitter' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.facebook_url != '' -%}
+						<li>
+							<a aria-label="{{ 'general.footer.facebook' | t }}" href="{{ settings.facebook_url }}" target="_blank" tabindex="-1" class="social-link">
+								{%- render 'icon-facebook' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.instagram_url != '' -%}
+						<li>
+							<a aria-label="{{ 'general.footer.instagram' | t }}" href="{{ settings.instagram_url }}" target="_blank" tabindex="-1" class="social-link">
+								{%- render 'icon-instagram' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.pinterest_url != '' -%}
+						<li>
+							<a aria-label="{{ 'general.footer.pinterest' | t }}"  href="{{ settings.pinterest_url }}" target="_blank" tabindex="-1" class="social-link">
+								{%- render 'icon-pinterest' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.youtube_url != '' -%}
+						<li>
+							<a aria-label="{{ 'general.footer.youtube' | t }}" href="{{ settings.youtube_url }}" target="_blank" tabindex="-1" class="social-link">
+								{%- render 'icon-youtube' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.tumblr_url != '' -%}
+						<li>
+							<a aria-label="{{ 'general.footer.tumblr' | t }}" href="{{ settings.tumblr_url }}" target="_blank" tabindex="-1" class="social-link">
+								{%- render 'icon-tumblr' -%}
+							</a>
+						</li>
+					{%- endif -%}
+
+					{%- if settings.rss_url != '' -%}
+						<li>
+							<a aria-label="{{ 'general.footer.rss' | t }}" href="{{ settings.rss_url }}" target="_blank" tabindex="-1" class="social-link">
+								{%- render 'icon-rss' -%}
+							</a>
+						</li>
+					{%- endif -%}
+				</ul>
+				<span tabindex="-1" class="last-focusable-element"></span>
+			</div>
+		</div>
+	{%- endif -%}
+{%- endif -%}

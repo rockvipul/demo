@@ -1,0 +1,18 @@
+<div class="jb-product-collateral">
+  <div class="tab-content">
+    <div class="tabs" id="tab1" {% if block.settings.background != blank %} style="background-color:{{block.settings.background}}" {% endif %}>
+<div class="container">
+              <div class="tab-content-title">
+                  {% if block.settings.title %}
+				 {{ block.settings.title }} 
+				{% endif %}
+			  </div>
+              <div class="tab-content-inner">
+              	{% if block.settings.description %}
+                     {{ block.settings.description }}
+                {% endif %}   
+              </div>
+ </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="jb-product-collateral">
+  <div class="tab-content">
+    <div class="tabs jb-tab-with__background" {% if block.settings.tab_id != blank %}id="{{ block.settings.tab_id }}"{% endif %} {% if block.settings.bg_color_enable != blank %}{% if block.settings.bg_color != blank %} style="background-color: {{ block.settings.bg_color }}" {% endif %}{% endif %}>
+      <div class="container">
+        <h2 class="tab-content-title">
+          {% if block.settings.title != blank %}
+          {{ block.settings.title }} 
+          {% endif %}
+        </h2>
+      </div>
+      <div class="tab-content-bg-inner">
+        <div class="left-section">
+          <div class="left-section-inner">
+            <div class="grid">
+              <div class="grid-number">
+                {% if block.settings.num1 != blank %}
+                {{ block.settings.num1 }} 
+                {% endif %}
+              </div>
+              <div class="grid-text">
+                {% if block.settings.num1_title != blank %}
+                {{ block.settings.num1_title }} 
+                {% endif %}
+              </div>
+              <div class="grid-sub-text">
+                {% if block.settings.num1_detail != blank %}
+                {{ block.settings.num1_detail }} 
+                {% endif %}
+              </div>
+            </div>
+            <div class="grid">
+              <div class="grid-number">
+                {% if block.settings.num2 != blank %}
+                {{ block.settings.num2 }} 
+                {% endif %}
+              </div>
+              <div class="grid-text">
+                {% if block.settings.num2_title != blank %}
+                {{ block.settings.num2_title }} 
+                {% endif %}
+              </div>
+              <div class="grid-sub-text">
+                {% if block.settings.num2_detail != blank %}
+                {{ block.settings.num2_detail }} 
+                {% endif %}
+              </div>
+            </div>
+            <div class="grid">
+              <div class="grid-number">
+                {% if block.settings.num3 != blank %}
+                {{ block.settings.num3 }} 
+                {% endif %}
+              </div>
+              <div class="grid-text">
+                {% if block.settings.num3_title != blank %}
+                {{ block.settings.num3_title }} 
+                {% endif %}
+              </div>
+              <div class="grid-sub-text">
+                {% if block.settings.num3_detail != blank %}
+                {{ block.settings.num3_detail }} 
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-section">
+          <div class="right-section-inner">
+            {% if block.settings.detail != blank %}
+            {{ block.settings.detail }} 
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>  
+</div>

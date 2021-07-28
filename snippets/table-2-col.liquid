@@ -1,0 +1,96 @@
+{% if metafields.custom_fields["tab_2_table"] != blank %}
+ <div class="tab-content-table-wrapper" id="tab22">
+          <table class="tab-content-table">
+              <tbody>
+                 {% for item in metafields.custom_fields["tab_2_table"] %}
+                  <tr>
+                    {% if item["tab_2_table_heading_1"] != blank %}
+                      <th>{{ item["tab_2_table_heading_1"] }}</th>
+                    {% endif %}
+                    {% if item["tab_2_table_heading_2"] != blank %}
+                      <th>{{ item["tab_2_table_heading_2"] }}</th>
+                    {% endif %}
+                  </tr>
+                      {% if item["tab_2_table_row_1_left"] != blank and item["tab_2_table_row_1_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_1_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_1_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_2_left"] != blank and item["tab_2_table_row_2_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_2_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_2_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_3_left"] != blank and item["tab_2_table_row_3_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_3_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_3_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_4_left"] != blank and item["tab_2_table_row_4_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_4_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_4_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_5_left"] != blank and item["tab_2_table_row_5_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_5_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_5_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_6_left"] != blank and item["tab_2_table_row_6_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_6_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_6_right"] }}</td>
+                  </tr>
+                {% endif %}
+                 {% if item["tab_2_table_row_7_left"] != blank and item["tab_2_table_row_7_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_7_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_7_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_8_left"] != blank and item["tab_2_table_row_8_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_8_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_8_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_9_left"] != blank and item["tab_2_table_row_9_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_9_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_9_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_10_left"] != blank and item["tab_2_table_row_10_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_10_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_10_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_11_left"] != blank and item["tab_2_table_row_11_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_11_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_11_right"] }}</td>
+                  </tr>
+                {% endif %}
+                      {% if item["tab_2_table_row_12_left"] != blank and item["tab_2_table_row_12_right"] != blank %}
+                  <tr>
+                      <td>{{ item["tab_2_table_row_12_left"] }}</td>
+                      <td>{{ item["tab_2_table_row_12_right"] }}</td>
+                  </tr>
+                {% endif %}
+                {% if item["tab_2_table_heading_1"] == blank and item["tab_2_table_heading_2"] == blank %}
+                <style>
+                	#tab22
+                  { display:none; }
+                </style>
+                {% endif %}
+                {% endfor %}
+              </tbody>
+          </table>
+</div>
+          {% endif %}

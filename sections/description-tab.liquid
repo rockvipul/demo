@@ -1,0 +1,51 @@
+<div class="jb-product-collateral">
+  <div class="tab-content">
+    <div class="tabs" id="tab1" style="background-color: #ebebeb80">
+      <div class="container">
+        <div class="tab-content-title">
+         {% if section.settings.title != blank %}
+        {{ section.settings.title }}
+	  {% endif %}
+          
+        </div>
+        <div class="tab-content-inner">
+          
+          {% if section.settings.html_code != blank %}
+            {{ section.settings.html_code }} 
+        {% endif %}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Description Tab",
+    "settings": [
+		{
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+	{
+      "type": "html",
+      "id": "html_code",
+      "label": "Description"
+    }
+	],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Description Tab"
+			
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

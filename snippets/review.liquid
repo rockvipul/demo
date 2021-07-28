@@ -1,0 +1,18 @@
+{%- assign product_layout = section.settings.product_layout -%}
+{%- assign show_reviews = settings.show_reviews -%}
+{%- assign enable_yotpo = settings.enable_yotpo -%}
+{%- assign yotpo_ID = settings.yotpo_ID -%}
+	{%- if show_reviews or enable_yotpo and yotpo_ID != '' -%}
+		<div class="product__reviews">
+			<div class="container">
+				{%- if enable_yotpo and yotpo_ID != '' -%}
+					{%- render 'yotpo-reviews', product: product -%}
+				{%- else -%}
+					<div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
+				{%- endif -%}
+			</div>
+		</div>
+	{%- endif -%}
+
+<style>
+</style>

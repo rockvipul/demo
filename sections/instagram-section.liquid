@@ -1,0 +1,77 @@
+{% comment %} Settings {% endcomment %}
+{%- assign subheading = section.settings.subheading -%}
+{%- assign heading = section.settings.title -%}
+{%- assign html = section.settings.html -%}
+
+<section class="custom-html-section" data-section-id="{{ section.id }}" data-section-type="custom-html">
+   {%- unless heading == blank and subheading == blank -%}
+    <div class="page-title">
+      <div class="container">
+        <div class="row">
+          {%- if subheading != blank -%}
+            <div class="page-title__subheading subheading-text">{{ subheading }}</div>
+          {%- endif -%}
+
+          {%- if heading != blank -%}
+            <h2 class="page-title__heading">{{ heading }}</h2>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {% endunless %}
+
+  <div class="custom-html">
+    <div class="container">
+      <div class="row">
+        {%- if html -%}
+          <div class="custom-html__code">
+            {{ html }}
+          </div>
+        {%- endif -%}
+      </div>
+      {%- if settings.instagram_url != '' -%}
+            <li class="feeds-icon">
+                <a href="{{settings.instagram_url}}" target="_blank" class="social-link" rel="noopener">
+                  <span>Suivez-nous !</span> <div class="instaIcon">{%- render 'icon-instagram' -%}</div>
+                    <span class="fallback-text">{{ 'general.footer.instagram' | t }}</span>
+                </a>
+            </li>
+        {%- endif -%}
+    </div>
+    
+  </div>
+  
+</section>
+
+{% schema %}
+{
+  "name": "Instagram Section",
+  "class": "shopify-section--custom-html",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subeading",
+      "default": "Custom content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Instagram Section"
+    },
+    {
+      "type": "html",
+      "id": "html",
+      "label": "Instagram Section",
+      "default": "<p>Once you write some HTML, it will render right here.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Instagram Section"
+    }
+  ]
+}
+{% endschema %}

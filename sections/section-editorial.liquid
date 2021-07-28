@@ -1,0 +1,147 @@
+{% comment %} Logos List {% endcomment %}
+
+{%- assign blog_link = blogs[section.settings.blog].url -%}
+{%- assign title = section.settings.heading -%}
+{%- assign text = section.settings.text -%}
+{%- assign cta = section.settings.cta -%}
+
+{%- assign article_rows = section.settings.article_rows | plus: 0 -%}
+{%- assign article_columns = section.settings.article_columns | plus: 0 -%}
+{%- assign articles_count = article_columns | times: article_rows -%}
+
+<section
+	id="blog-module-{{ section.id }}"
+	class="blogModule container-wrap"
+	data-section-id="{{ section.id }}"
+	data-section-type="blogposts-list"
+	data-blog-container>
+  
+  	{%- unless title == blank and text == blank -%}
+		<div class="page-title{% if title == blank and text == blank %} page-title--no-text{% endif %}">
+			<div class="container">
+				
+				{%- if text != blank -%}
+					<div class="row row-sm">
+						<p>{{ text }}</p>
+					</div>
+				{%- endif -%}
+              {%- if title != blank -%}
+					<h2>{{ title }}</h2>
+				{%- endif -%}
+			</div>
+		</div>
+	{%- endunless -%}
+  
+{%- if section.blocks.size > 0 -%}
+<div data-section-id="{{ section.id }}" data-section-type="blogposts-list">
+	
+  <div class="blogModule-posts__wrapper">
+    <div class="logos-slider js-blogposts-slider">
+      {%- for block in section.blocks -%}
+      {%- assign blog_articles = articles[section.settings.article] -%}
+      {%- assign article_image = block.settings.article_image -%}
+      <div class="blogModule-posts__post block s1 med_s12 lg_s15 blogModule-posts__post--has-image" data-animation="moFadeInUp" data-blog-post="">
+        {%- if article_image != blank -%}
+        <div class="blogModule-posts__post-block">
+
+          <a href="{%- if block.settings.article_button_link != blank -%} {{ block.settings.article_button_link }} {% endif %}"
+             class="logos-slider__item lazyload"
+             title="Brûleur et capteur de graisse"
+             aria-label="Brûleur et capteur de graisse"
+             style="padding-top: 60%; {% if block.settings.article_image != blank %}background-image: url('{{ block.settings.article_image | img_url: '1500x' }}');{% endif %}"
+             data-parent-fit="cover">
+          </a>
+        </div>
+        {%- endif -%}
+
+        {% if block.settings.article_button_link != blank %} 
+        <a href="{{ block.settings.article_button_link }}" title="Brûleur et capteur de graisse" aria-label="Brûleur et capteur de graisse" class="carousel-slide-info">
+          {% if block.settings.article_title != blank %}  
+          <h3 class="post-title" data-post-title="" style="float: none; position: static;">{{ block.settings.article_title | truncate: 23  }}</h3>
+          {% endif  %}
+          {% if block.settings.article_discription != blank %} 
+          <p class="excerpt" data-post-excerpt="" title="" style="float: none; position: relative;">
+            {{ block.settings.article_discription | truncate: 100  }}
+          </p>
+          {% endif  %}  
+          {% if block.settings.article_button_text != blank %}      
+          <p class="blog-view-btn"> {{ block.settings.article_button_text }}</p>
+          {% endif  %}
+        </a>
+        {% endif  %}
+      </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if cta != blank -%}
+    <div class="row row-med u-center button-wrapper">
+      <a href="{{ blog_link }}" class="button button--{{ section.settings.button_style }}">{{ cta }}</a>
+    </div>
+    {%- endif -%}
+  </div>
+</div>
+{%- endif -%}
+
+</section>
+
+{% schema %}
+{
+	"name": "Blog posts",
+	"class": "shopify-section--featured-blog",
+	"settings": [
+			{
+				"type": "header",
+				"content": "Content"
+			},
+			{
+				"type": "text",
+				"id": "heading",
+				"label": "Heading"
+			},
+			{
+				"type": "textarea",
+				"id": "text",
+				"label": "Subheading"
+			}
+	],
+	"blocks": [
+		{
+			"type": "article",
+			"name": "Article",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "article_image",
+					"label": "Article Image"
+				},
+				{
+                    "type": "text",
+                    "id": "article_title",
+                    "label": "Article Title"
+                },
+				{
+                    "type": "richtext",
+                    "id": "article_discription",
+                    "label": "Article Short Discription"
+                },
+				{
+                    "type": "text",
+                    "id": "article_button_text",
+                    "label": "Button Text"
+                },
+				{
+					"type": "url",
+					"id": "article_button_link",
+					"label": "Link"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Editorial",
+			"category": "Article"
+		}
+	]
+}
+{% endschema %}

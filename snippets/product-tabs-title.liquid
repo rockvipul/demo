@@ -1,0 +1,120 @@
+ <div class="jb-product-collateral">
+<div class="tab-title">
+		<div class="container">
+          
+			<nav id="desktop-nav">
+			    <ul>
+				
+                  {% if metafields.custom_fields["tab_1_label"] != blank %}
+			      <li class="tab-title-inner active">
+                    <a href="#tab1" class="page-scroll">
+                    	{{ metafields.custom_fields["tab_1_label"] }}
+                    </a>
+                  </li>
+                {% endif %}
+                  {% if metafields.custom_fields["tab_2_label"] != blank %}
+			      <li class="tab-title-inner">
+                    <a href="#tab2" class="page-scroll">
+                      {{ metafields.custom_fields["tab_2_label"] }}
+                    </a>
+                  </li>
+                  {% endif %}
+                  {% if metafields.custom_fields["tab_3_label"] != blank %}
+			      <li class="tab-title-inner">
+                    <a href="#tab3" class="page-scroll">
+                       {{ metafields.custom_fields["tab_3_label"] }}
+                    </a>
+                  </li>
+                  {% endif %}
+                  {% if metafields.custom_fields["tab_4_label"] != blank %}
+			      <li class="tab-title-inner">
+                    <a href="#tab4" class="page-scroll">
+                      {{ metafields.custom_fields["tab_4_label"] }}
+                    </a>
+                  </li>
+                  {% endif %}
+                  {% if metafields.custom_fields["tab_5_label"] != blank %}
+				  <li class="tab-title-inner">
+                    <a href="#tab5" class="page-scroll">
+                      {{ metafields.custom_fields["tab_5_label"] }}
+                    </a>
+                  </li>	                  
+                  {% endif %}
+			    </ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	jQuery('.tab-title #desktop-nav').on('click', '.tab-title-inner', function() {
+        var that = $(this);
+        if (!that.hasClass('active')) {
+            that.addClass('active').siblings('.active').removeClass('active');
+        }
+    });
+</script>    	
+
+<script type="text/javascript">
+jQuery(function($){
+	var topMenuHeight = $("#desktop-nav").outerHeight();
+	$("#desktop-nav").menuScroll(topMenuHeight);
+});
+
+// COPY THE FOLLOWING FUNCTION INTO ANY SCRIPTS
+jQuery.fn.extend({
+    menuScroll: function(offset) {
+		// Declare all global variables
+        var topMenu = this;
+		var topOffset = offset ? offset : 0;
+        var menuItems = $(topMenu).find("a");
+        var lastId;
+	
+		// Save all menu items into scrollItems array
+        var scrollItems = $(menuItems).map(function() {
+            var item = $($(this).attr("href"));
+            if (item.length) {
+                return item;
+            }
+        });
+
+		// When the menu item is clicked, get the #id from the href value, then scroll to the #id element
+        $(topMenu).on("click", "a", function(e){
+            var href = $(this).attr("href");
+            
+            var offsetTop = href === "#" ? 0 : $(href).offset().top-topOffset;
+
+            $('html, body').stop().animate({ 
+                scrollTop: offsetTop
+            }, 300);
+            e.preventDefault();
+
+        });
+		
+		// When page is scrolled
+        $(window).scroll(function(){
+            var nm = $("html").scrollTop();
+            var nw = $("body").scrollTop();
+            var fromTop = (nm > nw ? nm : nw)+topOffset;
+
+			
+			// When the page pass one #id section, return all passed sections to scrollItems and save them into new array current
+            var current = $(scrollItems).map(function(){
+                if ($(this).offset().top <= fromTop)
+                return this;
+            });
+			
+			// Get the most recent passed section from current array
+            current = current[current.length-1];
+            var id = current && current.length ? current[0].id : "";
+            if (lastId !== id) {
+                lastId = id;
+                // Set/remove active class
+                $(menuItems)
+                .parent().removeClass("active")
+                .end().filter("[href='#"+id+"']").parent().addClass("active");
+            }      
+
+        });
+    }
+});
+</script>

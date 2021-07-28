@@ -1,0 +1,149 @@
+{% if product.metafields.custom_fields["tab_1_label"] != blank or
+product.metafields.custom_fields["tab_2_label"] != blank  or
+product.metafields.custom_fields["tab_3_label"] != blank  or
+product.metafields.custom_fields["tab_4_label"] != blank  or
+product.metafields.custom_fields["tab_5_label"]   
+!= blank %}
+<div class="jb-product-collateral">
+  <div class="tab-title">
+    <div class="container">
+
+      <nav id="desktop-nav">
+        <ul>
+
+          {% if product.metafields.custom_fields["tab_1_label"] != blank %}
+          <li class="tab-title-inner active">
+            <a href="#tab1" class="page-scroll">
+              {{ product.metafields.custom_fields["tab_1_label"] }}
+            </a>
+          </li>
+          {% endif %}
+          {% if product.metafields.custom_fields["tab_2_label"] != blank %}
+          <li class="tab-title-inner">
+            <a href="#tab2" class="page-scroll">
+              {{ product.metafields.custom_fields["tab_2_label"] }}
+            </a>
+          </li>
+          {% endif %}
+          {% if product.metafields.custom_fields["tab_3_label"] != blank %}
+          <li class="tab-title-inner">
+            <a href="#tab3" class="page-scroll">
+              {{ product.metafields.custom_fields["tab_3_label"] }}
+            </a>
+          </li>
+          {% endif %}
+          {% if product.metafields.custom_fields["tab_4_label"] != blank %}
+          <li class="tab-title-inner">
+            <a href="#tab4" class="page-scroll">
+              {{ product.metafields.custom_fields["tab_4_label"] }}
+            </a>
+          </li>
+          {% endif %}
+          {% if product.metafields.custom_fields["tab_5_label"] != blank %}
+          <li class="tab-title-inner">
+            <a href="#tab5" class="page-scroll">
+              {{ product.metafields.custom_fields["tab_5_label"] }}
+            </a>
+          </li>	                  
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="tab-content">
+    {% if product.metafields.custom_fields["tab_1_title"] != blank and product.metafields.custom_fields["tab_1_label"] != blank %}
+    {% render "block-text-grey-background" with metafields: product.metafields %}
+
+    {% endif %}
+    {% if product.metafields.custom_fields["tab_2_title"] != blank and product.metafields.custom_fields["tab_2_label"] != blank %}
+    {% render "block-text-with-table" with metafields: product.metafields %}
+
+    {% endif %}
+    {% if product.metafields.custom_fields["tab_3_main_title"] != blank  and product.metafields.custom_fields["tab_3_label"] %}
+    {% render "block-key-figures" with metafields: product.metafields %}
+
+    {% endif %}
+    {% if product.metafields.custom_fields["tab_4_label"] != blank and product.metafields.custom_fields["tab_4_label"] != blank %}
+    {% render "image-with-text-simple" with metafields: product.metafields %}
+
+    {% endif  %}
+    {% if product.metafields.custom_fields["tab_5_title"] != blank and product.metafields.custom_fields["tab_5_label"] != blank %}
+
+    {% render "text-with-icon-table" with metafields: product.metafields %}
+
+
+    {% endif %}
+  </div>
+</div>	
+{% endif %}
+<script type="text/javascript">
+  jQuery('.tab-title #desktop-nav').on('click', '.tab-title-inner', function() {
+    var that = $(this);
+    if (!that.hasClass('active')) {
+      that.addClass('active').siblings('.active').removeClass('active');
+    }
+  });
+</script>    	
+
+<script type="text/javascript">
+  jQuery(function($){
+    var topMenuHeight = $("#desktop-nav").outerHeight();
+    $("#desktop-nav").menuScroll(topMenuHeight);
+  });
+
+  // COPY THE FOLLOWING FUNCTION INTO ANY SCRIPTS
+  jQuery.fn.extend({
+    menuScroll: function(offset) {
+      // Declare all global variables
+      var topMenu = this;
+      var topOffset = offset ? offset : 0;
+      var menuItems = $(topMenu).find("a");
+      var lastId;
+
+      // Save all menu items into scrollItems array
+      var scrollItems = $(menuItems).map(function() {
+        var item = $($(this).attr("href"));
+        if (item.length) {
+          return item;
+        }
+      });
+
+      // When the menu item is clicked, get the #id from the href value, then scroll to the #id element
+      $(topMenu).on("click", "a", function(e){
+        var target = this.hash;
+        $target = $(target);
+        $('html, body').stop().animate({
+          'scrollTop':  $target.offset().top //no need of parseInt here
+        }, 900, 'swing', function () {
+          window.location.hash = target;
+        });
+      });
+
+      // When page is scrolled
+      $(window).scroll(function(){
+        var nm = $("html").scrollTop();
+        var nw = $("body").scrollTop();
+        var fromTop = (nm > nw ? nm : nw)+topOffset;
+
+
+        // When the page pass one #id section, return all passed sections to scrollItems and save them into new array current
+        var current = $(scrollItems).map(function(){
+          if ($(this).offset().top <= fromTop)
+            return this;
+        });
+
+        // Get the most recent passed section from current array
+        current = current[current.length-1];
+        var id = current && current.length ? current[0].id : "";
+        if (lastId !== id) {
+          lastId = id;
+          // Set/remove active class
+          $(menuItems)
+          .parent().removeClass("active")
+          .end().filter("[href='#"+id+"']").parent().addClass("active");
+        }      
+
+      });
+    }
+  });
+</script>

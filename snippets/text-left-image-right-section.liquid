@@ -1,0 +1,36 @@
+<div {% if block.settings.tab_id != blank %}id="{{ block.settings.tab_id }}"{% endif %} class="text-right-image-left__main">
+  <div class="container text-right-image-left__inner_">
+    <div class="feature-item " data-alignment="center">
+      <div class="feature-text">
+        <div class="feature-text-wrap">
+          {%- if block.settings.subtitle != blank -%}
+						<p class="subheading-text">
+							{{- block.settings.subtitle -}}
+						</p>
+          {% endif %}
+              {% if block.settings.title != blank %}
+          <h2 data-animation="moPopUp" data-animation-delay="0">{{  block.settings.title }}</h2>
+              {% endif %}
+          <div class="feature-text__p" data-animation="moPopUp" data-animation-delay="250">
+            {% if block.settings.code != blank %}
+                {{  block.settings.code }}
+                {% endif %}
+          </div>
+        </div>
+      </div>  
+      <div class="feature-image">
+        <div class="feature-image-bg" style="height:100%"> 
+          <div class="svg-placeholder">
+                 {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | img_url: '1024x' }}"> 
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

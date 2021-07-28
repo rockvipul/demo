@@ -1,0 +1,18 @@
+
+<div {% if block.settings.tab_id != blank %}id="{{ block.settings.tab_id }}"{% endif %} class="simple-text-section__main" {% if block.settings.enbale_bg != blank %}{% if block.settings.bg_color != blank %} style="background-color:{{ block.settings.bg_color }}"{% endif %}{% endif %}>
+  <div class="container simple-text-section__inner">
+    <div class="page-title">
+          {% if block.settings.subheading != blank  %}
+      <div class="page-title__subheading subheading-text" {% if block.settings.subheading_color != blank  %}style="color:{{ block.settings.subheading_color }}" {% endif %}>{{ block.settings.subheading }}</div>
+          {% endif %}
+          {% if block.settings.title != blank  %}
+      <h2 class="page-title__heading"  {% if block.settings.heading_color != blank  %}style="color:{{ block.settings.heading_color }}" {% endif %}>{{ block.settings.title }}</h2>
+          {% endif %}
+    </div>
+      {% if block.settings.description != blank  %}
+    <div class="simple-text-section__details" {% if block.settings.description_color != blank  %}style="color:{{ block.settings.description_color }}" {% endif %}>
+      <p>{{ block.settings.description }}</p>
+    </div>
+      {% endif %}
+  </div>
+</div>

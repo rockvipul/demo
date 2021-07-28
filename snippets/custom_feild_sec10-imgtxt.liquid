@@ -1,0 +1,47 @@
+{% if metafields.custom_fields["image_with_section_2_image"] != blank %}
+<div class="product-features--container section-with-bg-color">
+      <div class="container">
+        <div class="row">
+            <div class="feature-item " data-alignment="center">
+                    {% if metafields.custom_fields["image_with_section_2_image"] != blank %}
+              <div class="feature-image">
+                <div class="feature-image-bg" style="height: calc(100vh - 300px);">
+                  <div class="svg-placeholder">
+  						{% render 'cf-image' with image: metafields.custom_fields["image_with_section_2_image"] %}
+				   
+                  </div>
+               </div>
+              </div> 
+              {% endif %}
+              <div class="feature-text">
+                <div class="feature-text-wrap">
+                	{% if metafields.custom_fields["image_with_section_2_sub_title"] != blank %}
+			         <h5 class="sec6subtitle">
+			           {{ metafields.custom_fields["image_with_section_2_sub_title"] }}
+			        </h5>
+			        {% endif %}
+          		{% if metafields.custom_fields["image_with_section_2_title"] != blank %}
+                  <h2 class="" data-animation="moPopUp" data-animation-delay="0">
+                   {{ metafields.custom_fields["image_with_section_2_title"] }}
+                  </h2>
+                {% endif %}
+                  <div class="feature-text__p" data-animation="moPopUp" data-animation-delay="250">
+                    {% if metafields.custom_fields["image_with_section_2_detail"] != blank %}
+                      <p>{{ metafields.custom_fields["image_with_section_2_detail"] }}</p>
+                    {% endif %}
+                  </div>
+                  
+                  {% if metafields.custom_fields["image_section_2_btn_with_link"] != blank %}
+                    <div class="custom-field custom-field__text-link custom-field__type--link">
+                      <div class="custom-field--value">
+                        {{ metafields.custom_fields["image_section_2_btn_with_link"] }}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+      </div>
+   </div>
+     </div>
+{% endif %}

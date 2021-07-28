@@ -1,0 +1,3005 @@
+{
+  "current": {
+    "color_heading_new": "#000000",
+    "color_text_new": "#000000",
+    "color_error_new": "#d02e2e",
+    "color_border_new": "#e4e4e4",
+    "color_background_new": "#ffffff",
+    "color_button_primary_bg": "#d02e2e",
+    "color_button_secondary_bg": "#ffffff",
+    "color_header_bg_home": "#ffffff",
+    "color_header_text_home": "#222222",
+    "header_icon_color_home": "#fff",
+    "color_badge_bg": "#2e3234",
+    "color_footer_text": "#ffffff",
+    "color_footer_bg": "#e73439",
+    "color_bottom_bar_bg": "#e73439",
+    "heading_font_picker": "lucida_grande_n7",
+    "base_font_picker": "roboto_n4",
+    "accent_line": "none",
+    "transition_grid_items": true,
+    "transition_images_fade": true,
+    "transition_collections_list": true,
+    "enable_infinity_scroll": true,
+    "show_search": true,
+    "search_type": "product,page",
+    "image_aspect_ratio": 1,
+    "image_size": "contain",
+    "product_title_position": "center",
+    "show_quick_view": true,
+    "show_quick_view_description": false,
+    "price_swatches_hover": false,
+    "show_quantity": true,
+    "hover_image": false,
+    "enable_payment_button": true,
+    "enable_variant_boxes": true,
+    "enable_color_swatches": true,
+    "color_swatches_style": "circle",
+    "product_badge_style": "rectangle",
+    "products_rows": 4,
+    "products_columns": 4,
+    "enable_video_looping": true,
+    "cart_icon": "cart",
+    "enable_ajax_cart": true,
+    "enable_cart_order_notes": false,
+    "show_continue_shopping": true,
+    "tax_text": "Excluding taxes and shipping",
+    "show_breadcrumbs": true,
+    "show_reviews": true,
+    "enable_yotpo": false,
+    "yotpo_ID": "hI7kSV2oxcOBXUnIe8cBLHPapenWyKupzLSYoHsv",
+    "favicon": "",
+    "twitter_url": "",
+    "facebook_url": "",
+    "pinterest_url": "",
+    "instagram_url": "Instagram",
+    "tumblr_url": "",
+    "youtube_url": "",
+    "rss_url": "",
+    "share_on_twitter": true,
+    "share_on_facebook": true,
+    "share_on_pinterest": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "type_heading_font": "harmonia_sans_n7",
+    "type_heading_letter_spacing": 0,
+    "base_font_size": 14,
+    "type_base_font": "rubik_n4",
+    "body_font_size": 14,
+    "type_base_letter_spacing": 0,
+    "twitter_via": "",
+    "sections": {
+      "announcement": {
+        "type": "announcement",
+        "settings": {
+          "show_announcement": false,
+          "show_announcement_on_mobile": false,
+          "text": "<p>Free Shipping on Orders over $100<\/p>",
+          "link": ""
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "show_popup": "enabled",
+          "popup_position": "right",
+          "popup_header": "Use the popup to catch emails and showcase promotions",
+          "popup_content": "<p>Popups can detract from a user&#x27;s experience, so try to limit how often they appear.<\/p>",
+          "text_alignment": "center",
+          "show_popup_newsletter": true,
+          "popup_delay": 5,
+          "popup_reappear_time": "7"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "59923cd5-2ede-4005-ae99-27212eca97a8": {
+            "type": "submenu_icon_SVG",
+            "settings": {
+              "svg_icon_name": "header_beaute",
+              "menu_icon_svg_tag": "Beauté",
+              "menu_view_all_button_text_svg": "view all",
+              "menu_view_all_button_link_svg": "shopify:\/\/collections\/all"
+            }
+          },
+          "7c60f0b2-0bf3-4e18-87db-d1c3a6710b55": {
+            "type": "submenu_icon_SVG",
+            "settings": {
+              "svg_icon_name": "header_bienetre",
+              "menu_icon_svg_tag": "Minceur",
+              "menu_view_all_button_text_svg": "View all",
+              "menu_view_all_button_link_svg": "shopify:\/\/blogs\/perte-de-poids\/minceur-femme"
+            }
+          },
+          "f3cb49c5-339f-446a-8c0e-31bf2ff54a4f": {
+            "type": "submenu_icon_SVG",
+            "settings": {
+              "svg_icon_name": "header_transit",
+              "menu_icon_svg_tag": "Transit & Digestion",
+              "menu_view_all_button_text_svg": "",
+              "menu_view_all_button_link_svg": ""
+            }
+          },
+          "a7d370ba-6d91-47af-9ad5-b9ac6e9354c7": {
+            "type": "submenu_icon_SVG",
+            "settings": {
+              "svg_icon_name": "header_defenses",
+              "menu_icon_svg_tag": "Bien-être féminin",
+              "menu_view_all_button_text_svg": "",
+              "menu_view_all_button_link_svg": ""
+            }
+          }
+        },
+        "block_order": [
+          "59923cd5-2ede-4005-ae99-27212eca97a8",
+          "7c60f0b2-0bf3-4e18-87db-d1c3a6710b55",
+          "f3cb49c5-339f-446a-8c0e-31bf2ff54a4f",
+          "a7d370ba-6d91-47af-9ad5-b9ac6e9354c7"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo-new-fr_2_1.png",
+          "logo_other": "shopify:\/\/shop_images\/logo-new-fr_2_1.png",
+          "logo_max_width": 175,
+          "show_site_name": false,
+          "menu_list": "main-menu",
+          "links_position": "links_center",
+          "logo_position": "logo_left",
+          "header_button_text": "Diagnostic en ligne",
+          "header_button_text_link": "https:\/\/fortepharma-develop.myshopify.com\/pages\/diagnostic-en-ligne",
+          "image_aspect_ratio": 0.5,
+          "meganav_image_heading": "",
+          "meganav_image_link": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-block-text": {
+            "type": "text",
+            "settings": {
+              "title": "Contactez-nous",
+              "text": "<p>05 53 36 78 78<\/p>",
+              "mobile_hide_block": false
+            }
+          },
+          "7633534d-6c8b-4ea5-bf1a-eac204de44d4": {
+            "type": "menu",
+            "settings": {
+              "menu": "main-menu",
+              "title": "Informations légales",
+              "mobile_hide_block": false
+            }
+          },
+          "footer-block-menu": {
+            "type": "menu",
+            "settings": {
+              "menu": "footer",
+              "title": "À propos",
+              "mobile_hide_block": true
+            }
+          },
+          "footer-block-newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Inscription Newsletter",
+              "content": "",
+              "mobile_hide_block": false
+            }
+          }
+        },
+        "block_order": [
+          "footer-block-text",
+          "7633534d-6c8b-4ea5-bf1a-eac204de44d4",
+          "footer-block-menu",
+          "footer-block-newsletter"
+        ],
+        "settings": {
+          "show_payment_icons": false,
+          "show_social_icons": true,
+          "menu": "",
+          "show_locale_selector": false,
+          "show_currency_selector": false
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "product_layout": "slideshow",
+          "image_size": "medium",
+          "add_cart_position": "bottom",
+          "lightbox": true,
+          "show_vendor": false,
+          "show_quantity": true,
+          "show_cart_bar": true,
+          "enable_payment_button": true,
+          "show_newsletter": true,
+          "text_newsletter": "<p>Notify me when this product is available:<\/p>",
+          "enable_tabs_h6": true,
+          "page_tab_1": "",
+          "page_tab_2": "",
+          "page_tab_3": "",
+          "product_slideshow_dots": false,
+          "product_slideshow_arrows": false,
+          "enable_video_looping": false
+        }
+      },
+      "list-collections-page-template": {
+        "type": "list-collections-page-template",
+        "settings": {
+          "show_description": true,
+          "collections_columns": 2,
+          "coll_text_position": "center",
+          "button_text": "View Products",
+          "button_style": "primary",
+          "text_color": "#ffffff",
+          "overlay_color": "#222222",
+          "overlay_opacity": 10
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "show_blog_name": true,
+          "show_rss": false,
+          "show_featured_post": false,
+          "tags": false,
+          "author": false,
+          "date": false,
+          "show_comments": false,
+          "image_aspect_ratio": 1,
+          "article_rows": 4,
+          "article_columns": 4
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_title": true,
+          "show_sort_filter": false,
+          "filter_mode": "tag",
+          "position_filters": "top",
+          "show_banner": true,
+          "banner_height": "original-height",
+          "banner_text_position": "center",
+          "banner_color_text": "#e32c2b",
+          "banner_color_overlay": "#ffffff",
+          "banner_overlay_opacity": 0,
+          "show_featured_image": true,
+          "featured_image": "shopify:\/\/shop_images\/Group_167.jpg",
+          "featured_heading": "VOTRE DIAGNOSTIC",
+          "featured_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris culpa.<\/p><p>RÉALISEZ VOTRE DIAGNOSTIC <strong>EN 2 MINUTES<\/strong><\/p>",
+          "featured_button_text": "Découvrir",
+          "featured_button_link": "shopify:\/\/products\/turbodraine",
+          "featured_button_style": "secondary",
+          "featured_color_text": "#ffffff",
+          "featured_color_overlay": "#e35252",
+          "featured_overlay_opacity": 0
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/screen_home.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/Group_573_73436829-f621-40b3-8564-1d97c09b37bc.jpg",
+              "image_position": "center-center",
+              "alignment": "left",
+              "color_style": "white",
+              "subheading": "Faire de vos objectifs",
+              "title": "NOTRE RÉUSSITE !",
+              "text": "",
+              "cta": "Voir nos produits",
+              "link": "shopify:\/\/collections\/all",
+              "cta_primary_btn_style": "secondary",
+              "cta_2": "",
+              "link_2": "",
+              "cta_secondary_btn_style": "secondary",
+              "overlay_color": "#ffffff",
+              "overlay_opacity": 0
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0"
+        ],
+        "settings": {
+          "showNavArrows": false,
+          "show_arrow_down": false,
+          "autoplay": false,
+          "duration": 2,
+          "transition": "fade",
+          "dots_position": "center",
+          "slide_height": "original-height",
+          "button_size": "large"
+        }
+      },
+      "rich-text": {
+        "type": "rich-text",
+        "settings": {
+          "layout": "split",
+          "subheading": "Humble Beginnings",
+          "title": "Modular is a powerful Shopify theme that will set you apart from the rest.",
+          "content": "<p>It features ample space to showcase your imagery with Mosaic, Image with text, and Slideshow sections ... and even this Rich Text section itself.<\/p>",
+          "button_text": "Learn More",
+          "button_style": "primary"
+        }
+      },
+      "image-with-text": {
+        "type": "image-with-text",
+        "blocks": {
+          "image-with-text-0": {
+            "type": "gallery_image",
+            "settings": {
+              "slide": "shopify:\/\/shop_images\/image_format_test.png"
+            }
+          }
+        },
+        "block_order": [
+          "image-with-text-0"
+        ],
+        "settings": {
+          "bg_color_check": true,
+          "bg_color": "#f7f7f7",
+          "show_nav_arrows": false,
+          "color_style": "white",
+          "transition": "fade",
+          "autoplay": false,
+          "duration": 4,
+          "show_margins": false,
+          "slide_height": "seven-fifty-height-hero",
+          "slide_image_position": "left",
+          "slide_image_width": "med_s12|med_s12",
+          "subheading": "à propos",
+          "title": "QUI SOMMES-NOUS ?",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.\n\n<br><br>\n<ul>\n<li>Lorem ipsum dolor sit amet<\/li>\n<li>Lorem ipsum dolor sit amet<\/li>\n<li>Lorem ipsum dolor sit amet<\/li>\n<\/ul>",
+          "cta": "",
+          "link": "#",
+          "button_style": "primary"
+        }
+      },
+      "featured-collection": {
+        "type": "featured-collection",
+        "disabled": true,
+        "settings": {
+          "title": "",
+          "featured_collection": "frontpage",
+          "show_description": false,
+          "products_layout": "carousel",
+          "products_rows": 2,
+          "show_button": true,
+          "button_style": "primary",
+          "color_style": "black"
+        }
+      },
+      "list-collections": {
+        "type": "list-collections",
+        "blocks": {
+          "list-collections-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": ""
+            }
+          },
+          "list-collections-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": ""
+            }
+          },
+          "list-collections-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": ""
+            }
+          },
+          "list-collections-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": ""
+            }
+          },
+          "list-collections-4": {
+            "type": "collection",
+            "settings": {
+              "collection": "",
+              "image": ""
+            }
+          }
+        },
+        "block_order": [
+          "list-collections-0",
+          "list-collections-1",
+          "list-collections-2",
+          "list-collections-3",
+          "list-collections-4"
+        ],
+        "settings": {
+          "title": "",
+          "blocks_height": "default-height",
+          "coll_text_position": "bottom_left",
+          "show_description": true,
+          "text_color": "#ffffff",
+          "overlay_color": "#222222",
+          "overlay_opacity": 10
+        }
+      },
+      "testimonials": {
+        "type": "testimonials",
+        "blocks": {
+          "testimonials-0": {
+            "type": "testimonial",
+            "settings": {
+              "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+              "author": "John Doe"
+            }
+          },
+          "testimonials-1": {
+            "type": "testimonial",
+            "settings": {
+              "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+              "author": "John Doe"
+            }
+          },
+          "testimonials-2": {
+            "type": "testimonial",
+            "settings": {
+              "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+              "author": "John Doe"
+            }
+          }
+        },
+        "block_order": [
+          "testimonials-0",
+          "testimonials-1",
+          "testimonials-2"
+        ],
+        "settings": {
+          "title": "",
+          "title_position": "left",
+          "blocks_text_align": "justify",
+          "hide_quotes": false,
+          "columns": 3
+        }
+      },
+      "featured-blog": {
+        "type": "featured-blog",
+        "settings": {
+          "heading": "",
+          "text": "",
+          "cta": "Read More",
+          "button_style": "primary",
+          "tags": true,
+          "author": true,
+          "date": true,
+          "show_comments": true,
+          "image_aspect_ratio": 0.7,
+          "article_rows": 1,
+          "article_columns": 3
+        }
+      },
+      "logo-list": {
+        "type": "logo-list",
+        "blocks": {
+          "logo-list-0": {
+            "type": "item_logo",
+            "settings": {}
+          },
+          "logo-list-1": {
+            "type": "item_logo",
+            "settings": {}
+          },
+          "logo-list-2": {
+            "type": "item_logo",
+            "settings": {}
+          },
+          "logo-list-3": {
+            "type": "item_logo",
+            "settings": {}
+          },
+          "logo-list-4": {
+            "type": "item_logo",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "logo-list-0",
+          "logo-list-1",
+          "logo-list-2",
+          "logo-list-3",
+          "logo-list-4"
+        ],
+        "settings": {
+          "color_logos_bg": ""
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "color": "#ffffff",
+          "background": "#1ca3a4",
+          "top_subheading": "<p>Let&#x27;s keep in touch<\/p>",
+          "title": "INSCRIVEZ-VOUS À NOTRE NEWSLETTER",
+          "content": "<p>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.<\/p>"
+        }
+      },
+      "faq-section__product": {
+        "type": "faq-section__product",
+        "blocks": {
+          "f56337f1-104f-48f5-bed0-3c0e21c70431": {
+            "type": "item",
+            "settings": {
+              "title": "Question",
+              "answer": "<p>Use this answer block to discuss some commonly asked questions you&#x27;ve discovered from your customers interactions. You could discuss product details, size fit, shipping policies, or anything you think would help merchants make an informed decision about your product or collection. This section will appear across all products.<\/p>"
+            }
+          },
+          "43984b75-a554-47db-9b82-6b39e3b68c70": {
+            "type": "item",
+            "settings": {
+              "title": "Question",
+              "answer": "<p>Use this answer block to discuss some commonly asked questions you&#x27;ve discovered from your customers interactions. You could discuss product details, size fit, shipping policies, or anything you think would help merchants make an informed decision about your product or collection. This section will appear across all products.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "f56337f1-104f-48f5-bed0-3c0e21c70431",
+          "43984b75-a554-47db-9b82-6b39e3b68c70"
+        ],
+        "settings": {
+          "title": "Question fréquente",
+          "subheading": "à propos"
+        }
+      },
+      "related-products": {
+        "type": "related-products",
+        "settings": {
+          "related_products_enable": true,
+          "product_recommendations_heading": "Pour vous",
+          "title_color": "#ffffff",
+          "product_recommendations_subheading": "Notre sélection",
+          "sub_title_color": "#ffffff",
+          "background_image": "shopify:\/\/shop_images\/slider_background-1.png",
+          "button_name": "CTA label",
+          "button_url": "shopify:\/\/collections\/all",
+          "enable_carousel": true
+        }
+      },
+      "page-template": {
+        "type": "page-template",
+        "settings": {
+          "show_page_title": false
+        }
+      },
+      "16146916391fb76963": {
+        "type": "icons-row",
+        "blocks": {
+          "16146916391fb76963-0": {
+            "type": "text",
+            "settings": {
+              "icon_name": "basket",
+              "icon_image": "shopify:\/\/shop_images\/Group_610.png",
+              "title": "QUALITÉ",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+            }
+          },
+          "16146916391fb76963-1": {
+            "type": "text",
+            "settings": {
+              "icon_name": "eye",
+              "icon_image": "shopify:\/\/shop_images\/Group_428.png",
+              "title": "Tite in caps",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+            }
+          },
+          "16146916391fb76963-2": {
+            "type": "text",
+            "settings": {
+              "icon_name": "lock",
+              "icon_image": "shopify:\/\/shop_images\/Group_429.png",
+              "title": "QUALITÉ",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+            }
+          },
+          "d5216bce-71f6-46d2-83aa-f605c7ddda20": {
+            "type": "text",
+            "settings": {
+              "icon_name": "shop",
+              "icon_image": "shopify:\/\/shop_images\/Group_612.png",
+              "title": "Réassurance 4",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+            }
+          }
+        },
+        "block_order": [
+          "16146916391fb76963-0",
+          "16146916391fb76963-1",
+          "16146916391fb76963-2",
+          "d5216bce-71f6-46d2-83aa-f605c7ddda20"
+        ],
+        "settings": {
+          "grid-setting": "col4",
+          "alignment": "left",
+          "color_icons_bg": "#ffffff",
+          "color_icons_text": "#2e3234"
+        }
+      },
+      "1614692051ad0045fc": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "Pour vous",
+          "title_color": "#ffffff",
+          "sub_title": "Notre sélection",
+          "sub_title_color": "#ffffff",
+          "featured_collection": "minceur",
+          "featured_collection_img": "shopify:\/\/shop_images\/slider_background-1.png",
+          "show_description": false,
+          "products_layout": "carousel",
+          "products_rows": 1,
+          "show_button": true,
+          "button_style": "secondary",
+          "color_style": "black",
+          "show_button_text": "Boutique Minceur",
+          "show_button_link": "shopify:\/\/collections\/all"
+        }
+      },
+      "1614692520dbcb9a26": {
+        "type": "mosaic",
+        "blocks": {
+          "16146925209f359116-0": {
+            "type": "text",
+            "settings": {
+              "title": "VOICI NOS CONSEILS",
+              "subheading": "Nous sommes proches de nos clients",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+              "button_label": "",
+              "button_link": "",
+              "button_style": "secondary"
+            }
+          },
+          "942d5a5d-9dbd-4079-84c3-4dd97ca17e1e": {
+            "type": "product",
+            "settings": {
+              "product": "minceur-24",
+              "overlay_color": "#e70000",
+              "overlay_opacity": 0
+            }
+          },
+          "bc8db18f-4e29-422e-a900-c94e9b24e2cd": {
+            "type": "product",
+            "settings": {
+              "product": "forteflex-max-articulations",
+              "overlay_color": "#333333",
+              "overlay_opacity": 0
+            }
+          }
+        },
+        "block_order": [
+          "16146925209f359116-0",
+          "942d5a5d-9dbd-4079-84c3-4dd97ca17e1e",
+          "bc8db18f-4e29-422e-a900-c94e9b24e2cd"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/visuel_life.jpg",
+          "image_position": "left",
+          "hide_image_mobile": false,
+          "overlay_color": "#333333",
+          "overlay_opacity": 0,
+          "image_text": "",
+          "image_link": "",
+          "blocks_height": "full-height",
+          "blocks_layout": "offset",
+          "text_color": "black"
+        }
+      },
+      "1614692810592d4c8a": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "Pour vous",
+          "title_color": "#000000",
+          "sub_title": "Notre sélection",
+          "sub_title_color": "#000000",
+          "featured_collection": "minceur",
+          "show_description": false,
+          "products_layout": "carousel",
+          "products_rows": 2,
+          "show_button": true,
+          "button_style": "secondary",
+          "color_style": "black",
+          "show_button_text": "Boutique Minceur",
+          "show_button_link": "shopify:\/\/collections\/all"
+        }
+      },
+      "16146931345ed0ef97": {
+        "type": "icons-row",
+        "blocks": {
+          "16146931351d26b8af-0": {
+            "type": "text",
+            "settings": {
+              "icon_name": "shop",
+              "icon_image": "shopify:\/\/shop_images\/Group_611_8ae4a457-d565-4fa9-905c-b0dbdbb633dd.png",
+              "title": "LIVRAISON",
+              "content": "dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+            }
+          },
+          "16146931351d26b8af-1": {
+            "type": "text",
+            "settings": {
+              "icon_name": "phone",
+              "icon_image": "shopify:\/\/shop_images\/Group_612.png",
+              "title": "SERVICE CLIENT",
+              "content": "dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+            }
+          },
+          "603b8da1-ebe2-466f-a659-8481e84002ba": {
+            "type": "text",
+            "settings": {
+              "icon_name": "shop",
+              "icon_image": "shopify:\/\/shop_images\/Group_613.png",
+              "title": "PAIEMENT SÉCURISÉ",
+              "content": "dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+            }
+          }
+        },
+        "block_order": [
+          "16146931351d26b8af-0",
+          "16146931351d26b8af-1",
+          "603b8da1-ebe2-466f-a659-8481e84002ba"
+        ],
+        "settings": {
+          "grid-setting": "col3",
+          "alignment": "center",
+          "color_icons_bg": "#ffffff",
+          "color_icons_text": "#333333"
+        }
+      },
+      "icons-row": {
+        "type": "icons-row",
+        "blocks": {
+          "3025b454-1f3b-418d-b8b9-d06c149e738d": {
+            "type": "text",
+            "settings": {
+              "icon_name": "shop",
+              "icon_image": "shopify:\/\/shop_images\/Group_428_0cf69b86-4d71-4611-8c0f-37c89188806d.png",
+              "title": "Feature",
+              "content": "Modular is a powerful Shopify theme that will set you apart from the rest with Mosaic, Image with text, and Slideshow sections."
+            }
+          }
+        },
+        "block_order": [
+          "3025b454-1f3b-418d-b8b9-d06c149e738d"
+        ],
+        "settings": {
+          "grid-setting": "col3",
+          "alignment": "center",
+          "color_icons_bg": "#fafafa",
+          "color_icons_text": "#333333"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {}
+      },
+      "description-tab": {
+        "type": "description-tab",
+        "settings": {
+          "title": "Description",
+          "html_code": "<p>Hola Vous avez envie de perdre du poids car vous avez fait des écarts alimentaires, avez envie de préparer votre silhouette pour cet été ou pour un évènement spécial ? Et parce que nous savons que ce n'est pas toujours facile de mincir efficacement et durablement, nos experts ont développé <strong>Xtra Slim 700,<\/strong> la solution idéale pour vous accompagner dans votre objectif minceur.<\/p>\n\n<p>Une formule unique et très complète<\/p>\n\n<p><strong>L'Xtra Slim 700,<\/strong> notre <strong>brûleur de graisse<\/strong>, est composé de 4 extraits de plantes choisis pour leur action minceur et de 4 nutriments essentiels qui agissent sur le métabolisme pour une action complémentaire. Elle vous permettra une prise en charge globale car elle a des actions :<\/p>\n\n<p>- brûle graisse, grâce au wakamé qui contribue au métabolisme des graisses, qui aide au contrôle du poids<\/p>\n\n<p>- drainante grâce au cassis qui facilite les fonctions d’élimination de l’organisme et la perte de poids en complément de mesures diététiques<\/p>\n\n<p>- coupe-faim grâce au wakamé qui aide à réduire l'appétit<\/p>\n\n<p>- ainsi qu'une action sur le tri-métabolisme avec la présence de la choline qui contribue à un métabolisme lipidique normal, du chrome qui contribue au maintien d'une glycémie normale et au métabolisme normal des macronutriments et de la vitamine B6 contribue au métabolisme normal des protéines et du glycogène.<\/p>\n\n<p>Notre produit a été testé scientifiquement et c'est prouvé, les personnes qui utilisent XtraSlim 700 perdent jusqu'à 700 Kcal par jour*!<\/p>\n\n<p>* Etude scientifique WF\/NINAPHARM 18-7941A en double aveugle avec <strong>XtraSlim 700<\/strong> versus placebo 60 sujets – 30 jours, 2019. Les résultats peuvent varier d’un individu à l’autre.<\/p>\n\n<p>Un livret inclus dans chaque boîte<\/p>\n\n<p>Conçu pour vous accompagner dans votre programme minceur, nous avons développé un livret spécifique pour vous donner des idées de menus, des exercices et d'autres conseils pour avoir un résultat optimal.<\/p>"
+        }
+      },
+      "block-text-with-table": {
+        "type": "block-text-with-table",
+        "blocks": {
+          "4d045f69-00d3-4b8c-92a6-80ee29b7f9af": {
+            "type": "block-text-with-table",
+            "settings": {
+              "table_row_left": "dmeo 1",
+              "table_row_right": "demo 2"
+            }
+          },
+          "2de74e68-2385-40e4-a821-e61468daaec5": {
+            "type": "block-text-with-table",
+            "settings": {
+              "table_row_left": "demo 3",
+              "table_row_right": "demo 4"
+            }
+          },
+          "98ea30cb-e40d-430c-bc5d-a5fa31b0101d": {
+            "type": "block-text-with-table",
+            "settings": {
+              "table_row_left": "demo 5",
+              "table_row_right": "demon 6"
+            }
+          }
+        },
+        "block_order": [
+          "4d045f69-00d3-4b8c-92a6-80ee29b7f9af",
+          "2de74e68-2385-40e4-a821-e61468daaec5",
+          "98ea30cb-e40d-430c-bc5d-a5fa31b0101d"
+        ],
+        "settings": {
+          "title": "Efficacité produit ?",
+          "html_code": "<p class=\"tab-sub-heading\"> <\/p>\n\n<ul class=\"tab-content-list\">\n\t<li>Une association de curcuma et de wakamé : le Wakamé contribue au métabolisme des graisses, qui aide au contrôle du poids et à réduire l’appétit.<\/li>\n\t<li>Le cassis. Il facilite les fonctions d'élimination de l'organisme et la perte de poids en complément de mesures diététiques.<\/li>\n\t<li>Le konjac<\/li>\n<\/ul>\n\n<p class=\"tab-sub-heading\">C'est également l'association de 3 nutriments agissant sur le métabolisme des lipides, des glucides et des protéines :<\/p>\n\n<ul class=\"tab-content-list\">\n\t<li>La choline, un nutriment essentiel qui agit en synergie avec les vitamines du groupe B. Elle contribue à un métabolisme lipidique normal<\/li>\n\t<li>Le chrome, qui contribue au maintien d’une glycémie normale<\/li>\n\t<li>La vitamine B6 qui favorise le métabolisme normal des protéines et du glycogène. Elle contribue également à réduire la fatigue<\/li>\n\t<li>la vitamine B1 qui contribue au fonctionnement normal du système nerveux et au métabolisme énergetique normal<\/li>\n<\/ul>\n\n<p class=\"tab-sub-heading\">Pour notre formule Xtra Slim 700, nous avons sélectionnés 4 extraits végétaux :<\/p>\n\n<p class=\"tab-sub-heading\">La vitamine B1 contribue au fonctionnement normal du système nerveux et à un métabolisme énergétique normal.L’équilibre émotionnel est utile dans toute démarche minceur afin de faciliter la réduction des prises alimentaires et donc tenir son objectif minceur.<\/p>",
+          "table_heading_1": "Table 1",
+          "table_heading_2": "Table 2"
+        }
+      },
+      "section-key-figures": {
+        "type": "section-key-figures",
+        "settings": {
+          "bg_color_enable": true,
+          "bg_color": "#57de65",
+          "title": "COMMENT L’UTILISER ?",
+          "num1": "2",
+          "num1_title": "gélules par jour",
+          "num1_detail": "",
+          "num2": "2",
+          "num2_title": "fois par jour",
+          "num2_detail": "Soit 2 gélules d’XtraSlim 700 avant les 2 principaux repas avec un grand verre d’eau",
+          "num3": "1",
+          "num3_title": "mois",
+          "num3_detail": "A renouveler jusqu'à 3 mois consécutifs.",
+          "detail": "<p>Complément alimentaire à utiliser dans le cadre d’une alimentation saine et variée.<br\/>Consultez votre médecin ou votre pharmacien en cas d’usage concomitant d’anticoagulants.<br\/>Ne pas utiliser en cas de sensibilité à l’iode ou de troubles de la thyroïde<br\/>Tenir hors de la portée des jeunes enfants.<br\/>Déconseillé aux femmes enceintes ou qui allaitent et aux enfants de moins de 12 ans sans avis médical.<\/p><p>Consultez votre médecin ou votre pharmacien en cas d’usage concomitant d’anticoagulants.<\/p><p>Ne pas utiliser en cas de sensibilité à l’iode ou de troubles de la thyroïde<\/p>"
+        }
+      },
+      "section-ingredients": {
+        "type": "section-ingredients",
+        "blocks": {
+          "75a63a3e-cc59-4d6a-abda-23b1046c1463": {
+            "type": "ingredients_table",
+            "settings": {
+              "table_row_left": "demo 1",
+              "table_row_right": "demo 2"
+            }
+          },
+          "22059cdf-8141-4be4-b28d-c6deb73a282f": {
+            "type": "ingredients_table",
+            "settings": {
+              "table_row_left": "demo 3",
+              "table_row_right": "demo 4"
+            }
+          },
+          "38bd29ca-7ed1-47cc-8c00-ab612775b973": {
+            "type": "ingredients_table",
+            "settings": {
+              "table_row_left": "demo 4",
+              "table_row_right": "demo 5"
+            }
+          },
+          "d48cec65-512c-4a97-af26-f1dce7c771b8": {
+            "type": "ingredients_table",
+            "settings": {
+              "table_row_left": "demo 6",
+              "table_row_right": "demo 7"
+            }
+          },
+          "01eef5c1-a3da-47f8-bdea-80c364cd7c15": {
+            "type": "ingredients_table",
+            "settings": {
+              "table_row_left": "demo 8",
+              "table_row_right": "demo 9"
+            }
+          }
+        },
+        "block_order": [
+          "75a63a3e-cc59-4d6a-abda-23b1046c1463",
+          "22059cdf-8141-4be4-b28d-c6deb73a282f",
+          "38bd29ca-7ed1-47cc-8c00-ab612775b973",
+          "d48cec65-512c-4a97-af26-f1dce7c771b8",
+          "01eef5c1-a3da-47f8-bdea-80c364cd7c15"
+        ],
+        "settings": {
+          "title": "LES ACTIFS (INGRÉDIENTS)",
+          "icon1_title": "WAKAMÉ",
+          "icon1_detail": "Il contribue au métabolisme des graisses, qui aide au contrôle du poids et à réduire l’appétit.",
+          "icon2_title": "CURCUMA",
+          "icon2_detail": "Comme on parle de superfruits, on peut parler de super-épice pour le curcuma tant sa composition et ses propriétés sont riches et exceptionnelles.",
+          "icon3_title": "KONJAC",
+          "icon3_detail": "Ses racines contiennent des fibres de glucomannanes qui sont hygroscopiques, c’est-à-dire qu’elles gonflent en présence d’eau. Elles forment un gel dans l’estomac.",
+          "detail": "Ingrédients par dose journalière : complexe LIPOSLIM [extraits de wakamé (Undaria pinnatifida) (405 mg) et de curcuma (Curcuma longa) (45 mg)], agent de charge (carbonate de calcium), glucomannane de konjac (Amorphophallus konjac) (200 mg), choline bitartrate (82,5 mg équivalent choline), extrait sec de feuilles de cassis (Ribes nigrum L.) (2000 mg équivalent plantes), agent de charge (cellulose microcristalline), antiagglomérants (dioxyde de silicium, stéarate de magnésium), vitamine B6 (pyridoxine), chlorure de chrome, vitamine B1 (thiamine).",
+          "button_title": "Voir tout les ingrédients",
+          "button_link": "shopify:\/\/collections\/all",
+          "table_title": "ANALYSE NUTRITIONNELLE POUR 1 COMPRIMÉ :",
+          "table_heading_1": "Heading 1",
+          "table_heading_2": "Heading 2"
+        }
+      },
+      "custom_faq_section": {
+        "type": "custom_faq_section",
+        "settings": {}
+      },
+      "1624437968673540d6": {
+        "type": "section-editorial",
+        "blocks": {
+          "69a0672a-9eb2-4764-be2a-3bc7b0f3f198": {
+            "type": "article",
+            "settings": {
+              "article_image": "shopify:\/\/shop_images\/visuel_C.png",
+              "article_title": "demo",
+              "article_discription": "<p>Demo Message<\/p>",
+              "article_button_text": "view all",
+              "article_button_link": "shopify:\/\/blogs\/perte-de-poids"
+            }
+          },
+          "946bc4fa-bab7-4203-a2c7-ac194b711968": {
+            "type": "article",
+            "settings": {
+              "article_image": "shopify:\/\/shop_images\/visuel_C.png",
+              "article_title": "demo 12345",
+              "article_discription": "<p>Demo Message<\/p>",
+              "article_button_text": "view al",
+              "article_button_link": "shopify:\/\/collections"
+            }
+          },
+          "3f9cf609-5463-4bfb-b912-d46bf8a1ed3e": {
+            "type": "article",
+            "settings": {
+              "article_image": "shopify:\/\/shop_images\/Mask_Group_1.png",
+              "article_title": "demo 2",
+              "article_discription": "<p>demo 4<\/p>",
+              "article_button_text": "view all",
+              "article_button_link": "shopify:\/\/blogs\/perte-de-poids\/retrouver-un-ventre-plat"
+            }
+          },
+          "2142defe-84c9-485f-9e9e-4a7e32dcafdc": {
+            "type": "article",
+            "settings": {
+              "article_image": "shopify:\/\/shop_images\/visuel_C.png",
+              "article_title": "demo",
+              "article_discription": "<p>message<\/p>",
+              "article_button_text": "view all",
+              "article_button_link": "shopify:\/\/blogs\/perte-de-poids"
+            }
+          },
+          "9102e9d9-ffd3-4014-8f26-dcebe92bb4f8": {
+            "type": "article",
+            "settings": {
+              "article_image": "shopify:\/\/shop_images\/visuel_C.png",
+              "article_title": "www",
+              "article_discription": "<p>Demo Message<\/p>",
+              "article_button_text": "view all",
+              "article_button_link": "shopify:\/\/blogs\/perte-de-poids"
+            }
+          }
+        },
+        "block_order": [
+          "69a0672a-9eb2-4764-be2a-3bc7b0f3f198",
+          "946bc4fa-bab7-4203-a2c7-ac194b711968",
+          "3f9cf609-5463-4bfb-b912-d46bf8a1ed3e",
+          "2142defe-84c9-485f-9e9e-4a7e32dcafdc",
+          "9102e9d9-ffd3-4014-8f26-dcebe92bb4f8"
+        ],
+        "settings": {
+          "heading": "VOS BESOINS",
+          "text": "UN CONSEIL ? DES AVIS ?"
+        }
+      },
+      "section-top-banner": {
+        "type": "section-top-banner",
+        "settings": {
+          "desktop_banner_image": "shopify:\/\/shop_images\/blog-title-bg.png",
+          "mobile_banner_image": "shopify:\/\/shop_images\/Capture_d_ecran_2021-07-05_a_13.36.51.png",
+          "heading_color": "#d02e2e",
+          "heading": "Minceur",
+          "subheading": "Subheading"
+        }
+      },
+      "custom-fields-products": {
+        "type": "custom-fields-products",
+        "settings": {}
+      },
+      "instagram-section": {
+        "type": "instagram-section",
+        "settings": {
+          "subheading": "SUIVEZ NOUS !",
+          "title": "FORTÉ PHARMA ET VOUS",
+          "html": "<div id=\"instagram-feed-box\"><\/div>"
+        }
+      },
+      "162486160505e2275a": {
+        "type": "instagram-section",
+        "settings": {
+          "subheading": "SUIVEZ NOUS !",
+          "title": "FORTÉ PHARMA ET VOUS",
+          "html": "<div id=\"instagram-feed-box\"><\/div>"
+        }
+      },
+      "section-stikcy-tab": {
+        "type": "section-stikcy-tab",
+        "blocks": {
+          "ca11a44e-5a3d-4e15-b816-e244901d7ac5": {
+            "type": "block_text_with_text",
+            "settings": {
+              "enable_bg_color": true,
+              "bg_color": "#ebebeb",
+              "title": "Main title",
+              "html_code1": "Hola Vous avez envie de perdre du poids car vous avez fait des écarts alimentaires, avez envie de préparer votre silhouette pour cet été ou pour un évènement spécial ? Et parce que nous savons que ce n'est pas toujours facile de mincir efficacement et durablement, nos experts ont développé Xtra Slim 700, la solution idéale pour vous accompagner dans votre objectif minceur.",
+              "left_title_1": "demo",
+              "html_code2": "Hola Vous avez envie de perdre du poids car vous avez fait des écarts alimentaires, avez envie de préparer votre silhouette pour cet été ou pour un évènement spécial ?",
+              "left_title_2": "dmeo 2",
+              "html_code3": "facile de mincir efficacement et durablement, nos experts ont développé Xtra Slim 700, la solution idéale pour vous accompagner dans votre objectif minceur.",
+              "right_title_1": "demo 3",
+              "html_code4": "ez fait des écarts alimentaires, avez envie de préparer votre silhouette pour cet été ou pour un évènement spécial ? Et parce que nous savons que ce n'est pas toujours facil",
+              "right_title_2": "demo 4",
+              "html_code5": "toujours facile de mincir efficacement et durablement, nos experts ont développé Xtra Slim 700, la solution idéale pour vous accompagner dans votre obj"
+            }
+          },
+          "71bedc76-b4fc-415e-bdab-6aca397c6fcc": {
+            "type": "block_simple_text",
+            "settings": {
+              "enbale_bg": true,
+              "bg_color": "#f7f7f7",
+              "headign_color": "#000",
+              "subheading_color": "#000",
+              "description_color": "#000",
+              "title": "ddd",
+              "subheading": "ddd",
+              "description": "dddd"
+            }
+          },
+          "4fc879fc-3354-48d0-b681-b6b420111f27": {
+            "type": "block_simple_text",
+            "settings": {
+              "enbale_bg": true,
+              "bg_color": "#e41717",
+              "headign_color": "#000",
+              "subheading_color": "#000",
+              "description_color": "#000",
+              "title": "Hola",
+              "subheading": "Hola",
+              "description": "sjsjsn siss s sus bsb s"
+            }
+          },
+          "753bd120-40a8-4108-836b-8a5812e90b6b": {
+            "type": "block_ingredients",
+            "settings": {
+              "title": "Ingrediensts",
+              "icon1_title": "sss",
+              "icon1_detail": "ssss",
+              "icon2_title": "sss",
+              "icon2_detail": "ss",
+              "icon3_title": "",
+              "icon3_detail": "",
+              "detail": "Tell a Story",
+              "button_title": "",
+              "button_link": "",
+              "table_title": "",
+              "table_heading_1": "",
+              "table_heading_2": "",
+              "table_row_left1": "",
+              "table_row_right1": "",
+              "table_row_left2": "",
+              "table_row_right2": "",
+              "table_row_left3": "",
+              "table_row_right3": "",
+              "table_row_left4": "",
+              "table_row_right4": "",
+              "table_row_left5": "",
+              "table_row_right5": "",
+              "table_row_left6": "",
+              "table_row_right6": "",
+              "table_row_left7": "",
+              "table_row_right7": "",
+              "table_row_left8": "",
+              "table_row_right8": "",
+              "table_row_left9": "",
+              "table_row_right9": "",
+              "table_row_left10": "",
+              "table_row_right10": "",
+              "table_row_left11": "",
+              "table_row_right11": "",
+              "table_row_left12": "",
+              "table_row_right12": ""
+            }
+          },
+          "15ce58f0-f83d-4bea-bf2f-45c6db1f5810": {
+            "type": "image_with_text-table",
+            "settings": {
+              "title": "Image texte",
+              "description": "ssss",
+              "table_title_1": "",
+              "table_title_2": "",
+              "table_row_left_1": "",
+              "table_row_right_1": "",
+              "table_row_left_2": "",
+              "table_row_right_2": "",
+              "table_row_left_3": "",
+              "table_row_right_3": "",
+              "table_row_left_4": "",
+              "table_row_right_4": ""
+            }
+          }
+        },
+        "block_order": [
+          "ca11a44e-5a3d-4e15-b816-e244901d7ac5",
+          "71bedc76-b4fc-415e-bdab-6aca397c6fcc",
+          "4fc879fc-3354-48d0-b681-b6b420111f27",
+          "753bd120-40a8-4108-836b-8a5812e90b6b",
+          "15ce58f0-f83d-4bea-bf2f-45c6db1f5810"
+        ],
+        "settings": {
+          "tab1": "Tab 1",
+          "tab2": "Tab 2",
+          "tab3": "Tab 3",
+          "tab4": "Tab 4",
+          "tab5": "Tab 5"
+        }
+      },
+      "anchor-menu-tab": {
+        "type": "anchor-menu-tab",
+        "settings": {
+          "title1": "demo 1",
+          "title2": "demo 2",
+          "title3": "demo 3",
+          "title4": "demo 4",
+          "title5": "demo 5"
+        }
+      },
+      "diagnostic-section": {
+        "type": "diagnostic-section",
+        "settings": {
+          "bg_color_enable": true,
+          "bg_color": "#e73439",
+          "title": "df",
+          "subtitle": "fg",
+          "detail": "<p>vev<\/p>",
+          "detail_1": "fve",
+          "svg_icon_name": "beaute-white",
+          "icon1_link": "",
+          "icon1": "dfb",
+          "icon1_des": "feb",
+          "svg_icon_name2": "beaute-white",
+          "icon2_link": "",
+          "icon2": "fbd",
+          "icon2_des": "dbf",
+          "svg_icon_name3": "beaute-white",
+          "icon3_link": "",
+          "icon3": "htteh",
+          "icon3_des": "thbrbvrb",
+          "svg_icon_name4": "beaute-white",
+          "icon4_link": "",
+          "icon4": "btgbrbbr",
+          "icon4_des": "brgngbrb",
+          "svg_icon_name5": "beaute-white",
+          "icon5_link": "",
+          "icon5": "rgbnnrny",
+          "icon5_des": "rtghrb",
+          "svg_icon_name6": "beaute-white",
+          "icon6_link": "",
+          "icon6": "rtnrn",
+          "icon6_des": "rtnrnrnr",
+          "button_text": "rnrn",
+          "button_link": "shopify:\/\/collections\/all"
+        }
+      },
+      "simple-text-section": {
+        "type": "simple-text-section",
+        "settings": {
+          "enbale_bg": true,
+          "bg_color": "#f7f7f7",
+          "headign_color": "#000000",
+          "subheading_color": "#000000",
+          "description_color": "#000000",
+          "title": "dgb",
+          "subheading": "rgn",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        }
+      },
+      "section-image-right-text-left-with-table": {
+        "type": "section-image-right-text-left-with-table",
+        "settings": {
+          "title": "Title",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n<ul>\n<li>fjfjfjf<\/li>\n<li>fjfjfjf<\/li>\n\n<\/ul>",
+          "img1": "shopify:\/\/shop_images\/Group_524_2.png",
+          "table_title_1": "fb",
+          "table_title_2": "ebf",
+          "table_row_left_1": "eb",
+          "table_row_right_1": "ebb",
+          "table_row_left_2": "brw",
+          "table_row_right_2": "bhy",
+          "table_row_left_3": "wef",
+          "table_row_right_3": "fbe",
+          "table_row_left_4": "bgrt",
+          "table_row_right_4": "rwthw"
+        }
+      },
+      "1625486855ea0cf4de": {
+        "type": "diagnostic-section",
+        "settings": {
+          "bg_color_enable": true,
+          "bg_color": "#e73439",
+          "title": "Heading text",
+          "subtitle": "Sub heading",
+          "detail": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too<\/p>",
+          "detail_1": "Icon section titel",
+          "svg_icon_name": "muscle-white",
+          "icon1_link": "",
+          "icon1": "Minceur",
+          "icon1_des": "Description 1",
+          "svg_icon_name2": "sommeil-white",
+          "icon2_link": "",
+          "icon2": "title 2",
+          "icon2_des": "Description 2",
+          "svg_icon_name3": "beaute-white",
+          "icon3_link": "",
+          "icon3": "Title 3",
+          "icon3_des": "Description 3",
+          "svg_icon_name4": "beaute-white",
+          "icon4_link": "",
+          "icon4": "title 4",
+          "icon4_des": "Description 4",
+          "svg_icon_name5": "beaute-white",
+          "icon5_link": "",
+          "icon5": "title 5",
+          "icon5_des": "Description 5",
+          "svg_icon_name6": "beaute-white",
+          "icon6_link": "",
+          "icon6": "Title 6",
+          "icon6_des": "Description 6",
+          "button_text": "Button label",
+          "button_link": "shopify:\/\/pages\/diagnostic-en-ligne"
+        }
+      },
+      "text-with-grid-section": {
+        "type": "text-with-grid-section",
+        "settings": {
+          "enable_bg_color": false,
+          "bg_color": "#cc4b4b",
+          "title": "Heading",
+          "html_code1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "left_title_1": "Left 1",
+          "html_code2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "left_title_2": "Left 2",
+          "html_code3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "right_title_1": "Right 1",
+          "html_code4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+          "right_title_2": "Right 2",
+          "html_code5": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        }
+      },
+      "162563830849be0377": {
+        "type": "section-stikcy-tab",
+        "blocks": {
+          "6a35174e-72ab-4594-92fb-b885a1ad8ef5": {
+            "type": "block_simple_text",
+            "settings": {
+              "tab_id": "tab1",
+              "enbale_bg": true,
+              "bg_color": "#f7f7f7",
+              "headign_color": "#000",
+              "subheading_color": "#000",
+              "description_color": "#000",
+              "title": "TITRE",
+              "subheading": "SOUS-TITRE",
+              "description": "LoremNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. LoremNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. LoremNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. LoremNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+            }
+          },
+          "20187520-92a6-4a91-a48a-b138d9f7e401": {
+            "type": "block_ingredients",
+            "settings": {
+              "tab_id": "tab2",
+              "title": "LES ACTIFS (INGRÉDIENTS)",
+              "icon1": "shopify:\/\/shop_images\/pexels-chokniti-khongchum-2280551_1.png",
+              "icon1_title": "WAKAMÉ",
+              "icon1_detail": "Il contribue au métabolisme des graisses, qui aide au contrôle du poids et à réduire l’appétit.",
+              "icon2": "shopify:\/\/shop_images\/pexels-chokniti-khongchum-2280551_1.png",
+              "icon2_title": "CURCUMA",
+              "icon2_detail": "Comme on parle de superfruits, on peut parler de super-épice pour le curcuma tant sa composition et ses propriétés sont riches et exceptionnelles.",
+              "icon3": "shopify:\/\/shop_images\/pexels-chokniti-khongchum-2280551_1.png",
+              "icon3_title": "KONJAC",
+              "icon3_detail": "Ses racines contiennent des fibres de glucomannanes qui sont hygroscopiques, c’est-à-dire qu’elles gonflent en présence d’eau. Elles forment un gel dans l’estomac.",
+              "detail": "Ingrédients par dose journalière : complexe LIPOSLIM [extraits de wakamé (Undaria pinnatifida) (405 mg) et de curcuma (Curcuma longa) (45 mg)], agent de charge (carbonate de calcium), glucomannane de konjac (Amorphophallus konjac) (200 mg), choline bitartrate (82,5 mg équivalent choline), extrait sec de feuilles de cassis (Ribes nigrum L.) (2000 mg équivalent plantes), agent de charge (cellulose microcristalline), antiagglomérants (dioxyde de silicium, stéarate de magnésium), vitamine B6 (pyridoxine), chlorure de chrome, vitamine B1 (thiamine).",
+              "button_title": "View More",
+              "button_link": "shopify:\/\/collections\/all",
+              "table_title": "ANALYSE NUTRITIONNELLE POUR 1 COMPRIMÉ :",
+              "table_heading_1": "titre",
+              "table_heading_2": "titre",
+              "table_row_left1": "1",
+              "table_row_right1": "2",
+              "table_row_left2": "3",
+              "table_row_right2": "4",
+              "table_row_left3": "5",
+              "table_row_right3": "6",
+              "table_row_left4": "7",
+              "table_row_right4": "8",
+              "table_row_left5": "9",
+              "table_row_right5": "0",
+              "table_row_left6": "11",
+              "table_row_right6": "12",
+              "table_row_left7": "",
+              "table_row_right7": "",
+              "table_row_left8": "",
+              "table_row_right8": "",
+              "table_row_left9": "",
+              "table_row_right9": "",
+              "table_row_left10": "",
+              "table_row_right10": "",
+              "table_row_left11": "",
+              "table_row_right11": "",
+              "table_row_left12": "",
+              "table_row_right12": ""
+            }
+          },
+          "e3b6b75e-2a46-42ea-be76-a7b8a44d54bc": {
+            "type": "block_key_figures",
+            "settings": {
+              "tab_id": "tab3",
+              "bg_color_enable": true,
+              "bg_color": "#e73439",
+              "title": "COMMENT L’UTILISER ?",
+              "num1": "2",
+              "num1_title": "gélules par jour",
+              "num1_detail": "",
+              "num2": "2",
+              "num2_title": "fois par jour",
+              "num2_detail": "Soit 2 gélules d’XtraSlim 700 avant les 2 principaux repas avec un grand",
+              "num3": "1",
+              "num3_title": "mois",
+              "num3_detail": "A renouveler jusqu'à 3 mois consécutifs.",
+              "detail": "<p>Complément alimentaire à  utiliser dans le cadre d’une alimentation saine et variée.<br\/>Ne pas dépasser la dose journalière conseillée.<br\/>Tenir hors de la portée des jeunes enfants. <br\/>Déconseillé aux femmes enceintes ou qui allaitent et aux enfants de moins de 12 ans sans avis médical. <br\/>Consultez votre médecin ou votre pharmacien en cas d’usage concomitant d’anticoagulants. <br\/>Ne pas utiliser en cas de sensibilité à l’iode ou de troubles de la thyroïde <\/p>"
+            }
+          },
+          "bf63831c-28db-4ebd-9086-1bb5efbd3cd9": {
+            "type": "block_text_with_text",
+            "settings": {
+              "tab_id": "tab4",
+              "enable_bg_color": true,
+              "bg_color": "#bcc6bb",
+              "title": "Efficacité ou action",
+              "html_code1": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+              "left_title_1": "Efficacité 1",
+              "html_code2": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+              "left_title_2": "Efficacité 2",
+              "html_code3": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+              "right_title_1": "Efficacité 3",
+              "html_code4": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+              "right_title_2": "Efficacité 4",
+              "html_code5": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet."
+            }
+          },
+          "73630ac9-b63d-48d6-99aa-27fe3def26c8": {
+            "type": "text_right_image_left",
+            "settings": {
+              "tab_id": "tab5",
+              "title": "Vous conseil",
+              "subtitle": "Notre expert",
+              "code": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.<\/p>\n<ul>\n<li>Lorem ipsum dolor sit amet<\/li>\n<li>Lorem ipsum dolor sit amet<\/li>\n<li>Lorem ipsum dolor sit amet<\/li>\n<\/ul>",
+              "image": "shopify:\/\/shop_images\/Group_524_2.png"
+            }
+          }
+        },
+        "block_order": [
+          "6a35174e-72ab-4594-92fb-b885a1ad8ef5",
+          "20187520-92a6-4a91-a48a-b138d9f7e401",
+          "e3b6b75e-2a46-42ea-be76-a7b8a44d54bc",
+          "bf63831c-28db-4ebd-9086-1bb5efbd3cd9",
+          "73630ac9-b63d-48d6-99aa-27fe3def26c8"
+        ],
+        "settings": {
+          "tab1": "Tab1",
+          "tab2": "tab2",
+          "tab3": "tab3",
+          "tab4": "tab4",
+          "tab5": "tab5"
+        }
+      },
+      "contact-template": {
+        "type": "contact-template",
+        "settings": {
+          "show_page_title": false,
+          "banner_height": "small",
+          "banner_subheading": "",
+          "banner_text": "",
+          "banner_text_position": "center",
+          "banner_color_text": "#ffffff",
+          "banner_color_overlay": "#333333",
+          "banner_overlay_opacity": 0,
+          "form_heading": "Contact us"
+        }
+      },
+      "1625734223eadc4ac1": {
+        "type": "section-top-banner",
+        "settings": {
+          "desktop_banner_image": "shopify:\/\/shop_images\/blog-title-bg.png",
+          "mobile_banner_image": "shopify:\/\/shop_images\/Group_436_1.png",
+          "heading_color": "#c56f6f",
+          "heading": "MINCEUR",
+          "subheading": "Sub Heading"
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "16146916391fb76963",
+      "1614692051ad0045fc",
+      "1614692520dbcb9a26",
+      "1625486855ea0cf4de",
+      "1614692810592d4c8a",
+      "1624437968673540d6",
+      "image-with-text",
+      "162486160505e2275a",
+      "newsletter",
+      "16146931345ed0ef97",
+      "162563830849be0377",
+      "1625734223eadc4ac1"
+    ]
+  },
+  "presets": {
+    "Chelsea": {
+      "color_heading_new": "#000000",
+      "color_text_new": "#000000",
+      "color_error_new": "#d02e2e",
+      "color_border_new": "#000000",
+      "color_background_new": "#ffffff",
+      "color_button_primary_bg": "#8dcbe9",
+      "color_button_secondary_bg": "#ffffff",
+      "color_badge_bg": "#8dcbe9",
+      "type_heading_font": "nunito_n4",
+      "type_heading_letter_spacing": 0,
+      "base_font_size": 14,
+      "type_base_font": "nunito_sans_n4",
+      "body_font_size": 14,
+      "type_base_letter_spacing": 0,
+      "transition_grid_items": true,
+      "transition_images_fade": true,
+      "transition_collections_list": true,
+      "show_search": true,
+      "image_aspect_ratio": 1,
+      "image_size": "cover",
+      "show_quick_view": true,
+      "show_quick_view_description": true,
+      "show_quantity": true,
+      "hover_image": false,
+      "enable_payment_button": true,
+      "enable_color_swatches": true,
+      "color_swatches_style": "circle",
+      "products_rows": 4,
+      "products_columns": 4,
+      "enable_video_looping": false,
+      "enable_ajax_cart": true,
+      "enable_cart_order_notes": false,
+      "show_continue_shopping": true,
+      "tax_text": "Excluding taxes and shipping",
+      "show_breadcrumbs": true,
+      "show_reviews": false,
+      "enable_yotpo": false,
+      "yotpo_ID": "",
+      "favicon": "",
+      "twitter_url": "",
+      "facebook_url": "",
+      "pinterest_url": "",
+      "instagram_url": "",
+      "tumblr_url": "",
+      "youtube_url": "",
+      "rss_url": "",
+      "share_on_twitter": true,
+      "share_on_facebook": true,
+      "share_on_pinterest": true,
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "twitter_via": "",
+      "sections": {
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "show_announcement": true,
+            "show_announcement_on_mobile": true,
+            "text": "<p>Broadcast sales, promos, or other offerings here<\/p>",
+            "link": ""
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "settings": {
+            "show_popup": "disabled",
+            "popup_position": "left",
+            "popup_header": "Use the popup to catch emails and showcase promotions",
+            "popup_content": "<p>Popups can detract from a user's experience, so try to limit how often they appear.<\/p>",
+            "text_alignment": "left",
+            "show_popup_newsletter": true,
+            "popup_delay": 5,
+            "popup_reappear_time": "7",
+            "popup_image": ""
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_other": "",
+            "logo_max_width": 100,
+            "show_site_name": true,
+            "menu_list": "main-menu",
+            "links_position": "links_center",
+            "logo_position": "logo_left",
+            "meganav_image": "",
+            "image_aspect_ratio": 0.7,
+            "meganav_image_heading": "",
+            "meganav_image_link": ""
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-block-menu": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "title": "Helpful Links",
+                "mobile_hide_block": true
+              }
+            },
+            "footer-block-text": {
+              "type": "text",
+              "settings": {
+                "title": "Information",
+                "text": "<p>This text block is a great place to discuss shipping policies, or terms and conditions info.<\/p>",
+                "mobile_hide_block": false
+              }
+            },
+            "footer-block-newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "",
+                "mobile_hide_block": false
+              }
+            }
+          },
+          "block_order": [
+            "footer-block-menu",
+            "footer-block-text",
+            "footer-block-newsletter"
+          ],
+          "settings": {
+            "show_payment_icons": true,
+            "show_social_icons": true,
+            "menu": "",
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "product_layout": "slideshow",
+            "image_size": "large",
+            "add_cart_position": "top",
+            "lightbox": true,
+            "show_vendor": true,
+            "show_quantity": false,
+            "show_cart_bar": true,
+            "enable_payment_button": true,
+            "show_newsletter": true,
+            "text_newsletter": "<p>Notify me when this product is available:<\/p>",
+            "page_tab_1": "",
+            "page_tab_2": "",
+            "page_tab_3": "",
+            "product_slideshow_dots": false,
+            "product_slideshow_arrows": false,
+            "enable_video_looping": false
+          }
+        },
+        "list-collections-page-template": {
+          "type": "list-collections-page-template",
+          "settings": {
+            "show_description": true,
+            "collections_columns": 2,
+            "coll_text_position": "center",
+            "button_text": "Shop Now",
+            "text_color": "#ffffff",
+            "overlay_color": "#333333",
+            "overlay_opacity": 0
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "show_blog_name": false,
+            "show_rss": false,
+            "show_featured_post": true,
+            "tags": true,
+            "author": true,
+            "date": true,
+            "show_comments": true,
+            "article_rows": 4,
+            "article_columns": 4
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_title": true,
+            "show_sort_filter": true,
+            "filter_mode": "none",
+            "position_filters": "left",
+            "show_banner": true,
+            "banner_height": "normal",
+            "banner_text_position": "center",
+            "banner_color_text": "#ffffff",
+            "banner_color_overlay": "#333333",
+            "banner_overlay_opacity": 0,
+            "featured_image": "",
+            "featured_heading": "Use this image showcase promotional content.",
+            "featured_text": "<p>Elaborate on it with rich text<\/p>",
+            "featured_button_text": "Learn More",
+            "featured_button_link": "",
+            "featured_button_style": "primary",
+            "featured_color_text": "#ffffff",
+            "featured_color_overlay": "#333333",
+            "featured_overlay_opacity": 0
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "image_mobile": "",
+                "image_position": "center-center",
+                "alignment": "center",
+                "color_style": "white",
+                "subheading": "",
+                "title": "Welcome to Modular",
+                "text": "<p>A unique layout with a striking design<\/p>",
+                "cta": "Learn More",
+                "link": "",
+                "cta_primary_btn_style": "primary",
+                "cta_2": "",
+                "link_2": "",
+                "cta_secondary_btn_style": "secondary",
+                "overlay_color": "#333333",
+                "overlay_opacity": 0
+              }
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "image_mobile": "",
+                "image_position": "center-center",
+                "alignment": "center",
+                "color_style": "white",
+                "subheading": "",
+                "title": "Welcome to Modular",
+                "text": "<p>A unique layout with a striking design<\/p>",
+                "cta": "Learn More",
+                "link": "",
+                "cta_primary_btn_style": "primary",
+                "cta_2": "",
+                "link_2": "",
+                "cta_secondary_btn_style": "secondary",
+                "overlay_color": "#333333",
+                "overlay_opacity": 0
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {
+            "show_arrow_down": false,
+            "autoplay": true,
+            "duration": 4,
+            "transition": "zoom-out",
+            "dots_position": "center",
+            "slide_height": "five-fifty-height-hero",
+            "button_size": "normal"
+          }
+        },
+        "rich-text": {
+          "type": "rich-text",
+          "settings": {
+            "layout": "split",
+            "subheading": "Humble Beginnings",
+            "title": "Modular is a powerful Shopify theme that will set you apart from the rest.",
+            "content": "<p>It features ample space to showcase your imagery with Mosaic, Image with text, and Slideshow sections ... and even this Rich Text section itself.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "image-with-text": {
+          "type": "image-with-text",
+          "blocks": {
+            "image-with-text-0": {
+              "type": "gallery_image",
+              "settings": {
+                "slide": ""
+              }
+            },
+            "image-with-text-1": {
+              "type": "gallery_image",
+              "settings": {
+                "slide": ""
+              }
+            }
+          },
+          "block_order": [
+            "image-with-text-0",
+            "image-with-text-1"
+          ],
+          "settings": {
+            "show_nav_arrows": true,
+            "color_style": "white",
+            "transition": "fade",
+            "autoplay": true,
+            "duration": 4,
+            "show_margins": false,
+            "slide_height": "five-fifty-height-hero",
+            "slide_image_position": "left",
+            "slide_image_width": "med_s12|med_s12",
+            "subheading": "Humble Beginnings",
+            "title": "Tell a Story",
+            "content": "<p>By showcasing a product, collection, or your brand.<\/p>",
+            "cta": "Shop Now",
+            "link": "",
+            "button_style": "primary"
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "title": "",
+            "featured_collection": "frontpage",
+            "products_layout": "grid",
+            "show_button": true,
+            "button_style": "primary",
+            "color_style": "white"
+          }
+        },
+        "list-collections": {
+          "type": "list-collections",
+          "blocks": {
+            "list-collections-0": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-1": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-2": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-3": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-4": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            }
+          },
+          "block_order": [
+            "list-collections-0",
+            "list-collections-1",
+            "list-collections-2",
+            "list-collections-3",
+            "list-collections-4"
+          ],
+          "settings": {
+            "title": "",
+            "blocks_height": "default-height",
+            "coll_text_position": "bottom_left",
+            "show_description": true,
+            "text_color": "#ffffff",
+            "overlay_color": "#333333",
+            "overlay_opacity": 0
+          }
+        },
+        "testimonials": {
+          "type": "testimonials",
+          "blocks": {
+            "testimonials-0": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            },
+            "testimonials-1": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            },
+            "testimonials-2": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            }
+          },
+          "block_order": [
+            "testimonials-0",
+            "testimonials-1",
+            "testimonials-2"
+          ],
+          "settings": {
+            "title": "",
+            "title_position": "center",
+            "blocks_text_align": "justify",
+            "hide_quotes": false,
+            "columns": 3
+          }
+        },
+        "featured-blog": {
+          "type": "featured-blog",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "cta": "Read More",
+            "button_style": "primary",
+            "tags": true,
+            "author": true,
+            "date": true,
+            "show_comments": true,
+            "image_aspect_ratio": 0.7,
+            "article_rows": 1,
+            "article_columns": 3
+          }
+        },
+        "logo-list": {
+          "type": "logo-list",
+          "blocks": {
+            "logo-list-0": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-1": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-2": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-3": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-4": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            }
+          },
+          "block_order": [
+            "logo-list-0",
+            "logo-list-1",
+            "logo-list-2",
+            "logo-list-3",
+            "logo-list-4"
+          ],
+          "settings": {
+            "color_logos_bg": ""
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "color": "#333",
+            "background": "#ffffff",
+            "title": "Newsletter",
+            "content": "<p>Let's keep in touch<\/p>"
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "rich-text",
+        "image-with-text",
+        "featured-collection",
+        "list-collections",
+        "testimonials",
+        "featured-blog",
+        "logo-list",
+        "newsletter"
+      ]
+    },
+    "Mayfair": {
+      "color_heading_new": "#2e3234",
+      "color_text_new": "#222222",
+      "color_error_new": "#e35252",
+      "color_border_new": "#e4e4e4",
+      "color_background_new": "#ffffff",
+      "color_button_primary_bg": "#ffffff",
+      "color_button_secondary_bg": "#000000",
+      "color_badge_bg": "#2e3234",
+      "type_heading_font": "harmonia_sans_n7",
+      "type_heading_letter_spacing": 0,
+      "base_font_size": 14,
+      "type_base_font": "rubik_n4",
+      "body_font_size": 14,
+      "type_base_letter_spacing": 0,
+      "transition_grid_items": true,
+      "transition_images_fade": true,
+      "transition_collections_list": true,
+      "show_search": true,
+      "image_aspect_ratio": 1.3,
+      "image_size": "cover",
+      "show_quick_view": true,
+      "show_quick_view_description": true,
+      "show_quantity": true,
+      "hover_image": false,
+      "enable_payment_button": true,
+      "enable_color_swatches": true,
+      "color_swatches_style": "circle",
+      "products_rows": 4,
+      "products_columns": 4,
+      "enable_video_looping": false,
+      "enable_ajax_cart": true,
+      "enable_cart_order_notes": false,
+      "show_continue_shopping": true,
+      "tax_text": "Excluding taxes and shipping",
+      "show_breadcrumbs": true,
+      "show_reviews": false,
+      "enable_yotpo": false,
+      "yotpo_ID": "",
+      "favicon": "",
+      "twitter_url": "",
+      "facebook_url": "",
+      "pinterest_url": "",
+      "instagram_url": "",
+      "tumblr_url": "",
+      "youtube_url": "",
+      "rss_url": "",
+      "share_on_twitter": true,
+      "share_on_facebook": true,
+      "share_on_pinterest": true,
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "twitter_via": "",
+      "sections": {
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "show_announcement": true,
+            "show_announcement_on_mobile": true,
+            "text": "<p>Free Shipping on Orders over $100<\/p>",
+            "link": ""
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "settings": {
+            "show_popup": "disabled",
+            "popup_position": "right",
+            "popup_header": "Use the popup to catch emails and showcase promotions",
+            "popup_content": "<p>Popups can detract from a user's experience, so try to limit how often they appear.<\/p>",
+            "text_alignment": "center",
+            "show_popup_newsletter": true,
+            "popup_delay": 5,
+            "popup_reappear_time": "7",
+            "popup_image": ""
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_other": "",
+            "logo_max_width": 100,
+            "show_site_name": true,
+            "menu_list": "main-menu",
+            "links_position": "links_left",
+            "logo_position": "logo_center",
+            "meganav_image": "",
+            "image_aspect_ratio": 0.7,
+            "meganav_image_heading": "",
+            "meganav_image_link": ""
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-block-menu": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "title": "Helpful Links",
+                "mobile_hide_block": true
+              }
+            },
+            "footer-block-text": {
+              "type": "text",
+              "settings": {
+                "title": "Information",
+                "text": "<p>This text block is a great place to discuss shipping policies, or terms and conditions info.<\/p>",
+                "mobile_hide_block": false
+              }
+            },
+            "footer-block-newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "",
+                "mobile_hide_block": false
+              }
+            }
+          },
+          "block_order": [
+            "footer-block-menu",
+            "footer-block-text",
+            "footer-block-newsletter"
+          ],
+          "settings": {
+            "show_payment_icons": true,
+            "show_social_icons": true,
+            "menu": "",
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "product_layout": "slideshow",
+            "image_size": "medium",
+            "add_cart_position": "top",
+            "lightbox": true,
+            "show_vendor": false,
+            "show_quantity": true,
+            "show_cart_bar": true,
+            "enable_payment_button": true,
+            "show_newsletter": true,
+            "text_newsletter": "<p>Notify me when this product is available:<\/p>",
+            "page_tab_1": "",
+            "page_tab_2": "",
+            "page_tab_3": "",
+            "product_slideshow_dots": false,
+            "product_slideshow_arrows": false,
+            "enable_video_looping": false
+          }
+        },
+        "list-collections-page-template": {
+          "type": "list-collections-page-template",
+          "settings": {
+            "show_description": true,
+            "collections_columns": 2,
+            "coll_text_position": "center",
+            "button_text": "View Products",
+            "text_color": "#ffffff",
+            "overlay_color": "#222222",
+            "overlay_opacity": 10
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "show_blog_name": false,
+            "show_rss": false,
+            "show_featured_post": true,
+            "tags": true,
+            "author": true,
+            "date": true,
+            "show_comments": true,
+            "article_rows": 4,
+            "article_columns": 4
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_title": true,
+            "show_sort_filter": true,
+            "filter_mode": "group",
+            "position_filters": "left",
+            "show_banner": true,
+            "banner_height": "normal",
+            "banner_text_position": "bottom-left",
+            "banner_color_text": "#ffffff",
+            "banner_color_overlay": "#222222",
+            "banner_overlay_opacity": 10,
+            "featured_image": "",
+            "featured_heading": "Use this image showcase promotional content.",
+            "featured_text": "<p>Elaborate on it with rich text<\/p>",
+            "featured_button_text": "Learn More",
+            "featured_button_link": "",
+            "featured_button_style": "primary",
+            "featured_color_text": "#ffffff",
+            "featured_color_overlay": "#222222",
+            "featured_overlay_opacity": 10
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "image_mobile": "",
+                "image_position": "center-center",
+                "alignment": "bottom-left",
+                "color_style": "white",
+                "subheading": "",
+                "title": "Welcome to Modular",
+                "text": "<p>A unique layout with a striking design<\/p>",
+                "cta": "Learn More",
+                "link": "",
+                "cta_primary_btn_style": "secondary",
+                "cta_2": "Shop Now",
+                "link_2": "",
+                "cta_secondary_btn_style": "secondary",
+                "overlay_color": "#222222",
+                "overlay_opacity": 10
+              }
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "image_mobile": "",
+                "image_position": "center-center",
+                "alignment": "center",
+                "color_style": "white",
+                "subheading": "",
+                "title": "Welcome to Modular",
+                "text": "<p>A unique layout with a striking design<\/p>",
+                "cta": "Learn More",
+                "link": "",
+                "cta_primary_btn_style": "primary",
+                "cta_2": "Shop Now",
+                "link_2": "",
+                "cta_secondary_btn_style": "secondary",
+                "overlay_color": "#222222",
+                "overlay_opacity": 10
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {
+            "show_arrow_down": false,
+            "autoplay": true,
+            "duration": 4,
+            "transition": "fade",
+            "dots_position": "center",
+            "slide_height": "one-hundred-height-hero",
+            "button_size": "normal"
+          }
+        },
+        "rich-text": {
+          "type": "rich-text",
+          "settings": {
+            "layout": "split",
+            "subheading": "Humble Beginnings",
+            "title": "Modular is a powerful Shopify theme that will set you apart from the rest.",
+            "content": "<p>It features ample space to showcase your imagery with Mosaic, Image with text, and Slideshow sections ... and even this Rich Text section itself.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "image-with-text": {
+          "type": "image-with-text",
+          "blocks": {
+            "image-with-text-0": {
+              "type": "gallery_image",
+              "settings": {
+                "slide": ""
+              }
+            },
+            "image-with-text-1": {
+              "type": "gallery_image",
+              "settings": {
+                "slide": ""
+              }
+            }
+          },
+          "block_order": [
+            "image-with-text-0",
+            "image-with-text-1"
+          ],
+          "settings": {
+            "show_nav_arrows": true,
+            "color_style": "white",
+            "transition": "fade",
+            "autoplay": true,
+            "duration": 4,
+            "show_margins": false,
+            "slide_height": "five-fifty-height-hero",
+            "slide_image_position": "left",
+            "slide_image_width": "med_s12|med_s12",
+            "subheading": "Humble Beginnings",
+            "title": "Tell a Story",
+            "content": "<p>By showcasing a product, collection, or your brand.<\/p>",
+            "cta": "Shop Now",
+            "link": "",
+            "button_style": "primary"
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "title": "",
+            "featured_collection": "frontpage",
+            "products_layout": "carousel",
+            "show_button": true,
+            "button_style": "primary",
+            "color_style": "black"
+          }
+        },
+        "list-collections": {
+          "type": "list-collections",
+          "blocks": {
+            "list-collections-0": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-1": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-2": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-3": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-4": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            }
+          },
+          "block_order": [
+            "list-collections-0",
+            "list-collections-1",
+            "list-collections-2",
+            "list-collections-3",
+            "list-collections-4"
+          ],
+          "settings": {
+            "title": "",
+            "blocks_height": "default-height",
+            "coll_text_position": "bottom_left",
+            "show_description": true,
+            "text_color": "#ffffff",
+            "overlay_color": "#222222",
+            "overlay_opacity": 10
+          }
+        },
+        "testimonials": {
+          "type": "testimonials",
+          "blocks": {
+            "testimonials-0": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            },
+            "testimonials-1": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            },
+            "testimonials-2": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            }
+          },
+          "block_order": [
+            "testimonials-0",
+            "testimonials-1",
+            "testimonials-2"
+          ],
+          "settings": {
+            "title": "",
+            "title_position": "left",
+            "blocks_text_align": "justify",
+            "hide_quotes": false,
+            "columns": 3
+          }
+        },
+        "featured-blog": {
+          "type": "featured-blog",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "cta": "Read More",
+            "button_style": "primary",
+            "tags": true,
+            "author": true,
+            "date": true,
+            "show_comments": true,
+            "image_aspect_ratio": 0.7,
+            "article_rows": 1,
+            "article_columns": 3
+          }
+        },
+        "logo-list": {
+          "type": "logo-list",
+          "blocks": {
+            "logo-list-0": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-1": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-2": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-3": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-4": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            }
+          },
+          "block_order": [
+            "logo-list-0",
+            "logo-list-1",
+            "logo-list-2",
+            "logo-list-3",
+            "logo-list-4"
+          ],
+          "settings": {
+            "color_logos_bg": ""
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "color": "#222222",
+            "background": "#ffffff",
+            "title": "Newsletter",
+            "content": "<p>Let's keep in touch<\/p>"
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "rich-text",
+        "image-with-text",
+        "featured-collection",
+        "testimonials",
+        "featured-blog",
+        "logo-list",
+        "newsletter"
+      ]
+    },
+    "Hoxton": {
+      "color_heading_new": "#000000",
+      "color_text_new": "#000000",
+      "color_error_new": "#d02e2e",
+      "color_border_new": "#e4e4e4",
+      "color_background_new": "#ffffff",
+      "color_button_primary_bg": "#000000",
+      "color_button_secondary_bg": "#ffffff",
+      "color_badge_bg": "#2e3234",
+      "type_heading_font": "optima_nova_n4",
+      "type_heading_letter_spacing": 0,
+      "base_font_size": 14,
+      "type_base_font": "chivo_n4",
+      "body_font_size": 14,
+      "type_base_letter_spacing": 0,
+      "transition_grid_items": true,
+      "transition_images_fade": true,
+      "transition_collections_list": true,
+      "show_search": true,
+      "image_aspect_ratio": 1,
+      "image_size": "cover",
+      "show_quick_view": true,
+      "show_quick_view_description": true,
+      "show_quantity": true,
+      "hover_image": false,
+      "enable_payment_button": true,
+      "enable_color_swatches": true,
+      "color_swatches_style": "circle",
+      "products_rows": 4,
+      "products_columns": 4,
+      "enable_video_looping": false,
+      "enable_ajax_cart": true,
+      "enable_cart_order_notes": false,
+      "show_continue_shopping": true,
+      "tax_text": "Excluding taxes and shipping",
+      "show_breadcrumbs": true,
+      "show_reviews": false,
+      "enable_yotpo": false,
+      "yotpo_ID": "",
+      "favicon": "",
+      "twitter_url": "",
+      "facebook_url": "",
+      "pinterest_url": "",
+      "instagram_url": "",
+      "tumblr_url": "",
+      "youtube_url": "",
+      "rss_url": "",
+      "share_on_twitter": true,
+      "share_on_facebook": true,
+      "share_on_pinterest": true,
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "twitter_via": "",
+      "sections": {
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "show_announcement": true,
+            "show_announcement_on_mobile": true,
+            "text": "<p>Broadcast sales, promos, or other offerings here<\/p>",
+            "link": ""
+          }
+        },
+        "popup": {
+          "type": "popup",
+          "settings": {
+            "show_popup": "disabled",
+            "popup_position": "left",
+            "popup_header": "Use the popup to catch emails and showcase promotions",
+            "popup_content": "<p>Popups can detract from a user's experience, so try to limit how often they appear.<\/p>",
+            "text_alignment": "left",
+            "show_popup_newsletter": true,
+            "popup_delay": 5,
+            "popup_reappear_time": "7",
+            "popup_image": ""
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_other": "",
+            "logo_max_width": 100,
+            "show_site_name": true,
+            "menu_list": "main-menu",
+            "links_position": "links_left",
+            "logo_position": "logo_left",
+            "meganav_image": "",
+            "image_aspect_ratio": 0.7,
+            "meganav_image_heading": "",
+            "meganav_image_link": ""
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-block-menu": {
+              "type": "menu",
+              "settings": {
+                "menu": "footer",
+                "title": "Helpful Links",
+                "mobile_hide_block": true
+              }
+            },
+            "footer-block-text": {
+              "type": "text",
+              "settings": {
+                "title": "Information",
+                "text": "<p>This text block is a great place to discuss shipping policies, or terms and conditions info.<\/p>",
+                "mobile_hide_block": false
+              }
+            },
+            "footer-block-newsletter": {
+              "type": "newsletter",
+              "settings": {
+                "title": "Newsletter",
+                "content": "",
+                "mobile_hide_block": false
+              }
+            }
+          },
+          "block_order": [
+            "footer-block-menu",
+            "footer-block-text",
+            "footer-block-newsletter"
+          ],
+          "settings": {
+            "show_payment_icons": true,
+            "show_social_icons": true,
+            "menu": "",
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "product_layout": "scrollable",
+            "image_size": "large",
+            "add_cart_position": "top",
+            "lightbox": true,
+            "show_vendor": true,
+            "show_quantity": false,
+            "show_cart_bar": true,
+            "enable_payment_button": true,
+            "show_newsletter": true,
+            "text_newsletter": "<p>Notify me when this product is available:<\/p>",
+            "page_tab_1": "",
+            "page_tab_2": "",
+            "page_tab_3": "",
+            "product_slideshow_dots": false,
+            "product_slideshow_arrows": false,
+            "enable_video_looping": false
+          }
+        },
+        "list-collections-page-template": {
+          "type": "list-collections-page-template",
+          "settings": {
+            "show_description": true,
+            "collections_columns": 2,
+            "coll_text_position": "center",
+            "button_text": "View products",
+            "text_color": "#ffffff",
+            "overlay_color": "#222222",
+            "overlay_opacity": 10
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "show_blog_name": false,
+            "show_rss": false,
+            "show_featured_post": true,
+            "tags": true,
+            "author": true,
+            "date": true,
+            "show_comments": true,
+            "article_rows": 4,
+            "article_columns": 4
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_title": true,
+            "show_sort_filter": true,
+            "filter_mode": "group",
+            "position_filters": "left",
+            "show_banner": true,
+            "banner_height": "normal",
+            "banner_text_position": "center",
+            "banner_color_text": "#ffffff",
+            "banner_color_overlay": "#222222",
+            "banner_overlay_opacity": 10,
+            "featured_image": "",
+            "featured_heading": "Use this image showcase promotional content.",
+            "featured_text": "<p>Elaborate on it with rich text<\/p>",
+            "featured_button_text": "Learn More",
+            "featured_button_link": "",
+            "featured_button_style": "secondary",
+            "featured_color_text": "#ffffff",
+            "featured_color_overlay": "#222222",
+            "featured_overlay_opacity": 10
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "image_mobile": "",
+                "image_position": "center-center",
+                "alignment": "left",
+                "color_style": "white",
+                "subheading": "",
+                "title": "Welcome to Modular",
+                "text": "<p>A unique layout with a striking design<\/p>",
+                "cta": "Learn More",
+                "link": "",
+                "cta_primary_btn_style": "primary",
+                "cta_2": "",
+                "link_2": "",
+                "cta_secondary_btn_style": "secondary",
+                "overlay_color": "#222222",
+                "overlay_opacity": 10
+              }
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "image_mobile": "",
+                "image_position": "center-center",
+                "alignment": "center",
+                "color_style": "white",
+                "subheading": "",
+                "title": "Welcome to Modular",
+                "text": "<p>A unique layout with a striking design<\/p>",
+                "cta": "Learn More",
+                "link": "",
+                "cta_primary_btn_style": "primary",
+                "cta_2": "",
+                "link_2": "",
+                "cta_secondary_btn_style": "secondary",
+                "overlay_color": "#222222",
+                "overlay_opacity": 10
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {
+            "show_arrow_down": false,
+            "autoplay": true,
+            "duration": 4,
+            "transition": "zoom-out",
+            "dots_position": "center",
+            "slide_height": "one-hundred-height-hero",
+            "button_size": "normal"
+          }
+        },
+        "rich-text": {
+          "type": "rich-text",
+          "settings": {
+            "layout": "split",
+            "subheading": "Humble Beginnings",
+            "title": "Modular is a powerful Shopify theme that will set you apart from the rest.",
+            "content": "<p>It features ample space to showcase your imagery with Mosaic, Image with text, and Slideshow sections ... and even this Rich Text section itself.<\/p>",
+            "button_text": "Learn More",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "image-with-text": {
+          "type": "image-with-text",
+          "blocks": {
+            "image-with-text-0": {
+              "type": "gallery_image",
+              "settings": {
+                "slide": ""
+              }
+            },
+            "image-with-text-1": {
+              "type": "gallery_image",
+              "settings": {
+                "slide": ""
+              }
+            }
+          },
+          "block_order": [
+            "image-with-text-0",
+            "image-with-text-1"
+          ],
+          "settings": {
+            "show_nav_arrows": true,
+            "color_style": "white",
+            "transition": "fade",
+            "autoplay": true,
+            "duration": 4,
+            "show_margins": false,
+            "slide_height": "five-fifty-height-hero",
+            "slide_image_position": "left",
+            "slide_image_width": "med_s12|med_s12",
+            "subheading": "Humble Beginnings",
+            "title": "Tell a Story",
+            "content": "<p>By showcasing a product, collection, or your brand.<\/p>",
+            "cta": "Shop Now",
+            "link": "",
+            "button_style": "primary"
+          }
+        },
+        "featured-collection": {
+          "type": "featured-collection",
+          "settings": {
+            "title": "",
+            "featured_collection": "frontpage",
+            "products_layout": "grid",
+            "show_button": true,
+            "button_style": "primary",
+            "color_style": "white"
+          }
+        },
+        "list-collections": {
+          "type": "list-collections",
+          "blocks": {
+            "list-collections-0": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-1": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-2": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-3": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            },
+            "list-collections-4": {
+              "type": "collection",
+              "settings": {
+                "collection": "",
+                "image": ""
+              }
+            }
+          },
+          "block_order": [
+            "list-collections-0",
+            "list-collections-1",
+            "list-collections-2",
+            "list-collections-3",
+            "list-collections-4"
+          ],
+          "settings": {
+            "title": "",
+            "blocks_height": "default-height",
+            "coll_text_position": "top_left",
+            "show_description": true,
+            "text_color": "#ffffff",
+            "overlay_color": "#222222",
+            "overlay_opacity": 10
+          }
+        },
+        "testimonials": {
+          "type": "testimonials",
+          "blocks": {
+            "testimonials-0": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            },
+            "testimonials-1": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            },
+            "testimonials-2": {
+              "type": "testimonial",
+              "settings": {
+                "blockquote": "Use this testimonial as an opportunity for your most valued customer to discuss your brand and what sets you apart from the competition. This section looks best when limited to two or three lines!",
+                "author": "John Doe"
+              }
+            }
+          },
+          "block_order": [
+            "testimonials-0",
+            "testimonials-1",
+            "testimonials-2"
+          ],
+          "settings": {
+            "title": "Testimonials",
+            "title_position": "left",
+            "blocks_text_align": "justify",
+            "hide_quotes": true,
+            "columns": 3
+          }
+        },
+        "featured-blog": {
+          "type": "featured-blog",
+          "settings": {
+            "heading": "",
+            "text": "",
+            "cta": "Read More",
+            "button_style": "primary",
+            "tags": true,
+            "author": true,
+            "date": true,
+            "show_comments": true,
+            "image_aspect_ratio": 0.7,
+            "article_rows": 1,
+            "article_columns": 3
+          }
+        },
+        "logo-list": {
+          "type": "logo-list",
+          "blocks": {
+            "logo-list-0": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-1": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-2": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-3": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            },
+            "logo-list-4": {
+              "type": "item_logo",
+              "settings": {
+                "logo_image": "",
+                "logo_url": ""
+              }
+            }
+          },
+          "block_order": [
+            "logo-list-0",
+            "logo-list-1",
+            "logo-list-2",
+            "logo-list-3",
+            "logo-list-4"
+          ],
+          "settings": {
+            "color_logos_bg": ""
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "color": "#222222",
+            "background": "#ffffff",
+            "title": "Newsletter",
+            "content": "<p>Let's keep in touch<\/p>"
+          }
+        }
+      },
+      "content_for_index": [
+        "slideshow",
+        "rich-text",
+        "image-with-text",
+        "featured-collection",
+        "list-collections",
+        "testimonials",
+        "featured-blog",
+        "logo-list",
+        "newsletter"
+      ]
+    }
+  }
+}

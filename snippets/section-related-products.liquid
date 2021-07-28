@@ -1,0 +1,106 @@
+<div id="shopify-section-related-products" class="shopify-section">
+   <section style="{% if section.settings.background_image != blank %}background-image: url('{{ section.settings.background_image  | img_url: "1024x"  }}'); {% elsif section.settings.background_color != blank %}background-color:{{ section.settings.background_color }};{% endif %}" class="related-products container-wrap collectionGrid js-collection-grid js-collectionGrid " data-columns="4" data-section-type="related-products" data-section-id="related-products" data-product-id="6618594640080" data-limit="4" data-show_quantity="true" data-show_reviews="true" data-yotpo="false" data-yotpo-id="hI7kSV2oxcOBXUnIe8cBLHPapenWyKupzLSYoHsv" data-enable-color-swatches="true" data-image-aspectratio="1" data-image-size="contain" data-carousel="true" data-slides-per-row="4">
+      <div class="page-title">
+         <div class="container">
+            <div class="row row-sm 1">
+               <h5 {% if section.settings.sub_title_color1 != blank %} style="color: {{ section.settings.sub_title_color1 }};"{% endif %}>
+					{% if section.settings.product_recommendations_subheading1 != blank %}{{ section.settings.product_recommendations_subheading1 }}{% endif %}
+               </h5>
+            </div>
+            <div class="row row-sm">
+               <h2 {% if section.settings.title_color1 != blank %} style="color: {{ section.settings.title_color1 }};"{% endif %}>
+                 {% if section.settings.product_recommendations_heading1 != blank %}{{ section.settings.product_recommendations_heading1 }}{% endif %}
+               </h2>
+            </div>
+         </div>
+      </div>
+     <div class="container">
+      <div class="collectionGrid-row collectionGrid-row--slider collection-slider js-collection-slider ">
+         
+		{% assign product_refs = metafields.custom_fields["related_products"] | split: "|" %}
+		{% for product_handle in product_refs %}
+      	{% assign product_ref = all_products[product_handle] %}
+      {%- assign first_variant = product_ref.selected_or_first_available_variant -%}
+		
+		<div class="collectionBlock js-collectionBlock block lg_s14 med_s13 s1 is-visible" data-animation="moFadeInUp" data-enable-payment-button="true" data-collection-block="">
+            <div class="collectionBlock__inner">
+               <div class="collectionBlock-image lazyloaded" aria-label="XtraSlim Coupe-faim" title="XtraSlim Coupe-faim"  data-parent-fit="cover" data-aspectratio="1.0" >
+                  <a href="/products/xtraslim-coupe-faim?pr_prod_strat=collection_fallback&amp;pr_rec_pid=6618595360976&amp;pr_ref_pid=6618594640080&amp;pr_seq=uniform" class="collectionBlock-image__link" aria-label="xtraslim-coupe-faim">
+                     <img src="{{ product_ref.featured_image  | img_url: "1024x"  }}" />
+{% for tag in product_ref.tags %} 
+					{%- if tag contains 'badge_' -%}
+						<span class="product-status-flag product-status-flag--{{ settings.product_badge_style }}{% if sold_out %} is-sold-out{% endif %}{{ on_sale_class }}">
+							{{tag | remove: 'badge_'}}
+						</span>
+              		
+					{%- endif -%}
+				{%- endfor -%}                 
+</a>
+                  <div class="collectionBlock-image-inner">
+                     <a href="{{ product_ref.url }}" class="js-quickView-button quickView-button button">Aperçu rapide</a>
+                  </div>
+               </div>
+               <noscript>
+                  <div aria-label="XtraSlim Coupe-faim" title="XtraSlim Coupe-faim" class="collectionBlock-image" style="background-image:url('//cdn.shopify.com/s/files/1/0565/7788/4368/products/XtraSlim_Coupe_Faim_pack_1024x.png?v=1621849734');">
+                     <a href="{{ product_ref.url }}" class="collectionBlock-image__link" aria-label="xtraslim-coupe-faim"></a>
+                  </div>
+               </noscript>
+               <div class="collectionBlock-info collectionBlock-info--center">
+                  <div class="collectionBlock__price">
+                     <p class="price ">{{ product_ref.price | money }}</p>
+
+                     <form method="post" action="/cart/add">
+                        <input type="hidden" name="id" value="{{ first_variant.id }}">
+                        <input type="submit" value="Ajouter au panier" class="btn frcol-btn">
+                     </form>
+                  </div>
+                  <h3 class="collectionBlock__title">{{ product_ref.title | link_to: product_ref.url }}</h3>
+
+               </div>
+               
+                  <div class="short_descrition">
+                     <div class="short_desc_p">
+                        <p>{{ product_ref.description | link_to: product_ref.url }}</p>
+                     </div>
+                  </div>
+               
+            </div>
+         </div>
+       
+	 {% endfor %}
+		
+          
+          
+      </div>
+      <div class="row row-med u-center button-wrapper">
+         <a href="{% if section.settings.button_link != blank %}{{ section.settings.button_link }}{% endif %}" class="button button--" style="margin-bottom: 18px;">
+         {% if section.settings.button_title != blank %}{{ section.settings.button_title }}{% endif %}
+         </a>
+      </div>
+     </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!--       <script type="text/javascript">
+         jQuery(document).ready(function($) {
+           if(jQuery(window).width()<767){
+             $('div#shopify-section-related-products .collectionGrid-row').addClass('owl-carousel');
+             $('div#shopify-section-related-products .owl-carousel').owlCarousel({
+             loop:false,
+             nav:false,
+             dots:false,  
+             responsive:{
+                    0:{
+                        items:1.3
+                    },
+                    600:{
+                        items:2.3
+                    }
+                }
+             });
+           }
+           else {
+           	$('div#shopify-section-related-products .collectionGrid-row.owl-carousel').removeClass('owl-carousel');
+           }
+         });
+      </script> -->
+   </section>
+</div>

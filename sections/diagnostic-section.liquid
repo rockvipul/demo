@@ -1,0 +1,461 @@
+<div class="diagnostic-section__main" {% if section.settings.bg_color_enable != blank %}{% if section.settings.bg_color != blank %} style="background-color: {{ section.settings.bg_color }}" {% endif %}{% endif %}>
+<div class="container">
+   <div class="page-title">
+      {% if section.settings.subtitle != blank %}
+      <div class="page-title__subheading subheading-text">{{ section.settings.subtitle }}</div>
+      {% endif %}
+      {% if section.settings.title != blank %}
+      <h2 class="page-title__heading">{{ section.settings.title }}</h2>
+      {% endif %}
+   </div>
+   {% if section.settings.detail != blank %}
+   <div class="diagnostic-section__details">
+      <p>{{ section.settings.detail }}</p>
+   </div>
+   {% endif %}
+   <div class="vorte-diagnostic-section">
+      {% if section.settings.detail_1 != blank %}
+      <div class="section-title">{{ section.settings.detail_1 }}</div>
+      {% endif %}
+      <div class="vorte-diagnostic-grids">
+         <div class="diagnostic-grid">
+            <a href="{% if section.settings.icon1_link %}{{ section.settings.icon1_link }}{% endif %}">
+               <div class="diagnostic-grid__icon">
+                  {% if section.settings.svg_icon_name != blank %}
+                  {%- assign icon_svg = section.settings.svg_icon_name -%}
+                  {%- case icon_svg -%}
+                  {%- when 'diag_beaute' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_beaute' -%}</span>
+                  {%- when 'diag_energie' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_energie' -%}</span>
+                  {%- when 'diag_minceur' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_minceur' -%}</span>
+                  {%- when 'diag_muscle' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_muscle' -%}</span>
+                  {%- when 'diag_sommeil' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_sommeil' -%}</span>
+                  {%- when 'diag_transit' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_transit' -%}</span>
+                  {% endcase %}
+                  {% endif %}
+               </div>
+            </a>
+            {% if section.settings.icon1 != blank %}
+            <a href="{% if section.settings.icon1_link %}{{ section.settings.icon1_link }}{% endif %}">
+               <div class="diagnostic-grid__title">{{ section.settings.icon1 }}</div>
+            </a>
+            {% endif %}
+            {% if section.settings.icon1_des != blank %}
+            <a href="{% if section.settings.icon1_link %}{{ section.settings.icon1_link }}{% endif %}">
+               <div class="diagnostic-grid__shortdesc">{{ section.settings.icon1_des }}</div>
+            </a>
+            {% endif %}
+         </div>
+         <div class="diagnostic-grid">
+            <a href="{% if section.settings.icon2_link %}{{ section.settings.icon2_link }}{% endif %}">
+               <div class="diagnostic-grid__icon">
+                  {% if section.settings.svg_icon_name2 != blank %}
+                  {%- assign icon_svg = section.settings.svg_icon_name2 -%}
+                  {%- case icon_svg -%}
+                  {%- when 'diag_beaute' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_beaute' -%}</span>
+                  {%- when 'diag_energie' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_energie' -%}</span>
+                  {%- when 'diag_minceur' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_minceur' -%}</span>
+                  {%- when 'diag_muscle' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_muscle' -%}</span>
+                  {%- when 'diag_sommeil' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_sommeil' -%}</span>
+                  {%- when 'diag_transit' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_transit' -%}</span>
+                  {% endcase %}
+                  {% endif %} 
+               </div>
+            </a>
+            {% if section.settings.icon2 != blank %}
+            <a href="{% if section.settings.icon2_link %}{{ section.settings.icon2_link }}{% endif %}">
+               <div class="diagnostic-grid__title">{{ section.settings.icon2 }}</div>
+            </a>
+            {% endif %}
+            {% if section.settings.icon2_des != blank %}
+            <a href="{% if section.settings.icon2_link %}{{ section.settings.icon2_link }}{% endif %}">
+               <div class="diagnostic-grid__shortdesc">{{ section.settings.icon2_des }}</div>
+            </a>
+            {% endif %}
+         </div>
+         <div class="diagnostic-grid">
+            <a href="{% if section.settings.icon1_link %}{{ section.settings.icon1_link }}{% endif %}">
+               <div class="diagnostic-grid__icon">
+                  {% if section.settings.svg_icon_name3 != blank %}
+                  {%- assign icon_svg = section.settings.svg_icon_name3 -%}
+                  {%- case icon_svg -%}
+                  {%- when 'diag_beaute' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_beaute' -%}</span>
+                  {%- when 'diag_energie' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_energie' -%}</span>
+                  {%- when 'diag_minceur' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_minceur' -%}</span>
+                  {%- when 'diag_muscle' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_muscle' -%}</span>
+                  {%- when 'diag_sommeil' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_sommeil' -%}</span>
+                  {%- when 'diag_transit' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_transit' -%}</span>
+                  {% endcase %}
+                  {% endif %}  
+               </div>
+            </a>
+            {% if section.settings.icon3 != blank %}
+            <a href="{% if section.settings.icon1_link %}{{ section.settings.icon1_link }}{% endif %}">
+               <div class="diagnostic-grid__title">{{ section.settings.icon3 }}</div>
+            </a>
+            {% endif %}
+            {% if section.settings.icon3_des != blank %}
+            <a href="{% if section.settings.icon1_link %}{{ section.settings.icon1_link }}{% endif %}">
+               <div class="diagnostic-grid__shortdesc">{{ section.settings.icon3_des }}</div>
+            </a>
+            {% endif %}
+         </div>
+         <div class="diagnostic-grid">
+            <a href="{% if section.settings.icon4_link %}{{ section.settings.icon4_link }}{% endif %}">
+               <div class="diagnostic-grid__icon">
+                  {% if section.settings.svg_icon_name4 != blank %}
+                  {%- assign icon_svg = section.settings.svg_icon_name4 -%}
+                  {%- case icon_svg -%}
+                  {%- when 'diag_beaute' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_beaute' -%}</span>
+                  {%- when 'diag_energie' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_energie' -%}</span>
+                  {%- when 'diag_minceur' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_minceur' -%}</span>
+                  {%- when 'diag_muscle' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_muscle' -%}</span>
+                  {%- when 'diag_sommeil' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_sommeil' -%}</span>
+                  {%- when 'diag_transit' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_transit' -%}</span>
+                  {% endcase %}
+                  {% endif %} 
+               </div>
+            </a>
+            {% if section.settings.icon4 != blank %}
+            <a href="{% if section.settings.icon4_link %}{{ section.settings.icon4_link }}{% endif %}">
+               <div class="diagnostic-grid__title">{{ section.settings.icon4 }}</div>
+            </a>
+            {% endif %}
+            {% if section.settings.icon4_des != blank %}
+            <a href="{% if section.settings.icon4_link %}{{ section.settings.icon4_link }}{% endif %}">
+               <div class="diagnostic-grid__shortdesc">{{ section.settings.icon4_des }}</div>
+            </a>
+            {% endif %}
+         </div>
+         <div class="diagnostic-grid">
+            <a href="{% if section.settings.icon5_link %}{{ section.settings.icon5_link }}{% endif %}">
+               <div class="diagnostic-grid__icon">
+                  {% if section.settings.svg_icon_name5 != blank %}
+                  {%- assign icon_svg = section.settings.svg_icon_name5 -%}
+                  {%- case icon_svg -%}
+                  {%- when 'diag_beaute' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_beaute' -%}</span>
+                  {%- when 'diag_energie' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_energie' -%}</span>
+                  {%- when 'diag_minceur' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_minceur' -%}</span>
+                  {%- when 'diag_muscle' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_muscle' -%}</span>
+                  {%- when 'diag_sommeil' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_sommeil' -%}</span>
+                  {%- when 'diag_transit' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_transit' -%}</span>
+                  {% endcase %}
+                  {% endif %} 
+               </div>
+            </a>
+            {% if section.settings.icon5 != blank %}
+            <a href="{% if section.settings.icon5_link %}{{ section.settings.icon5_link }}{% endif %}">
+               <div class="diagnostic-grid__title">{{ section.settings.icon5 }}</div>
+            </a>
+            {% endif %}
+            {% if section.settings.icon5_des != blank %}
+            <a href="{% if section.settings.icon5_link %}{{ section.settings.icon5_link }}{% endif %}">
+               <div class="diagnostic-grid__shortdesc">{{ section.settings.icon5_des }}</div>
+            </a>
+            {% endif %}
+         </div>
+         <div class="diagnostic-grid">
+            <a href="{% if section.settings.icon6_link %}{{ section.settings.icon6_link }}{% endif %}">
+               <div class="diagnostic-grid__icon">
+                  {% if section.settings.svg_icon_name6 != blank %}
+                  {%- assign icon_svg = section.settings.svg_icon_name6 -%}
+                  {%- case icon_svg -%}
+                  {%- when 'diag_beaute' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_beaute' -%}</span>
+                  {%- when 'diag_energie' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_energie' -%}</span>
+                  {%- when 'diag_minceur' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_minceur' -%}</span>
+                  {%- when 'diag_muscle' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_muscle' -%}</span>
+                  {%- when 'diag_sommeil' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_sommeil' -%}</span>
+                  {%- when 'diag_transit' -%}
+                  <span class="mega_menu_icon">{%- render 'diag_transit' -%}</span>
+                  {% endcase %}
+                  {% endif %}
+               </div>
+            </a>
+            {% if section.settings.icon6 != blank %}
+            <a href="{% if section.settings.icon6_link %}{{ section.settings.icon6_link }}{% endif %}">
+               <div class="diagnostic-grid__title">{{ section.settings.icon6 }}</div>
+            </a>
+            {% endif %}
+            {% if section.settings.icon6_des != blank %}
+            <a href="{% if section.settings.icon6_link %}{{ section.settings.icon6_link }}{% endif %}">
+               <div class="diagnostic-grid__shortdesc">{{ section.settings.icon6_des }}</div>
+            </a>
+            {% endif %}
+         </div>
+      </div>
+      {% if section.settings.button_link != blank %}
+      <div class="diagnostic-grid-btn">
+         {% if section.settings.button_text != blank %}
+         <a href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+         {% endif %}
+      </div>
+      {% endif %}
+   </div>
+</div>
+</div>
+
+{% schema %}
+{
+	"name": "Diagnostic Section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "bg_color_enable",
+			"label": "Enable Background Color",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color",
+			"default": "#e73439"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Heading"
+		},
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "Sub Heading"
+		},
+		{
+			"type": "richtext",
+			"id": "detail",
+			"label": "Description"
+		},
+		{
+			"type": "text",
+			"id": "detail_1",
+			"label": "Icon Section Title"
+		},
+		{
+			"type": "select",
+			"id": "svg_icon_name",
+			"label": "SVG Icon",
+			"default": "diag_beaute",
+			"options": [
+						{ "value": "diag_beaute", "label": "Beaute" },
+						{ "value": "diag_energie", "label": "Energie" },
+						{ "value": "diag_minceur", "label": "Minceur" },
+						{ "value": "diag_muscle", "label": "Muscle" },
+						{ "value": "diag_sommeil", "label": "Sommeil" },
+						{ "value": "diag_transit", "label": "Transit" }
+					]
+		},
+		{
+			"type": "url",
+			"id": "icon1_link",
+			"label": "Icon Link"
+		},
+		{
+			"type": "text",
+			"id": "icon1",
+			"label": "Icon Title 1"
+		},
+		{
+			"type": "text",
+			"id": "icon1_des",
+			"label": "Icon Description 1"
+		},
+		{
+			"type": "select",
+			"id": "svg_icon_name2",
+			"label": "SVG Icon",
+			"default": "diag_beaute",
+			"options": [
+						{ "value": "diag_beaute", "label": "Beaute" },
+						{ "value": "diag_energie", "label": "Energie" },
+						{ "value": "diag_minceur", "label": "Minceur" },
+						{ "value": "diag_muscle", "label": "Muscle" },
+						{ "value": "diag_sommeil", "label": "Sommeil" },
+						{ "value": "diag_transit", "label": "Transit" }
+					]
+		},
+		{
+			"type": "url",
+			"id": "icon2_link",
+			"label": "Icon Link"
+		},
+		{
+			"type": "text",
+			"id": "icon2",
+			"label": "Icon Title 2"
+		},
+		{
+			"type": "text",
+			"id": "icon2_des",
+			"label": "Icon Description 2"
+		},
+		{
+			"type": "select",
+			"id": "svg_icon_name3",
+			"label": "SVG Icon",
+			"default": "diag_beaute",
+			"options": [
+						{ "value": "diag_beaute", "label": "Beaute" },
+						{ "value": "diag_energie", "label": "Energie" },
+						{ "value": "diag_minceur", "label": "Minceur" },
+						{ "value": "diag_muscle", "label": "Muscle" },
+						{ "value": "diag_sommeil", "label": "Sommeil" },
+						{ "value": "diag_transit", "label": "Transit" }
+					]
+		},
+		{
+			"type": "url",
+			"id": "icon3_link",
+			"label": "Icon Link"
+		},
+		{
+			"type": "text",
+			"id": "icon3",
+			"label": "Icon Title 3"
+		},
+		{
+			"type": "text",
+			"id": "icon3_des",
+			"label": "Icon Description 3"
+		},
+		{
+			"type": "select",
+			"id": "svg_icon_name4",
+			"label": "SVG Icon",
+			"default": "diag_beaute",
+			"options": [
+						{ "value": "diag_beaute", "label": "Beaute" },
+						{ "value": "diag_energie", "label": "Energie" },
+						{ "value": "diag_minceur", "label": "Minceur" },
+						{ "value": "diag_muscle", "label": "Muscle" },
+						{ "value": "diag_sommeil", "label": "Sommeil" },
+						{ "value": "diag_transit", "label": "Transit" }
+					]
+		},
+		{
+			"type": "url",
+			"id": "icon4_link",
+			"label": "Icon Link"
+		},
+		{
+			"type": "text",
+			"id": "icon4",
+			"label": "Icon Title 4"
+		},
+		{
+			"type": "text",
+			"id": "icon4_des",
+			"label": "Icon Description 4"
+		},
+		{
+			"type": "select",
+			"id": "svg_icon_name5",
+			"label": "SVG Icon",
+			"default": "diag_beaute",
+			"options": [
+						{ "value": "diag_beaute", "label": "Beaute" },
+						{ "value": "diag_energie", "label": "Energie" },
+						{ "value": "diag_minceur", "label": "Minceur" },
+						{ "value": "diag_muscle", "label": "Muscle" },
+						{ "value": "diag_sommeil", "label": "Sommeil" },
+						{ "value": "diag_transit", "label": "Transit" }
+					]
+		},
+		{
+			"type": "url",
+			"id": "icon5_link",
+			"label": "Icon Link"
+		},
+		{
+			"type": "text",
+			"id": "icon5",
+			"label": "Icon Title 5"
+		},
+		{
+			"type": "text",
+			"id": "icon5_des",
+			"label": "Icon Description 5"
+		},
+		{
+			"type": "select",
+			"id": "svg_icon_name6",
+			"label": "SVG Icon",
+			"default": "diag_beaute",
+			"options": [
+						{ "value": "diag_beaute", "label": "Beaute" },
+						{ "value": "diag_energie", "label": "Energie" },
+						{ "value": "diag_minceur", "label": "Minceur" },
+						{ "value": "diag_muscle", "label": "Muscle" },
+						{ "value": "diag_sommeil", "label": "Sommeil" },
+						{ "value": "diag_transit", "label": "Transit" }
+					]
+		},
+		{
+			"type": "url",
+			"id": "icon6_link",
+			"label": "Icon Link"
+		},
+		{
+			"type": "text",
+			"id": "icon6",
+			"label": "Icon Title 6"
+		},
+		{
+			"type": "text",
+			"id": "icon6_des",
+			"label": "Icon Description 6"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button Title"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "Button Link"
+		}
+	],
+"presets": [
+		{
+			"name": "Diagnostic Section",
+			"category": "Advanced",
+			"blocks": [
+			]
+		}
+	]
+}
+{% endschema %}

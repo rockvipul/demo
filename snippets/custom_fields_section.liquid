@@ -1,0 +1,31 @@
+{% if metafields.custom_fields["image_collection"] != blank %}
+<div class="product-features--container custom-container">
+      <div class="custom-full-container">
+        <div class="row">
+            <div class="feature-item " data-alignment="center">
+              <div class="feature-image">
+                <div class="feature-image-bg" style="height: 100%;">
+                  <div class="svg-placeholder" style="position:static;">
+                      {% if metafields.custom_fields["image_collection"] != blank %}
+                        {% render 'cf-image' with image: metafields.custom_fields["image_collection"] %}
+                      {% endif %}
+                  </div>
+               </div>
+              </div>
+              <div class="feature-text">
+                <div class="feature-text-wrap">
+                {% if metafields.custom_fields["text_collection"] != blank %}
+                      {{ metafields.custom_fields["text_collection"] }}
+                    {% endif %}
+                </div>
+              </div>
+            </div>
+      </div>
+   </div>
+     </div>
+{% endif %}
+<!-- <style>
+.svg-placeholder img {
+    width: 95%;
+}
+</style> -->

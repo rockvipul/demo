@@ -1,0 +1,23 @@
+<div class="jb-product-collateral">
+  <div class="tab-content">
+    <div class="tabs" id="tab1" style="background-color: #F6F6F6;">
+      <div class="container">
+        <h2 class="tab-content-title">
+          {% if metafields.custom_fields["tab_1_title"] != blank %}
+          {{ metafields.custom_fields["tab_1_title"] }} 
+          {% endif %}
+        </h2>
+        <div class="tab-content-inner">
+          {% if metafields.custom_fields["tab_1_body"] != blank %}
+          {{ metafields.custom_fields["tab_1_body"] }}
+          {% endif %}
+        </div>
+        <div class="tab-content-inner-2">
+          {% if metafields.custom_fields["tab_1_body_2"] != blank %}
+          {{ metafields.custom_fields["tab_1_body_2"] }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

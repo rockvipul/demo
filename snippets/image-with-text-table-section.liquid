@@ -1,0 +1,81 @@
+<div {% if block.settings.tab_id != blank %}id="{{ block.settings.tab_id }}"{% endif %} class="text-right-image-left__main">
+  <div class="container text-right-image-left__inner">
+    <div class="feature-item " data-alignment="center">
+      <div class="feature-text">
+        <div class="feature-text-wrap">
+              {% if block.settings.title != blank %}
+          <h2 data-animation="moPopUp" data-animation-delay="0">{{  block.settings.title }}</h2>
+              {% endif %}
+          <div class="feature-text__p" data-animation="moPopUp" data-animation-delay="250">
+            {% if block.settings.description != blank %}
+                {{  block.settings.description }}
+                {% endif %}
+          </div>
+        </div>
+      </div>  
+      <div class="feature-image">
+        <div class="feature-image-bg" style="height:100%"> 
+          <div class="svg-placeholder">
+                 {% if block.settings.img1 != blank %}
+                <img src="{{ block.settings.img1 | img_url: '1024x' }}"> 
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jb-product-collateral">
+      <div class="tab-content">  
+        <div class="tabs">
+          <div class="tab-content-table-wrapper">
+                 {% if block.settings.table_title_1 != blank and block.settings.table_title_2 != blank %}
+            <table class="tab-content-table">
+              <tbody>
+                <tr>
+                      {% if block.settings.table_title_1 != blank %}
+                  <th>{{ block.settings.table_title_1 }}</th>
+                      {% endif %}
+                      {% if block.settings.table_title_2 != blank %}
+                  <th>{{ block.settings.table_title_2 }}</th>
+                      {% endif %}
+                </tr>
+                <tr>
+                      {% if block.settings.table_row_left_1 != blank %}
+                  <td>{{ block.settings.table_row_left_1 }}</td>
+                      {% endif %}
+                      {% if block.settings.table_row_right_1 != blank %}
+                  <td>{{ block.settings.table_row_right_1 }}</td>
+                      {% endif %}
+                </tr>
+                <tr>
+                      {% if block.settings.table_row_left_2 != blank %}
+                  <td>{{ block.settings.table_row_left_2 }}</td>
+                      {% endif %}
+                      {% if block.settings.table_row_right_2 != blank %}
+                  <td>{{ block.settings.table_row_right_2 }}</td>
+                      {% endif %}
+                </tr>
+                <tr>
+                      {% if block.settings.table_row_left_3 != blank %}
+                  <td>{{ block.settings.table_row_left_3 }}</td>
+                      {% endif %}
+                      {% if block.settings.table_row_right_3 != blank %}
+                  <td>{{ block.settings.table_row_right_3 }}</td>
+                      {% endif %}
+                </tr>
+                <tr>
+                      {% if block.settings.table_row_left_4 != blank %}
+                  <td>{{ block.settings.table_row_left_4 }}</td>
+                      {% endif %}
+                      {% if block.settings.table_row_right_4 != blank %}
+                  <td>{{ block.settings.table_row_right_4 }}</td>
+                      {% endif %}
+                </tr>
+              </tbody>
+            </table>
+                {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

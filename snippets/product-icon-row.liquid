@@ -1,0 +1,14 @@
+<div class="jb-product-icons">
+	<div class="container small-container">
+		<div class="icon-items">
+		{% for tag in product.tags %}
+			{% if tag contains 'info_' %}
+			{% assign tag_image = tag | append: '.png'  %}
+			<div class="icon-item">
+                <img src="{{ tag_image | file_url }}" style="width:190px;" />
+          	</div>
+			{% endif %}
+		{% endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,151 @@
+<div class="text-with-grid-section" {% if section.settings.enable_bg_color != blank %}{% if section.settings.bg_color != blank %} style="background: {{ section.settings.bg_color }};"{% endif %}{% endif %}>
+	<div class="container">
+		<div class="grid-section-title">
+          	{% if section.settings.title != blank %}
+          		<h2>{{ section.settings.title }}</h2>
+          	{% endif %}
+        </div>
+		<div class="grid-section-inner">
+			{% if section.settings.html_code1 != blank %}
+          		{{ section.settings.html_code1 }} 
+          	{% endif %}
+		</div>
+		<div class="grid-content-inner">
+			<div class="grid__inner">
+              	<div class="grid__section__left">
+				<div class="grid__section">
+					{% if section.settings.left_title_1 != blank %}
+						<h3 class="grid-title">
+			          		{{ section.settings.left_title_1 }} 
+			          </h3>
+			        {% endif %}
+					<div class="grid-details">
+	                  {% if section.settings.html_code2 != blank %}
+			          	{{ section.settings.html_code2 }} 
+			          {% endif %}
+		      		</div>
+				</div>
+				<div class="grid__section">
+					{% if section.settings.left_title_2 != blank %}
+						<h3 class="grid-title">
+	          				{{ section.settings.left_title_2 }} 
+	          			</h3>
+          			{% endif %}
+          			{% if section.settings.html_code3 != blank %}
+						<div class="grid-details">
+	          				{{ section.settings.html_code3 }} 
+	          			</div>
+          			{% endif %}
+				</div>
+                </div>
+                <div class="grid__section__right">  
+				<div class="grid__section">
+					{% if section.settings.right_title_1 != blank %}
+						<h3 class="grid-title">
+	          				{{ section.settings.right_title_1 }} 
+	          			</h3>
+          			{% endif %}
+          			{% if section.settings.html_code4 != blank %}
+						<div class="grid-details">
+	          				{{ section.settings.html_code4 }} 
+	          			</div>
+          			{% endif %}
+				</div>
+				<div class="grid__section">
+					{% if section.settings.right_title_2 != blank %}
+						<h3 class="grid-title">
+          					{{ section.settings.right_title_2 }} 
+		          		</h3>
+		          	{% endif %}
+		          	{% if section.settings.html_code5 != blank %}
+						<div class="grid-details">
+	          				{{ section.settings.html_code5 }} 
+	          			</div>
+          			{% endif %}
+				</div>
+                </div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+{% schema %}
+  {
+    "name": "Text With Grid Section",
+    "settings": [
+		{
+              "type": "checkbox",
+              "id": "enable_bg_color",
+              "label": "Enable Background Color"
+              },
+			  {
+              "type": "color",
+              "id": "bg_color",
+              "label": "Background Color"
+              },
+			  {
+              "type": "text",
+              "id": "title",
+              "label": "Heading"
+              },
+              {
+              "type": "html",
+              "id": "html_code1",
+              "label": "Description"
+              },
+              {
+              "type": "text",
+              "id": "left_title_1",
+              "label": "Left Title 1"
+              },
+              {
+              "type": "html",
+              "id": "html_code2",
+              "label": "Left Description 1"
+              },
+              {
+              "type": "text",
+              "id": "left_title_2",
+              "label": "Left Title 2"
+              },
+              {
+              "type": "html",
+              "id": "html_code3",
+              "label": "Left Description 2"
+              },
+              {
+              "type": "text",
+              "id": "right_title_1",
+              "label": "Right Title 1"
+              },
+              {
+              "type": "html",
+              "id": "html_code4",
+              "label": "Right Description 1"
+              },
+              {
+              "type": "text",
+              "id": "right_title_2",
+              "label": "Right Title 2"
+              },
+              {
+              "type": "html",
+              "id": "html_code5",
+              "label": "Right Description 2"
+              }
+],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Text With Text Grid"
+			
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

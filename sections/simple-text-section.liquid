@@ -1,0 +1,82 @@
+<div class="simple-text-section__main" {% if section.settings.enbale_bg != blank %}{% if section.settings.bg_color != blank %} style="background-color:{{ section.settings.bg_color }}"{% endif %}{% endif %}>
+	<div class="container simple-text-section__inner">
+		<div class="page-title">
+          {% if section.settings.subheading != blank  %}
+			<h4 class="page-title__subheading subheading-text" {% if section.settings.subheading_color != blank  %}style="color:{{ section.settings.subheading_color }}" {% endif %}>{{ section.settings.subheading }}</h4>
+          {% endif %}
+          {% if section.settings.title != blank  %}
+			<h2 class="page-title__heading"  {% if section.settings.headign_color != blank  %}style="color:{{ section.settings.headign_color }}" {% endif %}>{{ section.settings.title }}</h2>
+          {% endif %}
+		</div>
+      {% if section.settings.description != blank  %}
+		<div class="simple-text-section__details" {% if section.settings.description_color != blank  %}style="color:{{ section.settings.description_color }}" {% endif %}>
+			<p>{{ section.settings.description }}</p>
+		</div>
+      {% endif %}
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Simple Text Section",
+    "settings": [
+		{
+			"type": "checkbox",
+            "id": "enbale_bg",
+            "label": "Enable Background Color",
+			"default": true
+		},
+		{
+			"type": "color",
+            "id": "bg_color",
+            "label": "background Color",
+			"default": "#f7f7f7"
+		},
+		{
+			"type": "color",
+            "id": "headign_color",
+            "label": "Heading Color",
+			"default": "#000"
+		},
+		{
+			"type": "color",
+            "id": "subheading_color",
+            "label": "Subheading Color",
+			"default": "#000"
+		},
+		{
+			"type": "color",
+            "id": "description_color",
+            "label": "Description Color",
+			"default": "#000"
+		},
+		{
+			"type": "text",
+            "id": "title",
+            "label": "Heading"
+		},
+		{
+			"type": "text",
+            "id": "subheading",
+            "label": "Subheading"
+		},
+		{
+			"type": "textarea",
+            "id": "description",
+            "label": "Description"
+		}
+	],
+  "presets": [
+    {
+      "name": "Simple Text Section",
+      "category": "Advanced"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

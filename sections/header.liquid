@@ -1,0 +1,475 @@
+{% comment %} Settings {% endcomment %}
+{% comment %} This is theme kit testing for connection {% endcomment %}
+{% comment %} This is theme kit testing for connection by jitesh {% endcomment %}
+
+{%- assign logo_position = section.settings.logo_position -%}
+{%- assign links_position = section.settings.links_position -%}
+{%- assign logo_width = section.settings.logo_max_width -%}
+{%- assign logo = section.settings.logo -%}
+{%- assign logo_other = section.settings.logo_other -%}
+{%- assign shop_name = shop.name | escape -%}
+{%- assign show_shop_name = section.settings.show_site_name -%}
+
+{%- assign transparent_header = false -%}
+{%- if settings.color_header_bg_home == 'rgba(0,0,0,0)' -%}
+	{%- assign transparent_header = true -%}
+{%- endif -%}
+
+{%- comment -%} Check if there is only one logo set and show it always {%- endcomment -%}
+{%- assign single_logo = false -%}
+{%- if logo and logo_other == blank -%}
+	{%- assign single_logo = true -%}
+{%- elsif logo == blank and logo_other -%}
+	{%- assign single_logo = true -%}
+{%- endif -%}
+
+{%- capture logo_not_home -%}
+	{%- assign image = logo_other -%}
+	{%- if image != blank -%}
+		{%- assign logo_height = logo_width | divided_by: image.aspect_ratio -%}
+		{%- assign image_url_pattern = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+		{%- assign image_widths = "[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048, 2450, 2700, 3000, 3350, 3750, 4100]" -%}
+
+		{%- assign logo_small_height = 40 -%}
+		{%- if logo_height < 40 -%}
+			{%- assign logo_small_height = logo_height -%}
+		{%- endif -%}
+		{%- assign logo_small_width = logo_small_height | times: image.aspect_ratio -%}
+
+		{%- style -%}
+			.logo__image--other { width: {{ logo_width }}px; height: {{ logo_height }}px; }
+			.header--has-scrolled .logo__image--other { width: {{ logo_small_width }}px; height: {{ logo_small_height }}px; }
+		{%- endstyle -%}
+
+		<img
+			class="logo__image logo__image--other{% if single_logo %} logo__image--single{% endif %} lazyload"
+			src="{{ 'blank.gif' | asset_img_url: '1x1' }}"
+			data-src="{{ image_url_pattern }}"
+			data-widths= "{{ image_widths }}"
+			data-aspectratio="{{ image.aspect_ratio }}"
+			data-sizes="auto"
+			loading="lazy"
+			width="{{ logo_width }}px"
+			height="{{ logo_height }}px"
+			alt="{{ image.alt | escape | default: shop.name }}">
+		<noscript>
+			<img src="{{ image | img_url: '500x' }}"
+				class="logo__image"
+				width="{{ logo_width }}px"
+				height="{{ logo_height }}px"
+				style="width: {{ logo_width }}px; height: {{ logo_height }}px;"
+				alt="{{ image.alt | escape | default: shop.name }}">
+		</noscript>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- capture logo_home -%}
+	{%- assign image = logo -%}
+	{%- if image != blank -%}
+		{%- assign logo_height = logo_width | divided_by: image.aspect_ratio -%}
+		{%- assign image_url_pattern = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+		{%- assign image_widths = "[100, 140, 180, 220, 280, 360, 400, 440, 560, 720, 800]" -%}
+
+		{%- assign logo_small_height = 40 -%}
+		{%- if logo_height < 40 -%}
+			{%- assign logo_small_height = logo_height -%}
+		{%- endif -%}
+		{%- assign logo_small_width = logo_small_height | times: image.aspect_ratio -%}
+
+		{%- style -%}
+			.logo__image--home { width: {{ logo_width }}px; height: {{ logo_height }}px; }
+			.header--has-scrolled .logo__image--home { width: {{ logo_small_width }}px; height: {{ logo_small_height }}px; }
+		{%- endstyle -%}
+
+		<img
+			class="logo__image logo__image--home{% if single_logo %} logo__image--single{% endif %} lazyload"
+			src="{{ 'blank.gif' | asset_img_url: '1x1' }}"
+			data-src="{{ image_url_pattern }}"
+			data-widths= "{{ image_widths }}"
+			data-aspectratio="{{ image.aspect_ratio }}"
+			data-sizes="auto"
+			loading="lazy"
+			width="{{ logo_width }}px"
+			height="{{ logo_height }}px"
+			style="width: {{ logo_width }}px; height: {{ logo_height }}px;"
+			alt="{{ image.alt | escape | default: shop.name }}">
+		<noscript>
+			<img src="{{ image | img_url: '500x' }}"
+				class="logo__image"
+				width="{{ logo_width }}px"
+				height="{{ logo_height }}px"
+				style="width: {{ logo_width }}px; height: {{ logo_height }}px;"
+				alt="{{ image.alt | escape | default: shop.name }}">
+		</noscript>
+
+		{%- style -%}
+			.logo__image--home { width: {{ logo_width }}px; height: {{ logo_height }}px; }
+			.header--has-scrolled .logo__image--home { width: {{ logo_small_width }}px; height: {{ logo_small_height }}px; }
+		{%- endstyle -%}
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- capture headerClass -%}site-header header--no-bg header--is-standard header--{{ logo_position }}_{{ links_position }} header--standard {% unless logo or logo_other or show_shop_name %}header--no-logo{% endunless %}{%- endcapture -%}
+
+<header class="{{ headerClass }}" data-section-type="header" id="header" data-transparent="{{ transparent_header }}" data-scroll-lock-fill-gap>
+	<div class="container">
+		<div class="row">
+			{%- if logo or logo_other or show_shop_name -%}
+				{% if template == 'index' %}
+					<h1 class="nav-item logo {% unless logo or logo_other %}logo--text-only{% endunless %}">
+					{%- if logo or logo_other -%}
+						<a href="{{ routes.root_url }}" class="logo__image-link visible-nav-link" data-width="{{ section.settings.logo_max_width }}" aria-label="{{ shop_name }}">
+							{%- if logo -%}
+								{{- logo_home -}}
+							{%- endif -%}
+
+							{%- if logo_other -%}
+								{{- logo_not_home -}}
+							{%- endif -%}
+						</a>
+					{%- endif -%}
+
+					{%- if show_shop_name -%}
+						<a id="shopName" class="logo__text" href="{{ routes.root_url }}">{{ shop_name }}</a>
+					{%- endif -%}
+				</h1>
+          {% else %}
+          <div class="nav-item logo {% unless logo or logo_other %}logo--text-only{% endunless %}">
+					{%- if logo or logo_other -%}
+						<a href="{{ routes.root_url }}" class="logo__image-link visible-nav-link" data-width="{{ section.settings.logo_max_width }}" aria-label="{{ shop_name }}">
+							{%- if logo -%}
+								{{- logo_home -}}
+							{%- endif -%}
+
+							{%- if logo_other -%}
+								{{- logo_not_home -}}
+							{%- endif -%}
+						</a>
+					{%- endif -%}
+
+					{%- if show_shop_name -%}
+						<a id="shopName" class="logo__text" href="{{ routes.root_url }}">{{ shop_name }}</a>
+					{%- endif -%}
+				</div>
+			{%- endif -%}
+			{%- endif -%}
+
+			<div class="header-fix-cont">
+				<div class="header-fix-cont-inner">
+					<nav role="navigation" class="nav-standard nav-main">
+						{%- render 'navigation', is_hamburger_nav: false -%}
+							{% if section.settings.header_button_text_link %}
+							<a href="{{ section.settings.header_button_text_link }}" class="button button--primary">
+                      			{% if section.settings.header_button_text %}
+                              		<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975388 17.8126C1.60054 18.4377 2.44844 18.7889 3.33254 18.7889H7.87825V16.9706H3.33254C2.93068 16.9706 2.54527 16.811 2.26111 16.5268C1.97695 16.2427 1.81731 15.8573 1.81731 15.4554V5.75789C1.81731 5.35603 1.97695 4.97062 2.26111 4.68646C2.54527 4.4023 2.93068 4.24266 3.33254 4.24266H13.03C13.4319 4.24266 13.8173 4.4023 14.1015 4.68646C14.3856 4.97062 14.5453 5.35603 14.5453 5.75789V8.48532H16.3636V5.75789C16.3627 5.03298 16.1256 4.3281 15.6881 3.75008C15.2506 3.17205 14.6366 2.75239 13.9392 2.55469V0H12.1209V2.42438H9.09044V0H7.27215V2.42438H4.24168V0H2.4234V2.55469C1.72596 2.75239 1.11198 3.17205 0.674501 3.75008C0.237019 4.3281 -0.000119355 5.03298 -0.000976562 5.75789V15.4554C-0.000976562 16.3395 0.350232 17.1874 0.975388 17.8126ZM17.3757 9.69749C17.031 9.69677 16.6896 9.76444 16.3713 9.89656C16.0529 10.0287 15.764 10.2227 15.5211 10.4672L10.6723 15.316C10.3622 15.6246 10.1163 15.9915 9.94886 16.3957C9.78137 16.7998 9.6956 17.2332 9.69651 17.6707V20.0011H12.0269C12.4649 20.0024 12.8988 19.9168 13.3035 19.7493C13.7082 19.5818 14.0757 19.3357 14.3847 19.0253L19.2334 14.1765C19.6002 13.8093 19.8498 13.3416 19.9508 12.8325C20.0518 12.3235 19.9996 11.7959 19.8008 11.3165C19.6019 10.8371 19.2654 10.4274 18.8338 10.1392C18.4021 9.85103 17.8947 9.69731 17.3757 9.69749ZM17.9455 12.8916L13.0967 17.7404C12.8127 18.0236 12.428 18.1827 12.0269 18.1828H11.5148V17.6707C11.5144 17.4715 11.5533 17.2743 11.6293 17.0902C11.7052 16.9062 11.8166 16.7388 11.9572 16.5979L16.806 11.7491C16.9586 11.6057 17.1611 11.5273 17.3706 11.5305C17.58 11.5338 17.7799 11.6184 17.9281 11.7665C18.0762 11.9146 18.1608 12.1146 18.1641 12.324C18.1673 12.5335 18.0889 12.7359 17.9455 12.8886V12.8916ZM11.2944 9.21733C11.2944 8.08911 10.5694 7.33 9.66476 7.27614C9.18223 7.24742 8.7222 7.4237 8.3732 7.766C8.02188 7.42356 7.55708 7.24987 7.0653 7.29403C6.14398 7.37677 5.45386 8.1896 5.45386 9.34957C5.45386 10.5042 6.17252 11.49 6.77711 12.128C7.0912 12.4595 7.40324 12.727 7.63613 12.9116C7.75305 13.0042 7.85125 13.0769 7.92143 13.1272C7.95655 13.1524 7.98475 13.1721 8.00486 13.1859L8.02886 13.2022L8.03606 13.2071L8.03842 13.2087L8.03928 13.2092L8.03963 13.2095C8.03979 13.2096 8.03993 13.2097 8.37413 12.704L8.03993 13.2097C8.25643 13.3527 8.54 13.3421 8.74519 13.1833L8.37413 12.704C8.74519 13.1833 8.74531 13.1832 8.74543 13.1831L8.74647 13.1823L8.7486 13.1806L8.75534 13.1753L8.77837 13.1571C8.79782 13.1415 8.82532 13.1193 8.85972 13.0909C8.92846 13.0341 9.02506 12.9521 9.14026 12.8489C9.36983 12.6431 9.67745 12.3488 9.98694 11.9958C10.5755 11.3246 11.2944 10.3046 11.2944 9.21733ZM9.0755 11.1967C8.81435 11.4945 8.55145 11.7478 8.34937 11.9299C8.15366 11.7725 7.90442 11.5553 7.65697 11.2942C7.10447 10.7112 6.66605 10.0199 6.66605 9.34957C6.66605 8.68243 7.00297 8.5167 7.17373 8.50136C7.35034 8.4855 7.68542 8.59516 7.77505 9.17922C7.82043 9.475 8.07489 9.69339 8.37413 9.69339C8.67337 9.69339 8.92782 9.475 8.97321 9.17922C9.06207 8.60011 9.3989 8.47465 9.59272 8.48619C9.78016 8.49735 10.0822 8.65068 10.0822 9.21733C10.0822 9.82488 9.64405 10.5482 9.0755 11.1967Z" fill="white"/>
+                                    </svg>
+                                     {{ section.settings.header_button_text }}
+                              	{% endif %}
+                      		</a>
+						{% endif %}
+						{%- if settings.show_search -%}
+							{%- render 'nav-search' -%}
+						{%- endif -%}
+					</nav>
+						
+					<div class="header-icons">
+<!--                       <a href="" class="mobile__cal">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.976267 17.8108C1.60136 18.4359 2.44917 18.787 3.33319 18.787H7.87844V16.9689H3.33319C2.93136 16.9689 2.54599 16.8093 2.26186 16.5252C1.97773 16.2411 1.8181 15.8557 1.8181 15.4539V5.75732C1.8181 5.35549 1.97773 4.97013 2.26186 4.68599C2.54599 4.40186 2.93136 4.24224 3.33319 4.24224H13.0297C13.4316 4.24224 13.8169 4.40186 14.1011 4.68599C14.3852 4.97013 14.5448 5.35549 14.5448 5.75732V8.48447H16.3629V5.75732C16.3621 5.03248 16.1249 4.32767 15.6875 3.7497C15.2501 3.17174 14.6361 2.75212 13.9388 2.55443V0H12.1207V2.42413H9.09051V0H7.2724V2.42413H4.24224V0H2.42413V2.55443C1.72677 2.75212 1.11285 3.17174 0.675411 3.7497C0.237972 4.32767 0.000857122 5.03248 0 5.75732V15.4539C0 16.3379 0.351174 17.1857 0.976267 17.8108ZM17.375 9.69639C17.0303 9.69568 16.689 9.76333 16.3706 9.89545C16.0523 10.0276 15.7634 10.2215 15.5205 10.4661L10.6722 15.3143C10.3622 15.6229 10.1163 15.9898 9.94884 16.3939C9.78137 16.798 9.69561 17.2313 9.69652 17.6688V19.999H12.0267C12.4647 20.0003 12.8985 19.9147 13.3032 19.7472C13.7078 19.5797 14.0753 19.3337 14.3842 19.0232L19.2325 14.175C19.5992 13.8078 19.8488 13.3402 19.9498 12.8311C20.0508 12.3221 19.9986 11.7946 19.7998 11.3152C19.601 10.8358 19.2645 10.4262 18.8329 10.1381C18.4013 9.84992 17.8939 9.69622 17.375 9.69639ZM13.0964 17.7385C12.8124 18.0217 12.4278 18.1808 12.0267 18.1809H11.5146V17.6688C11.5143 17.4697 11.5532 17.2725 11.6291 17.0884C11.705 16.9043 11.8164 16.737 11.957 16.5961L16.8053 11.7478C16.9579 11.6044 17.1604 11.526 17.3698 11.5292C17.5792 11.5325 17.7791 11.6171 17.9272 11.7652C18.0753 11.9133 18.16 12.1132 18.1632 12.3227C18.1665 12.5321 18.0881 12.7345 17.9446 12.8872V12.8902L13.0964 17.7385ZM11.2943 9.21628C11.2943 8.08818 10.5693 7.32914 9.66478 7.27529C9.18229 7.24656 8.72231 7.42283 8.37335 7.76509C8.02206 7.42269 7.5573 7.24901 7.06557 7.29317C6.14435 7.37591 5.45429 8.18866 5.45429 9.34851C5.45429 10.503 6.17288 11.4888 6.77741 12.1267C7.09147 12.4581 7.40348 12.7256 7.63634 12.9101C7.75325 13.0028 7.85145 13.0755 7.92162 13.1258C7.95674 13.151 7.98493 13.1706 8.00504 13.1845L8.02903 13.2008L8.03624 13.2056L8.03859 13.2072L8.03946 13.2078L8.03981 13.208C8.03996 13.2081 8.04011 13.2082 8.37427 12.7026L8.04011 13.2082C8.25658 13.3513 8.54012 13.3407 8.7453 13.1818L8.37865 12.7083C8.7453 13.1818 8.74541 13.1817 8.74554 13.1816L8.74658 13.1808L8.74871 13.1792L8.75544 13.1739L8.77847 13.1556C8.79792 13.1401 8.82542 13.1179 8.85981 13.0894C8.92855 13.0326 9.02514 12.9507 9.14033 12.8475C9.36987 12.6417 9.67747 12.3474 9.98692 11.9945C10.5754 11.3234 11.2943 10.3035 11.2943 9.21628ZM9.07557 11.1954C8.81445 11.4932 8.55158 11.7465 8.34952 11.9286C8.15382 11.7712 7.90461 11.5541 7.65719 11.293C7.10474 10.71 6.66636 10.0187 6.66636 9.34851C6.66636 8.68144 7.00325 8.51572 7.17399 8.50038C7.35058 8.48452 7.68564 8.59417 7.77525 9.17817C7.82063 9.47392 8.07506 9.69229 8.37427 9.69229C8.67348 9.69229 8.92791 9.47392 8.97329 9.17817C9.06215 8.59912 9.39894 8.47367 9.59274 8.48521C9.78016 8.49637 10.0822 8.64969 10.0822 9.21628C10.0822 9.82377 9.64407 10.5471 9.07557 11.1954Z" fill="#E73439"/>
+</svg>
+
+                      </a> -->
+						<a href="#menu" class="js-menuToggle menuToggle" data-target="nav" aria-expanded="false" aria-label="{{ 'general.accessibility.menu_toggle' | t }}">
+							<div id="hamburger-menu" class="icon-menu">
+								<div class="diamond-bar"></div>
+								<div id="hamburger-bar" class="icon-bar"></div>
+							</div>
+						</a>
+                      
+                      	
+                      {%- if shop.customer_accounts_enabled -%}
+							<a href="{{ routes.account_url }}" class="nav-item nav-item-fixed nav-account-link{% unless settings.show_search %} nav-account-link--no-search{% endunless %}" aria-label="{{ 'general.accessibility.account' | t }}">
+								{%- render 'icon-user' -%}
+							</a>
+						{%- endif -%}
+					
+						<a href="#" class="nav-item searchToggle js-searchToggle js-searchToggle--open" data-search-nav=".nav-standard" aria-expanded="false" aria-label="{{ 'general.accessibility.search' | t }}">
+							 	<svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.00004 8.99967C7.92052 8.99967 8.66671 8.25348 8.66671 7.33301C8.66671 6.41253 7.92052 5.66634 7.00004 5.66634C6.07957 5.66634 5.33337 6.41253 5.33337 7.33301C5.33337 8.25348 6.07957 8.99967 7.00004 8.99967Z" fill="#24292E"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.7141 2.28563C9.11059 -0.317866 4.88949 -0.317866 2.286 2.28563C-0.3175 4.88913 -0.3175 9.11023 2.286 11.7137L2.30446 11.7321L5.8882 15.3159C6.50228 15.9299 7.49791 15.9299 8.112 15.3159L11.7141 11.7137C14.3176 9.11022 14.3176 4.88911 11.7141 2.28563ZM2.9931 2.99274C5.20607 0.779765 8.79401 0.779765 11.007 2.99274C13.2199 5.20569 13.22 8.79365 11.007 11.0066L7.40489 14.6088C7.18133 14.8323 6.81887 14.8323 6.59531 14.6088L3.01021 11.0237L3.00885 11.0223L2.9931 11.0066C0.780131 8.79364 0.780131 5.20571 2.9931 2.99274Z" fill="#24292E"/>
+</svg>
+							</a>
+
+						<a style="width: 17px;" id="cartTotal" href="{{ routes.cart_url }}" aria-label="{{ 'cart.labels.items_added' | t }}" class="nav-item nav-item-fixed js-cartToggle cartToggle{% if cart.item_count == 0 %} cartToggle--empty{% endif %}" aria-expanded="false" aria-label="{{ 'general.accessibility.cart' | t }}">
+							{%- if settings.cart_icon == 'cart' -%}
+								
+
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.12793 10.2055C6.00094 9.44358 6.5885 8.75 7.36092 8.75H17.6391C18.4115 8.75 18.9991 9.44358 18.8721 10.2055L17.5387 18.2055C17.4383 18.8082 16.9168 19.25 16.3057 19.25H8.69425C8.08321 19.25 7.56172 18.8082 7.46126 18.2055L6.12793 10.2055Z" stroke="#24292E" stroke-width="1.5"/>
+<path d="M8.75 7C8.75 5.20507 10.2051 3.75 12 3.75H13C14.7949 3.75 16.25 5.20507 16.25 7V8.25H8.75V7Z" stroke="#24292E" stroke-width="1.5"/>
+<circle cx="18.5" cy="5.5" r="3.5" fill="#E73439"/>
+</svg>
+
+
+							{%- else -%}
+								{%- render 'icon-circle' -%}
+								<div id="CartToggleItemCount" class="cartToggle-items">{{ cart.item_count }}</div>
+							{%- endif -%}
+						</a>
+                      {%- if settings.show_search -%}
+							<a href="#" class="nav-item searchToggle js-searchToggle js-searchToggle--open" data-search-nav=".nav-standard" aria-expanded="false" aria-label="{{ 'general.accessibility.search' | t }}">
+							 	<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.0417 10.7692L8.88932 8.59077C9.69191 7.68 10.1905 6.47385 10.1905 5.15692C10.1905 2.31385 7.90432 0 5.09525 0C2.28617 0 0 2.31385 0 5.15692C0 8 2.28617 10.3138 5.09525 10.3138C6.09241 10.3138 7.0166 10.0185 7.79488 9.52615L10.0324 11.7908C10.1662 11.9262 10.3486 12 10.531 12C10.7134 12 10.8958 11.9262 11.0296 11.7908C11.3214 11.5077 11.3214 11.0523 11.0417 10.7692ZM1.42278 5.15692C1.42278 3.11385 3.06444 1.44 5.09525 1.44C7.12605 1.44 8.75555 3.11385 8.75555 5.15692C8.75555 7.2 7.11389 8.87385 5.09525 8.87385C3.0766 8.87385 1.42278 7.21231 1.42278 5.15692Z" fill="#E73439"/>
+</svg>
+
+							</a>
+						{%- endif -%}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{%- render 'cart-popover' -%}
+</header>
+
+{% comment %} Site Navigation {% endcomment %}
+<nav role="navigation" class="nav-hamburger nav-main">
+	<button class="nav-mobile-close js-menuToggle" aria-expanded="false" aria-label="{{ 'general.accessibility.menu_toggle' | t }}">
+		{%- render 'icon-close' -%}
+	</button>
+	<div class="nav-inner">
+		<div class="nav-inner-wrapper">
+			{%- render 'navigation', is_hamburger_nav: true -%}
+		</div>
+	</div>
+</nav>
+
+{%- unless template == 'cart' -%}
+  <div class="cart-drawer">
+	{%- render 'site-cart' -%}
+  </div>
+{%- endunless -%}
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Organization",
+	"name": {{ shop.name | json }},
+	{%- if section.settings.logo or section.settings.logo_other -%}
+		{%- if section.settings.logo -%}
+			{%- assign logo = section.settings.logo -%}
+		{%- elsif section.settings.logo_other -%}
+			{%- assign logo = section.settings.logo_other -%}
+		{%- endif -%}
+		{%- assign image_size = logo.width | append:'x' -%}
+
+		"logo": {{ logo | img_url: image_size | prepend: "https:" | json }},
+	{%- endif -%}
+	"sameAs": [
+		{{ settings.instagram_link | json }},
+		{{ settings.facebook_link | json }},
+		{{ settings.twitter_link | json }},
+		{{ settings.youtube_link | json }},
+		{{ settings.vimeo_link | json }},
+		{{ settings.pinterest_link | json }},
+		{{ settings.tumblr_link | json }}
+	],
+	"url": {{ shop.url | append: page.url | json }}
+}
+</script>
+
+{%- if template.name == 'index' -%}
+	{%- assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" -%}
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"name": {{ shop.name | json }},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": {{ potential_action_target | json }},
+				"query-input": "required name=search_term_string"
+			},
+			"url": {{ shop.url | append: page.url | json }}
+		}
+	</script>
+{%- endif -%}
+
+{% schema %}
+{
+	"name": "Header",
+	"class": "shopify-section-header",
+	"max_blocks": 25,
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "logo",
+			"label": "Custom logo (Transparent header)",
+			"info": "Used on Home and Collection pages when the header is transparent"
+		},
+		{
+			"type": "image_picker",
+			"id": "logo_other",
+			"label": "Custom logo (Default)",
+			"info": "Used on the other pages and on scroll when the header is sticky"
+		},
+		{
+			"type": "range",
+			"id": "logo_max_width",
+			"label": "Custom logo width (in pixels)",
+			"info": "Max logo height is 100px",
+			"min": 50,
+			"max": 400,
+			"default": 100,
+			"step": 5,
+			"unit": "px"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_site_name",
+			"label": "Show site name",
+			"default": true
+		},
+		{
+			"type": "header",
+			"content": "Menus"
+		},
+		{
+			"type": "link_list",
+			"id": "menu_list",
+			"label": "Primary menu"
+		},
+		{
+			"type":"header",
+			"content":"Navigation settings"
+		},
+		{
+			"type": "select",
+			"id": "links_position",
+			"label": "Links position",
+			"default": "links_center",
+			"options": [
+				{
+					"value": "links_left",
+					"label": "Left"
+				},
+				{
+					"value": "links_right",
+					"label": "Right"
+				},
+				{
+					"value": "links_center",
+					"label": "Center"
+				}
+			]
+		},
+		{
+			"type": "select",
+			"id": "logo_position",
+			"label": "Logo position",
+			"default": "logo_left",
+			"options": [
+				{
+					"value": "logo_left",
+					"label": "Left"
+				},
+				{
+					"value": "logo_center",
+					"label": "Center"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"id": "header_button_text",
+			"label": "Header Button Text"
+		},
+		{
+			"type": "url",
+			"id": "header_button_text_link",
+			"label": "Header Button Link"
+		},
+		{
+			"type":"header",
+			"content":"Mega menu"
+		},
+		{
+			"type": "image_picker",
+			"id": "meganav_image",
+			"label": "Image",
+			"info": "Recommended size: 500 x 800 px"
+		},
+		{
+			"type": "range",
+			"id": "image_aspect_ratio",
+			"label": "Image aspect ratio",
+			"min": 0.5,
+			"max": 1.5,
+			"step": 0.1,
+			"unit": ":1",
+			"default": 1
+		},
+		{
+			"type": "text",
+			"id": "meganav_image_heading",
+			"label": "Heading"
+		},
+		{
+			"type": "url",
+			"id": "meganav_image_link",
+			"label": "Link"
+		}
+	],
+	"blocks": [
+		
+		{
+			"type": "submenu_icon_SVG",
+			"name": "Submenu Icon with SVG",
+			"settings": [
+				{
+                    "type":"header",
+                    "content":"Add submenu title in 'Icon Place' box to show icon"
+                },
+				{
+                    "type": "checkbox",
+                    "id": "enable_menu_icon_svg_tag",
+                    "label": "Enable Icon"
+                },
+				{
+          "type": "select",
+          "id": "svg_icon_name",
+          "label": "SVG Icon",
+          "default": "header_beaute",
+          "options": [
+            { "value": "header_beaute", "label": "Beaute" },
+            { "value": "header_bienetre", "label": "Bienetre" },
+            { "value": "header_defenses", "label": "Defenses" },
+            { "value": "header_energie", "label": "Energie" },
+            { "value": "header_minceur", "label": "Minceur" },
+            { "value": "header_sante", "label": "Sante" },
+            { "value": "header_sommeil", "label": "Sommeil" },
+            { "value": "header_transit", "label": "Transit" }
+          ]
+        },
+                {
+                    "type": "text",
+                    "id": "menu_icon_svg_tag",
+                    "label": "Icon Place"
+                },
+                {
+                    "type": "text",
+                    "id": "menu_view_all_button_text_svg",
+                    "label": "View all Button"
+                },
+                {
+                    "type": "url",
+                    "id": "menu_view_all_button_link_svg",
+                    "label": "View all Button Link"
+                }
+			]
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,82 @@
+{% render 'test_tab-container' with section: section %}
+
+{% comment %} Schema {% endcomment %}
+{% schema %}
+	{
+		"name": "Test Tab Container",
+		"class": "shopify-section--test-tab-container",
+		"max_blocks": 5,
+		"blocks": [
+			{
+				"type": "snippet-abc",
+				"name": "Snippet ABC",
+				"settings": [
+					{
+						"type": "text",
+						"id": "name",
+						"label": "Name"
+					},
+					{
+						"type": "text",
+						"id": "description",
+						"label": "Description"
+					}
+				]
+			},
+			{
+				"type": "snippet-efg",
+				"name": "Snippet EFG",
+				"settings": [
+					{
+						"type": "text",
+						"id": "name",
+						"label": "Name"
+					},
+					{
+						"type": "text",
+						"id": "description",
+						"label": "Description"
+					},
+					{
+						"type": "image_picker",
+						"id": "image",
+						"label": "Image"
+					}
+				]
+			},
+			{
+				"type": "key-figures-test",
+				"name": "Key Figures",
+				"settings": [
+					{
+						"type": "text",
+						"id": "title",
+						"label": "Title"
+					},
+					{
+						"type": "text",
+						"id": "num1",
+						"label": "Figures Number 1"
+					},
+					{
+						"type": "text",
+      					"id": "num1_title",
+      					"label": "Figures Number 1 Title"
+					},
+					{
+      					"type": "text",
+      					"id": "num1_detail",
+      					"label": "Figures Number 1 Detail"
+    				}
+				]
+			}
+
+		],
+	  "presets": [
+			{
+				"name": "Test Tab Container",
+				"category": "Test"
+			}
+		]
+	}
+{% endschema %}

@@ -1,0 +1,64 @@
+{% if block.settings.tab1 != blank %}
+<div class="jb-product-collateral">
+  <div class="tab-title">
+		<div class="container">
+          
+			<nav id="desktop-nav">
+			    <ul>
+				
+                  
+			      <li class="tab-title-inner">
+                    <a href="#tab1" class="page-scroll">
+                      {% if block.settings.tab1 != blank %}
+                      	{{ block.settings.tab1 }}
+                      {% endif %}
+                    	
+                    </a>
+                  </li>
+                
+                  
+			      <li class="tab-title-inner">
+                    <a href="#tab2" class="page-scroll">
+                      {% if block.settings.tab2 != blank %}
+                      	{{ block.settings.tab2 }}
+                      {% endif %}
+                     
+                    </a>
+                  </li>
+                  
+                  
+			      <li class="tab-title-inner">
+                    <a href="#tab3" class="page-scroll">
+                      {% if block.settings.tab3 != blank %}
+                      	{{ block.settings.tab3 }}
+                      {% endif %}
+                       
+                    </a>
+                  </li>
+                  
+                  
+			      <li class="tab-title-inner">
+                    <a href="#tab4" class="page-scroll">
+                      {% if block.settings.tab4 != blank %}
+                      	{{ block.settings.tab4 }}
+                      {% endif %}
+                      
+                    </a>
+                  </li>
+                  
+                  
+				  <li class="tab-title-inner active">
+                    <a href="#tab5" class="page-scroll">
+                      {% if block.settings.tab5 != blank %}
+                      	{{ block.settings.tab5 }}
+                      {% endif %}
+                      
+                    </a>
+                  </li>	                  
+                  
+			    </ul>
+			</nav>
+		</div>
+	</div>
+</div>
+{% endif %}

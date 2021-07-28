@@ -1,0 +1,116 @@
+/**
+ * Base CSS file for Custom Fields widget styles.
+ * You can modify this file.
+ */
+.custom-fields-widgets-wrapper {
+  margin-top: 2rem;
+}
+.custom-fields-widgets-wrapper > div {
+  margin-bottom: 2rem;
+}
+.custom-fields-widgets-wrapper > div:last-child {
+  margin-bottom: 0;
+}
+
+.custom-fields-wrapper > [class*=cf-widget-] {
+  margin-bottom: 2rem;
+}
+
+.custom-fields-section {
+  margin-top: 6rem;
+}
+.custom-fields-section .custom-field {
+  margin: auto;
+  padding-left: 22px;
+  padding-right: 22px;
+  max-width: 1200px;
+}
+.custom-fields-section .cf-widget-items-wrapper {
+  margin: auto;
+  padding-left: 22px;
+  padding-right: 22px;
+  max-width: 1200px;
+}
+.custom-fields-section .custom-fields-section__item > div {
+  margin-bottom: 8rem;
+}
+@media screen and (min-width: 749px) {
+  .custom-fields-section .custom-field {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  .custom-fields-section .cf-widget-items-wrapper {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+
+/**
+ * Image Next to Text Widget CSS.
+ */
+.cf-widget__image-next-to-text .cf-widget-item {
+  margin-bottom: 2rem;
+}
+.cf-widget__image-next-to-text .cf-widget-item:last-child {
+  margin-bottom: 0;
+}
+.cf-widget__image-next-to-text .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+.cf-widget__image-next-to-text .cf-widget-field__title {
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+.cf-widget__image-next-to-text .cf-column {
+  width: 100%;
+}
+.cf-widget__image-next-to-text .cf-column:first-child {
+  margin-bottom: 1rem;
+}
+.cf-widget__image-next-to-text .cf-column-inner {
+  max-width: 400px;
+}
+.cf-widget__image-next-to-text .cf-widget-field {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.cf-widget__image-next-to-text .cf-widget-field:last-child {
+  margin-bottom: 0;
+}
+.cf-widget__image-next-to-text img {
+  display: block;
+}
+@media screen and (min-width: 749px) {
+  .cf-widget__image-next-to-text .cf-widget-field__title {
+    font-size: 2.15rem;
+    line-height: 2.5rem;
+  }
+  .cf-widget__image-next-to-text .inner {
+    flex-direction: row;
+  }
+  .cf-widget__image-next-to-text .cf-column:first-child {
+    min-width: 200px;
+    margin-bottom: 0;
+    max-width: 380px;
+  }
+  .cf-widget__image-next-to-text .cf-column:last-child {
+    padding-left: 3rem;
+  }
+  .cf-widget__image-next-to-text .cf-widget-item.cf-right-aligned--1 .cf-column-inner {
+    float: right;
+  }
+  .cf-widget__image-next-to-text .cf-widget-item.cf-right-aligned--1 .cf-column:last-child {
+    padding-left: 0;
+    padding-right: 3rem;
+  }
+  .cf-widget__image-next-to-text .cf-widget-item.cf-right-aligned--1 .inner {
+    flex-direction: row-reverse;
+  }
+}

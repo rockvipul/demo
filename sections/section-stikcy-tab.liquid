@@ -1,0 +1,837 @@
+<div class="jb-product-collateral jb-stikcy-container">
+  {% if section.settings.tab1 != blank %}
+  <div class="tab-title" {% if section.settings.bg_color != blank %} style="background-color: {{ section.settings.bg_color }}" {% endif %}>
+    <div class="container">
+
+      <nav id="desktop-nav">
+        <ul>
+
+
+          <li class="tab-title-inner active">
+            <a href="#tab1" class="page-scroll">
+              {% if section.settings.tab1 != blank %}
+              {{ section.settings.tab1 }}
+              {% endif %}
+
+            </a>
+          </li>
+
+
+          <li class="tab-title-inner">
+            <a href="#tab2" class="page-scroll">
+              {% if section.settings.tab2 != blank %}
+              {{ section.settings.tab2 }}
+              {% endif %}
+
+            </a>
+          </li>
+
+
+          <li class="tab-title-inner">
+            <a href="#tab3" class="page-scroll">
+              {% if section.settings.tab3 != blank %}
+              {{ section.settings.tab3 }}
+              {% endif %}
+
+            </a>
+          </li>
+
+
+          <li class="tab-title-inner">
+            <a href="#tab4" class="page-scroll">
+              {% if section.settings.tab4 != blank %}
+              {{ section.settings.tab4 }}
+              {% endif %}
+
+            </a>
+          </li>
+
+
+          <li class="tab-title-inner">
+            <a href="#tab5" class="page-scroll">
+              {% if section.settings.tab5 != blank %}
+              {{ section.settings.tab5 }}
+              {% endif %}
+
+            </a>
+          </li>                   
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="tab-content">
+    {% endif %}
+    {% for block in section.blocks %}
+    {% case block.type %}
+    {% when 'block_ingredients' %}
+
+    {% render "ingredients-section", block:block %}
+
+    {% when 'block_key_figures' %}
+
+    {% render "section_block_key_figures", block:block %}
+
+    {% when 'block_simple_text' %}
+
+    {% render "simple-text-section", block:block %}
+
+    {% when 'block_text_with_text' %}
+
+    {% render "text-with-text-section", block:block %}
+
+    {% when 'image_left_text_right' %}
+
+    {% render "image-left-text-right-section", block:block %}
+
+    {% when 'text_right_image_left' %}
+
+    {% render "text-left-image-right-section", block:block %}
+
+    {% when 'image_with_text-table' %}
+
+    {% render "image-with-text-table-section", block:block %}
+
+    {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+<script type="text/javascript">
+  jQuery('.tab-title #desktop-nav').on('click', '.tab-title-inner', function() {
+    var that = $(this);
+    if (!that.hasClass('active')) {
+      that.addClass('active').siblings('.active').removeClass('active');
+    }
+  });
+</script>    	
+
+<script type="text/javascript">
+  jQuery(function($){
+    var topMenuHeight = $("#desktop-nav").outerHeight();
+    $("#desktop-nav").menuScroll(topMenuHeight);
+  });
+
+  // COPY THE FOLLOWING FUNCTION INTO ANY SCRIPTS
+  jQuery.fn.extend({
+    menuScroll: function(offset) {
+      // Declare all global variables
+      var topMenu = this;
+      var topOffset = offset ? offset : 0;
+      var menuItems = $(topMenu).find("a");
+      var lastId;
+
+      // Save all menu items into scrollItems array
+      var scrollItems = $(menuItems).map(function() {
+        var item = $($(this).attr("href"));
+        if (item.length) {
+          return item;
+        }
+      });
+
+      // When the menu item is clicked, get the #id from the href value, then scroll to the #id element
+      $(topMenu).on("click", "a", function(e){
+        var target = this.hash;
+        $target = $(target);
+        $('html, body').stop().animate({
+          'scrollTop':  $target.offset().top //no need of parseInt here
+        }, 900, 'swing', function () {
+          window.location.hash = target;
+        });
+      });
+
+      // When page is scrolled
+      $(window).scroll(function(){
+        var nm = $("html").scrollTop();
+        var nw = $("body").scrollTop();
+        var fromTop = (nm > nw ? nm : nw)+topOffset;
+
+
+        // When the page pass one #id section, return all passed sections to scrollItems and save them into new array current
+        var current = $(scrollItems).map(function(){
+          if ($(this).offset().top <= fromTop)
+            return this;
+        });
+
+        // Get the most recent passed section from current array
+        current = current[current.length-1];
+        var id = current && current.length ? current[0].id : "";
+        if (lastId !== id) {
+          lastId = id;
+          // Set/remove active class
+          $(menuItems)
+          .parent().removeClass("active")
+          .end().filter("[href='#"+id+"']").parent().addClass("active");
+        }      
+
+      });
+    }
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Tab section",
+	"max_blocks": 5,
+    "settings": [
+        {
+			"type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+			"default": "#E73439"
+		},
+		{
+          "type": "text",
+          "id": "tab1",
+          "label": "Tab 1"
+        },
+        {
+          "type": "text",
+          "id": "tab2",
+          "label": "Tab 2"
+        },
+        {
+          "type": "text",
+          "id": "tab3",
+          "label": "Tab 3"
+        },
+        {
+          "type": "text",
+          "id": "tab4",
+          "label": "Tab 4"
+        },
+        {
+          "type": "text",
+          "id": "tab5",
+          "label": "Tab 5"
+        }
+	],
+	"blocks": [
+		
+		 
+		{
+          "type": "block_ingredients",
+          "name": "Ingredients",
+          "settings": [
+            {
+			"type": "select",
+			"id": "tab_id",
+			"label": "Select Tab ID",
+			"default": "tab1",
+			"options": [
+						{ "value": "tab1", "label": "Tab 1" },
+						{ "value": "tab2", "label": "Tab 2" },
+						{ "value": "tab3", "label": "Tab 3" },
+						{ "value": "tab4", "label": "Tab 4" },
+						{ "value": "tab5", "label": "Tab 5" }
+					]
+			},
+			{
+              "type": "text",
+              "id": "title",
+              "label": "Title"
+            },
+            {
+              "type": "image_picker",
+              "id": "icon1",
+              "label": "Icon 1 Image"
+            },
+            {
+              "type": "text",
+              "id": "icon1_title",
+              "label": "Icon 1 Title"
+            },
+            {
+              "type": "text",
+              "id": "icon1_detail",
+              "label": "Icon 1 Detail"
+            },
+            {
+              "type": "image_picker",
+              "id": "icon2",
+              "label": "Icon 2 Image"
+            },
+            {
+              "type": "text",
+              "id": "icon2_title",
+              "label": "Icon 2 Title"
+            },
+            {
+              "type": "text",
+              "id": "icon2_detail",
+              "label": "Icon 2 Detail"
+            },
+            {
+              "type": "image_picker",
+              "id": "icon3",
+              "label": "Icon 3 Image"
+            },
+            {
+              "type": "text",
+              "id": "icon3_title",
+              "label": "Icon 3 Title"
+            },
+            {
+              "type": "text",
+              "id": "icon3_detail",
+              "label": "Icon 3 Detail"
+            },
+            {
+              "type": "textarea",
+              "id": "detail",
+              "label": "Heading",
+              "default": "Tell a Story"
+            },
+            {
+              "type": "text",
+              "id": "button_title",
+              "label": "Button Title"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "Button Link"
+            },
+            {
+              "type": "text",
+              "id": "table_title",
+              "label": "Table Title"
+            },
+            {
+              "type": "text",
+              "id": "table_heading_1",
+              "label": "Table Heading 1"
+            },
+            {
+              "type": "text",
+              "id": "table_heading_2",
+              "label": "Table Heading 2"
+            },
+				{
+      				"type": "text",
+      				"id": "table_row_left1",
+      				"label": "Table Row Left 1"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right1",
+      				"label": "Table Row Right 1"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left2",
+      				"label": "Table Row Left 2"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right2",
+      				"label": "Table Row Right 2"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left3",
+      				"label": "Table Row Left 3"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right3",
+      				"label": "Table Row Right 3"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left4",
+      				"label": "Table Row Left 4"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right4",
+      				"label": "Table Row Right 4"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left5",
+      				"label": "Table Row Left 5"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right5",
+      				"label": "Table Row Right 5"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left6",
+      				"label": "Table Row Left 6"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right6",
+      				"label": "Table Row Right 6"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left7",
+      				"label": "Table Row Left 7"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right7",
+      				"label": "Table Row Right 7"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left8",
+      				"label": "Table Row Left 8"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right8",
+      				"label": "Table Row Right 8"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left9",
+      				"label": "Table Row Left 9"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right9",
+      				"label": "Table Row Right 9"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left10",
+      				"label": "Table Row Left 10"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right10",
+      				"label": "Table Row Right 10"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left11",
+      				"label": "Table Row Left 11"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right11",
+      				"label": "Table Row Right 11"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_left12",
+      				"label": "Table Row Left 12"
+    			},
+				{
+      				"type": "text",
+      				"id": "table_row_right12",
+      				"label": "Table Row Right 12"
+    			}
+          ]
+    	},
+		{
+          "type": "block_key_figures",
+          "name": "Key Figures",
+          "settings": [
+            {
+			"type": "select",
+			"id": "tab_id",
+			"label": "Select Tab ID",
+			"default": "tab1",
+			"options": [
+						{ "value": "tab1", "label": "Tab 1" },
+						{ "value": "tab2", "label": "Tab 2" },
+						{ "value": "tab3", "label": "Tab 3" },
+						{ "value": "tab4", "label": "Tab 4" },
+						{ "value": "tab5", "label": "Tab 5" }
+					]
+			},{
+			"type": "checkbox",
+            "id": "bg_color_enable",
+            "label": "Enable Background Color",
+			"default": true
+		},
+		{
+			"type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+			"default": "#e73439"
+		},
+			{
+              "type": "text",
+              "id": "title",
+              "label": "Title"
+            },
+            {
+              "type": "text",
+              "id": "num1",
+              "label": "Figures Number 1"
+            },
+            {
+              "type": "text",
+              "id": "num1_title",
+              "label": "Figures Number 1 Title"
+            },
+            {
+              "type": "text",
+              "id": "num1_detail",
+              "label": "Figures Number 1 Detail"
+            },
+            {
+              "type": "text",
+              "id": "num2",
+              "label": "Figures Number 2"
+            },
+            {
+              "type": "text",
+              "id": "num2_title",
+              "label": "Figures Number 2 Title"
+            },
+            {
+              "type": "text",
+              "id": "num2_detail",
+              "label": "Figures Number 2 Detail"
+            },
+            {
+              "type": "text",
+              "id": "num3",
+              "label": "Figures Number 3"
+            },
+            {
+              "type": "text",
+              "id": "num3_title",
+              "label": "Figures Number 3 Title"
+            },
+            {
+              "type": "text",
+              "id": "num3_detail",
+              "label": "Figures Number 3 Detail"
+            },
+            {
+              "type": "richtext",
+              "id": "detail",
+              "label": "Heading",
+			  "default": "<p>Tell a Story</p>"
+            }
+          ]
+        },
+		{
+          "type": "block_simple_text",
+          "name": "Simple Text",
+          "settings": [
+            {
+			"type": "select",
+			"id": "tab_id",
+			"label": "Select Tab ID",
+			"default": "tab1",
+			"options": [
+						{ "value": "tab1", "label": "Tab 1" },
+						{ "value": "tab2", "label": "Tab 2" },
+						{ "value": "tab3", "label": "Tab 3" },
+						{ "value": "tab4", "label": "Tab 4" },
+						{ "value": "tab5", "label": "Tab 5" }
+					]
+			},{
+			"type": "checkbox",
+            "id": "enbale_bg",
+            "label": "Enable Background Color",
+			"default": true
+		},
+		{
+			"type": "color",
+            "id": "bg_color",
+            "label": "background Color",
+			"default": "#f7f7f7"
+		},{
+      "type": "color",
+            "id": "headign_color",
+            "label": "Heading Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+            "id": "subheading_color",
+            "label": "Subheading Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+            "id": "description_color",
+            "label": "Description Color",
+      "default": "#000"
+    },
+    {
+      "type": "text",
+            "id": "title",
+            "label": "Heading"
+    },
+    {
+      "type": "text",
+            "id": "subheading",
+            "label": "Subheading"
+    },
+    {
+      "type": "textarea",
+            "id": "description",
+            "label": "Description"
+    }
+		  ]
+        },
+		{
+          "type": "block_text_with_text",
+          "name": "Text with text grid ",
+          "settings": [
+             {
+			"type": "select",
+			"id": "tab_id",
+			"label": "Select Tab ID",
+			"default": "tab1",
+			"options": [
+						{ "value": "tab1", "label": "Tab 1" },
+						{ "value": "tab2", "label": "Tab 2" },
+						{ "value": "tab3", "label": "Tab 3" },
+						{ "value": "tab4", "label": "Tab 4" },
+						{ "value": "tab5", "label": "Tab 5" }
+					]
+			},{
+              "type": "checkbox",
+              "id": "enable_bg_color",
+              "label": "Enable Background Color"
+              },
+			  {
+              "type": "color",
+              "id": "bg_color",
+              "label": "Background Color"
+              },
+			  {
+              "type": "text",
+              "id": "title",
+              "label": "Heading"
+              },
+              {
+              "type": "html",
+              "id": "html_code1",
+              "label": "Description"
+              },
+              {
+              "type": "text",
+              "id": "left_title_1",
+              "label": "Left Title 1"
+              },
+              {
+              "type": "html",
+              "id": "html_code2",
+              "label": "Left Description 1"
+              },
+              {
+              "type": "text",
+              "id": "left_title_2",
+              "label": "Left Title 2"
+              },
+              {
+              "type": "html",
+              "id": "html_code3",
+              "label": "Left Description 2"
+              },
+              {
+              "type": "text",
+              "id": "right_title_1",
+              "label": "Right Title 1"
+              },
+              {
+              "type": "html",
+              "id": "html_code4",
+              "label": "Right Description 1"
+              },
+              {
+              "type": "text",
+              "id": "right_title_2",
+              "label": "Right Title 2"
+              },
+              {
+              "type": "html",
+              "id": "html_code5",
+              "label": "Right Description 2"
+              }
+		  ]
+        },
+		{
+          "type": "image_left_text_right",
+          "name": "Image Left and Text Right",
+          "settings": [
+            {
+			"type": "select",
+			"id": "tab_id",
+			"label": "Select Tab ID",
+			"default": "tab1",
+			"options": [
+						{ "value": "tab1", "label": "Tab 1" },
+						{ "value": "tab2", "label": "Tab 2" },
+						{ "value": "tab3", "label": "Tab 3" },
+						{ "value": "tab4", "label": "Tab 4" },
+						{ "value": "tab5", "label": "Tab 5" }
+					]
+			},{
+             "type": "image_picker",
+             "id": "image",
+             "label": "Image"
+           	},
+			{
+              "type": "html",
+              "id": "title",
+              "label": "Heading",
+              "default": "Talk about your brand"
+          	},
+			{
+            "type": "text",
+            "id": "subtitle",
+            "label": "Sub Heading"
+            },
+            {
+              "type": "html",
+              "id": "code",
+              "label": "HTML",
+              "default": "<h2>Use HTML to format your text so it can be easily read.</h2>This text can be used to share information about your brand with customers."
+            }
+          ]
+        },
+		{
+          "type": "text_right_image_left",
+          "name": "Text Left and Image Right",
+          "settings": [            
+			{
+			"type": "select",
+			"id": "tab_id",
+			"label": "Select Tab ID",
+			"default": "tab1",
+			"options": [
+						{ "value": "tab1", "label": "Tab 1" },
+						{ "value": "tab2", "label": "Tab 2" },
+						{ "value": "tab3", "label": "Tab 3" },
+						{ "value": "tab4", "label": "Tab 4" },
+						{ "value": "tab5", "label": "Tab 5" }
+					]
+			},{
+              "type": "html",
+              "id": "title",
+              "label": "Heading",
+              "default": "Talk about your brand"
+          	},
+			{
+            "type": "text",
+            "id": "subtitle",
+            "label": "Sub Heading"
+            },
+            {
+              "type": "html",
+              "id": "code",
+              "label": "HTML",
+              "default": "<h2>Use HTML to format your text so it can be easily read.</h2>This text can be used to share information about your brand with customers."
+            },
+			{
+             "type": "image_picker",
+             "id": "image",
+             "label": "Image"
+           	}
+          ]
+        },
+		{
+			"type": "image_with_text-table",
+			"name": "Image With Text and Table",
+			"settings": [
+				{
+			"type": "select",
+			"id": "tab_id",
+			"label": "Select Tab ID",
+			"default": "tab1",
+			"options": [
+						{ "value": "tab1", "label": "Tab 1" },
+						{ "value": "tab2", "label": "Tab 2" },
+						{ "value": "tab3", "label": "Tab 3" },
+						{ "value": "tab4", "label": "Tab 4" },
+						{ "value": "tab5", "label": "Tab 5" }
+					]
+			},{
+      "type": "text",
+            "id": "title",
+            "label": "Heading"
+    },
+    {
+      "type": "html",
+            "id": "description",
+            "label": "Description"
+    },
+    {
+      "type": "image_picker",
+            "id": "img1",
+            "label": "Image"
+    },
+    {
+      "type": "text",
+            "id": "table_title_1",
+            "label": "Table Title Left"
+    },
+    {
+      "type": "text",
+            "id": "table_title_2",
+            "label": "Table Title Right"
+    },
+    {
+      "type": "text",
+            "id": "table_row_left_1",
+            "label": "Table Row Left 1"
+    },
+    {
+      "type": "text",
+            "id": "table_row_right_1",
+            "label": "Table Row Right 1"
+    },
+    {
+      "type": "text",
+            "id": "table_row_left_2",
+            "label": "Table Row Left 2"
+    },
+    {
+      "type": "text",
+            "id": "table_row_right_2",
+            "label": "Table Row Right 2"
+    },
+    {
+      "type": "text",
+            "id": "table_row_left_3",
+            "label": "Table Row Left 3"
+    },
+    {
+      "type": "text",
+            "id": "table_row_right_3",
+            "label": "Table Row Right 3"
+    },
+    {
+      "type": "text",
+            "id": "table_row_left_4",
+            "label": "Table Row Left 4"
+    },
+    {
+      "type": "text",
+            "id": "table_row_right_4",
+            "label": "Table Row Right 4"
+    }
+			]
+		}
+		
+	],
+	"presets": [
+			{
+				"name": "Tab Container Section",
+				"category": "Advanced"
+			}
+		]
+
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

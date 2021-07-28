@@ -1,0 +1,166 @@
+<div class="text-right-image-left__main">
+  <div class="container text-right-image-left__inner_">
+    <div class="feature-item " data-alignment="center">
+      <div class="feature-text">
+        <div class="feature-text-wrap">
+              {% if section.settings.title != blank %}
+          <h2 data-animation="moPopUp" data-animation-delay="0">{{  section.settings.title }}</h2>
+              {% endif %}
+          <div class="feature-text__p" data-animation="moPopUp" data-animation-delay="250">
+            {% if section.settings.description != blank %}
+                {{  section.settings.description }}
+                {% endif %}
+          </div>
+        </div>
+      </div>  
+      <div class="feature-image">
+        <div class="feature-image-bg" style="height:100%"> 
+          <div class="svg-placeholder">
+                 {% if section.settings.img1 != blank %}
+                <img src="{{ section.settings.img1 | img_url: '1024x' }}"> 
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jb-product-collateral">
+      <div class="tab-content">  
+        <div class="tabs">
+          <div class="tab-content-table-wrapper">
+                 {% if section.settings.table_title_1 != blank and section.settings.table_title_2 != blank %}
+            <table class="tab-content-table">
+              <tbody>
+                <tr>
+                      {% if section.settings.table_title_1 != blank %}
+                  <th>{{ section.settings.table_title_1 }}</th>
+                      {% endif %}
+                      {% if section.settings.table_title_2 != blank %}
+                  <th>{{ section.settings.table_title_2 }}</th>
+                      {% endif %}
+                </tr>
+                <tr>
+                      {% if section.settings.table_row_left_1 != blank %}
+                  <td>{{ section.settings.table_row_left_1 }}</td>
+                      {% endif %}
+                      {% if section.settings.table_row_right_1 != blank %}
+                  <td>{{ section.settings.table_row_right_1 }}</td>
+                      {% endif %}
+                </tr>
+                <tr>
+                      {% if section.settings.table_row_left_2 != blank %}
+                  <td>{{ section.settings.table_row_left_2 }}</td>
+                      {% endif %}
+                      {% if section.settings.table_row_right_2 != blank %}
+                  <td>{{ section.settings.table_row_right_2 }}</td>
+                      {% endif %}
+                </tr>
+                <tr>
+                      {% if section.settings.table_row_left_3 != blank %}
+                  <td>{{ section.settings.table_row_left_3 }}</td>
+                      {% endif %}
+                      {% if section.settings.table_row_right_3 != blank %}
+                  <td>{{ section.settings.table_row_right_3 }}</td>
+                      {% endif %}
+                </tr>
+                <tr>
+                      {% if section.settings.table_row_left_4 != blank %}
+                  <td>{{ section.settings.table_row_left_4 }}</td>
+                      {% endif %}
+                      {% if section.settings.table_row_right_4 != blank %}
+                  <td>{{ section.settings.table_row_right_4 }}</td>
+                      {% endif %}
+                </tr>
+              </tbody>
+            </table>
+                {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Image Left Section",
+    "settings": [
+    {
+      "type": "text",
+            "id": "title",
+            "label": "Heading"
+    },
+    {
+      "type": "html",
+            "id": "description",
+            "label": "Description"
+    },
+    {
+      "type": "image_picker",
+            "id": "img1",
+            "label": "Image"
+    },
+    {
+      "type": "text",
+            "id": "table_title_1",
+            "label": "Table Title Left"
+    },
+    {
+      "type": "text",
+            "id": "table_title_2",
+            "label": "Table Title Right"
+    },
+    {
+      "type": "text",
+            "id": "table_row_left_1",
+            "label": "Table Row Left 1"
+    },
+    {
+      "type": "text",
+            "id": "table_row_right_1",
+            "label": "Table Row Right 1"
+    },
+    {
+      "type": "text",
+            "id": "table_row_left_2",
+            "label": "Table Row Left 2"
+    },
+    {
+      "type": "text",
+            "id": "table_row_right_2",
+            "label": "Table Row Right 2"
+    },
+    {
+      "type": "text",
+            "id": "table_row_left_3",
+            "label": "Table Row Left 3"
+    },
+    {
+      "type": "text",
+            "id": "table_row_right_3",
+            "label": "Table Row Right 3"
+    },
+    {
+      "type": "text",
+            "id": "table_row_left_4",
+            "label": "Table Row Left 4"
+    },
+    {
+      "type": "text",
+            "id": "table_row_right_4",
+            "label": "Table Row Right 4"
+    }
+],
+  "presets": [
+    {
+      "name": "Text Image Left Section",
+      "category": "Advanced"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

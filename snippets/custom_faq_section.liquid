@@ -1,0 +1,126 @@
+<div id="shopify-section-custom_faq_section" class="faq-section">
+   <div class="page-title">
+      <div class="container">
+         <div class="row">
+            {% if metafields.custom_fields["faqs_subheading"] != blank %}
+	            <p class="page-title__subheading subheading-text">
+	               {{ metafields.custom_fields["faqs_subheading"] }}
+	            </p>
+            {%- endif -%}
+            {% if metafields.custom_fields["faqs_heading"] != blank %}
+            	<h2 class="page-title__heading">{{ metafields.custom_fields["faqs_heading"] }}</h2>
+            {%- endif -%}
+         </div>
+      </div>
+   </div>
+   {% if metafields.custom_fields["product_faqs"] != blank %}
+   <div class="faq-content">
+      <div class="container">
+         <ul class="faq-list">
+            {% for item in metafields.custom_fields["product_faqs"] %}
+	            {% if item["faqs_question_1"] != blank and item["faqs_answer_1"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			            <a href="#" class="faq-list__item-question">
+				            <h3>{{ item["faqs_question_1"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                          </a>
+                      <div class="faq-list__item-answer"><p>{{ item["faqs_answer_1"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_2"] != blank and item["faqs_answer_2"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			            <a href="#" class="faq-list__item-question">
+				           <h3> {{ item["faqs_question_2"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                          </a>
+                      <div class="faq-list__item-answer"><p> {{ item["faqs_answer_2"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_3"] != blank and item["faqs_answer_3"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			            <a href="#" class="faq-list__item-question">
+				            <h3>{{ item["faqs_question_3"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                          </a>
+                      <div class="faq-list__item-answer"><p> {{ item["faqs_answer_3"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_4"] != blank and item["faqs_answer_4"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			           <a href="#" class="faq-list__item-question">
+				            <h3>{{ item["faqs_question_4"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                         </a>
+                      <div class="faq-list__item-answer"><p>{{ item["faqs_answer_4"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_5"] != blank and item["faqs_answer_5"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			            <a href="#" class="faq-list__item-question">
+				           <h3> {{ item["faqs_question_5"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                          </a>
+                      <div class="faq-list__item-answer"><p> {{ item["faqs_answer_5"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_6"] != blank and item["faqs_answer_6"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			            <a href="#" class="faq-list__item-question">
+				            <h3>{{ item["faqs_question_6"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                          </a>
+                      <div class="faq-list__item-answer"><p> {{ item["faqs_answer_6"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_7"] != blank and item["faqs_answer_7"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			           <a href="#" class="faq-list__item-question">
+				            <h3>{{ item["faqs_question_7"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                         </a>
+                      <div class="faq-list__item-answer"><p> {{ item["faqs_answer_7"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_8"] != blank and item["faqs_answer_8"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			           <a href="#" class="faq-list__item-question">
+				            <h3>{{ item["faqs_question_8"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                         </a>
+                      <div class="faq-list__item-answer"><p> {{ item["faqs_answer_8"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_9"] != blank and item["faqs_answer_9"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			           <a href="#" class="faq-list__item-question">
+				            <h3>{{ item["faqs_question_9"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                         </a>
+                      <div class="faq-list__item-answer"><p> {{ item["faqs_answer_9"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+	            {% if item["faqs_question_10"] != blank and item["faqs_answer_10"] != blank %}
+		            <li class="faq-list__item" {{ block.shopify_attributes }}>
+			           <a href="#" class="faq-list__item-question">
+				            <h3>{{ item["faqs_question_10"] }}</h3>
+				            {%- render 'icon-down-arrow' -%}
+				            {%- render 'icon-up-arrow' -%}
+                         </a>
+                      <div class="faq-list__item-answer"><p> {{ item["faqs_answer_10"] }}</p></div>
+		            </li>
+	            {%- endif -%}
+            {%- endfor -%}
+         </ul>
+      </div>
+   </div>
+   {% endif %}
+</div>

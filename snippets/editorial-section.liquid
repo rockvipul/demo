@@ -1,0 +1,47 @@
+{% if metafields.custom_fields["editorial_section_image"] != blank %}
+<div class="product-features--container section-with-bg-color">
+      <div class="custom-full-container">
+        <div class="row">
+            <div class="feature-item " data-alignment="center">
+                    {% if metafields.custom_fields["editorial_section_image"] != blank %}
+              <div class="feature-image">
+                <div class="feature-image-bg" style="height:100%">
+                  <div class="svg-placeholder">
+  						{% render 'cf-image' with image: metafields.custom_fields["editorial_section_image"] %}
+				   
+                  </div>
+               </div>
+              </div> 
+              {% endif %}
+              <div class="feature-text">
+                <div class="feature-text-wrap">
+                	{% if metafields.custom_fields["editorial_section_subheading"] != blank %}
+			         <div class="sec6subtitle">
+			           {{ metafields.custom_fields["editorial_section_subheading"] }}
+			        </div>
+			        {% endif %}
+          		{% if metafields.custom_fields["editorial_section_title"] != blank %}
+                  <h2 class="" data-animation="moPopUp" data-animation-delay="0">
+                   {{ metafields.custom_fields["editorial_section_title"] }}
+                  </h2>
+                {% endif %}
+                  <div class="feature-text__p" data-animation="moPopUp" data-animation-delay="250">
+                    {% if metafields.custom_fields["editorial_section__body"] != blank %}
+                      <p>{{ metafields.custom_fields["editorial_section__body"] }}</p>
+                    {% endif %}
+                  </div>
+                  
+                  {% if metafields.custom_fields["editorial_button_with_link"] != blank %}
+                    <div class="custom-field custom-field-button custom-field__text-link custom-field__type--link">
+                      <div class="custom-field--value">
+                        {{ metafields.custom_fields["editorial_button_with_link"] }}
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+      </div>
+   </div>
+     </div>
+{% endif %}

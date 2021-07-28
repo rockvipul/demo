@@ -1,0 +1,231 @@
+<div class="custom-fields-section">
+  
+    {% if resource_type == "blogs" %}
+    <div class="custom-fields-section__blogs">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div class="custom-fields-section__item custom-fields-section__item--{{ block.type }} custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        {% case block.settings.key %}
+        
+          {% when "blog_top_banner_image" %}
+            {% render "custom_fields.blogs.blog_top_banner_image" %}
+        
+          {% when "image_collection" %}
+            {% render "custom_fields.blogs.image_collection" %}
+        
+          {% when "mobile_banner_image" %}
+            {% render "custom_fields.blogs.mobile_banner_image" %}
+        
+          {% when "text_collection" %}
+            {% render "custom_fields.blogs.text_collection" %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    {% if resource_type == "collections" %}
+    <div class="custom-fields-section__collections">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div class="custom-fields-section__item custom-fields-section__item--{{ block.type }} custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        {% case block.settings.key %}
+        
+          {% when "desktop_banner_image" %}
+            {% render "custom_fields.collections.desktop_banner_image" %}
+        
+          {% when "image_collection" %}
+            {% render "custom_fields.collections.image_collection" %}
+        
+          {% when "mobile_banner_image" %}
+            {% render "custom_fields.collections.mobile_banner_image" %}
+        
+          {% when "text_collection" %}
+            {% render "custom_fields.collections.text_collection" %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+    {% if resource_type == "products" %}
+    <div class="custom-fields-section__products">
+      {% for block in blocks %}
+      {% if block.type contains "cf_" %}
+      <div class="custom-fields-section__item custom-fields-section__item--{{ block.type }} custom-fields-section__item--{{ block.type }}--{{ block.settings.key }}" {{ block.shopify_attributes }}>
+        {% case block.settings.key %}
+        
+          {% when "editorial_button_with_link" %}
+            {% render "custom_fields.products.editorial_button_with_link" %}
+        
+          {% when "editorial_section_image" %}
+            {% render "custom_fields.products.editorial_section_image" %}
+        
+          {% when "editorial_section_subheading" %}
+            {% render "custom_fields.products.editorial_section_subheading" %}
+        
+          {% when "editorial_section_title" %}
+            {% render "custom_fields.products.editorial_section_title" %}
+        
+          {% when "editorial_section__body" %}
+            {% render "custom_fields.products.editorial_section__body" %}
+        
+          {% when "faqs_heading" %}
+            {% render "custom_fields.products.faqs_heading" %}
+        
+          {% when "faqs_subheading" %}
+            {% render "custom_fields.products.faqs_subheading" %}
+        
+          {% when "product_bundle" %}
+            {% render "custom_fields.products.product_bundle" %}
+        
+          {% when "product_faqs" %}
+            {% render "custom_fields.products.product_faqs" %}
+        
+          {% when "program_button_label_with_link" %}
+            {% render "custom_fields.products.program_button_label_with_link" %}
+        
+          {% when "program_section_6_subheading" %}
+            {% render "custom_fields.products.program_section_6_subheading" %}
+        
+          {% when "program_section_body" %}
+            {% render "custom_fields.products.program_section_body" %}
+        
+          {% when "program_section_image" %}
+            {% render "custom_fields.products.program_section_image" %}
+        
+          {% when "program_section_title" %}
+            {% render "custom_fields.products.program_section_title" %}
+        
+          {% when "tab_1_body" %}
+            {% render "custom_fields.products.tab_1_body" %}
+        
+          {% when "tab_1_label" %}
+            {% render "custom_fields.products.tab_1_label" %}
+        
+          {% when "tab_1_title" %}
+            {% render "custom_fields.products.tab_1_title" %}
+        
+          {% when "tab_2_body" %}
+            {% render "custom_fields.products.tab_2_body" %}
+        
+          {% when "tab_2_body_2" %}
+            {% render "custom_fields.products.tab_2_body_2" %}
+        
+          {% when "tab_2_label" %}
+            {% render "custom_fields.products.tab_2_label" %}
+        
+          {% when "tab_2_table" %}
+            {% render "custom_fields.products.tab_2_table" %}
+        
+          {% when "tab_2_title" %}
+            {% render "custom_fields.products.tab_2_title" %}
+        
+          {% when "tab_3_body" %}
+            {% render "custom_fields.products.tab_3_body" %}
+        
+          {% when "tab_3_key_figure_1" %}
+            {% render "custom_fields.products.tab_3_key_figure_1" %}
+        
+          {% when "tab_3_key_figure_1_label" %}
+            {% render "custom_fields.products.tab_3_key_figure_1_label" %}
+        
+          {% when "tab_3_key_figure_1_label_body" %}
+            {% render "custom_fields.products.tab_3_key_figure_1_label_body" %}
+        
+          {% when "tab_3_key_figure_2" %}
+            {% render "custom_fields.products.tab_3_key_figure_2" %}
+        
+          {% when "tab_3_key_figure_2_label" %}
+            {% render "custom_fields.products.tab_3_key_figure_2_label" %}
+        
+          {% when "tab_3_key_figure_2_label_body" %}
+            {% render "custom_fields.products.tab_3_key_figure_2_label_body" %}
+        
+          {% when "tab_3_key_figure_3" %}
+            {% render "custom_fields.products.tab_3_key_figure_3" %}
+        
+          {% when "tab_3_key_figure_3_label" %}
+            {% render "custom_fields.products.tab_3_key_figure_3_label" %}
+        
+          {% when "tab_3_key_figure_3_label_body" %}
+            {% render "custom_fields.products.tab_3_key_figure_3_label_body" %}
+        
+          {% when "tab_3_label" %}
+            {% render "custom_fields.products.tab_3_label" %}
+        
+          {% when "tab_3_main_title" %}
+            {% render "custom_fields.products.tab_3_main_title" %}
+        
+          {% when "tab_4_boady" %}
+            {% render "custom_fields.products.tab_4_boady" %}
+        
+          {% when "tab_4_image" %}
+            {% render "custom_fields.products.tab_4_image" %}
+        
+          {% when "tab_4_label" %}
+            {% render "custom_fields.products.tab_4_label" %}
+        
+          {% when "tab_4_subheading" %}
+            {% render "custom_fields.products.tab_4_subheading" %}
+        
+          {% when "tab_4_title" %}
+            {% render "custom_fields.products.tab_4_title" %}
+        
+          {% when "tab_5_button_label_with_url" %}
+            {% render "custom_fields.products.tab_5_button_label_with_url" %}
+        
+          {% when "tab_5_icon_1" %}
+            {% render "custom_fields.products.tab_5_icon_1" %}
+        
+          {% when "tab_5_icon_1_text" %}
+            {% render "custom_fields.products.tab_5_icon_1_text" %}
+        
+          {% when "tab_5_icon_1_title" %}
+            {% render "custom_fields.products.tab_5_icon_1_title" %}
+        
+          {% when "tab_5_icon_2" %}
+            {% render "custom_fields.products.tab_5_icon_2" %}
+        
+          {% when "tab_5_icon_2_text" %}
+            {% render "custom_fields.products.tab_5_icon_2_text" %}
+        
+          {% when "tab_5_icon_2_title" %}
+            {% render "custom_fields.products.tab_5_icon_2_title" %}
+        
+          {% when "tab_5_icon_3" %}
+            {% render "custom_fields.products.tab_5_icon_3" %}
+        
+          {% when "tab_5_icon_3_text" %}
+            {% render "custom_fields.products.tab_5_icon_3_text" %}
+        
+          {% when "tab_5_icon_3_title" %}
+            {% render "custom_fields.products.tab_5_icon_3_title" %}
+        
+          {% when "tab_5_label" %}
+            {% render "custom_fields.products.tab_5_label" %}
+        
+          {% when "tab_5_table" %}
+            {% render "custom_fields.products.tab_5_table" %}
+        
+          {% when "tab_5_table_label" %}
+            {% render "custom_fields.products.tab_5_table_label" %}
+        
+          {% when "tab_5_text" %}
+            {% render "custom_fields.products.tab_5_text" %}
+        
+          {% when "tab_5_title" %}
+            {% render "custom_fields.products.tab_5_title" %}
+        
+        {% endcase %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  
+</div>

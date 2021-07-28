@@ -1,0 +1,125 @@
+{% assign mainTitle = blank %}
+{% assign key_1_label = blank %}
+{% assign key_1_number = blank %}
+{% assign key_1_body = blank %}
+{% if isSection %}
+	{% if section.settings.title != blank %}
+		{% assign mainTitle = section.settings.title %} 
+	{% endif %}
+  {% if section.settings.num1 != blank %}
+		{% assign key_1_number = section.settings.num1 %} 
+	{% endif %}
+	{% if section.settings.num1_title != blank %}
+		{% assign key_1_label = section.settings.num1_title %} 
+	{% endif %}
+  {% if section.settings.num1_detail != blank %}
+		{% assign key_1_body = section.settings.num1_detail %} 
+	{% endif %}
+{% else %}
+  {% if metafields.custom_fields["tab_3_main_title"] != blank %}
+		{% assign mainTitle = metafields.custom_fields["tab_3_main_title"] %} 
+	{% endif %}
+	{% if metafields.custom_fields["tab_3_key_figure_1"] != blank %}
+		{% assign key_1_number = metafields.custom_fields["tab_3_key_figure_1"] %} 
+	{% endif %}
+	{% if metafields.custom_fields["tab_3_key_figure_1_label"] != blank %}
+		{% assign key_1_label = metafields.custom_fields["tab_3_key_figure_1_label"] %} 
+	{% endif %}
+  {% if metafields.custom_fields["tab_3_key_figure_1_label_body"] != blank %}
+		{% assign key_1_body = metafields.custom_fields["tab_3_key_figure_1_label_body"] %} 
+	{% endif %}
+{% endif %}
+ <div class="tabs jb-tab__ingredients " id="tab5" style="background-color: #ebebeb80;">
+<div class="container tab-content-inner">
+  
+        <h2 class="tab-content-title">
+          {% if metafields.custom_fields["tab_5_title"] != blank %}
+          {{ metafields.custom_fields["tab_5_title"] }}
+          {% endif %}
+        </h2>
+        <div class="tab-content-full-inner">
+          <div class="image-section">
+            {% if metafields.custom_fields["tab_5_icon_1_title"] != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if metafields.custom_fields["tab_5_icon_1"] != blank %}
+                {% render 'cf-image' with image: metafields.custom_fields["tab_5_icon_1"] %}
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if metafields.custom_fields["tab_5_icon_1_title"] != blank %}
+                {{ metafields.custom_fields["tab_5_icon_1_title"] }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if metafields.custom_fields["tab_5_icon_1_text"] != blank %}
+                {{ metafields.custom_fields["tab_5_icon_1_text"] }} 
+                {% endif %}
+              </div>
+            </div>
+			{% endif %}
+            {% if metafields.custom_fields["tab_5_icon_2_title"] != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if metafields.custom_fields["tab_5_icon_2"] != blank %}
+                {% render 'cf-image' with image: metafields.custom_fields["tab_5_icon_2"] %}
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if metafields.custom_fields["tab_5_icon_2_title"] != blank %}
+                {{ metafields.custom_fields["tab_5_icon_2_title"] }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if metafields.custom_fields["tab_5_icon_2_text"] != blank %}
+                {{ metafields.custom_fields["tab_5_icon_2_text"] }} 
+                {% endif %}
+              </div>
+            </div>
+			{% endif %}
+            {% if metafields.custom_fields["tab_5_icon_3_title"] != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if metafields.custom_fields["tab_5_icon_3"] != blank %}
+                {% render 'cf-image' with image: metafields.custom_fields["tab_5_icon_3"] %}
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if metafields.custom_fields["tab_5_icon_3_title"] != blank %}
+                {{ metafields.custom_fields["tab_5_icon_3_title"] }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if metafields.custom_fields["tab_5_icon_3_text"] != blank %}
+                {{ metafields.custom_fields["tab_5_icon_3_text"] }} 
+                {% endif %}
+              </div>
+            </div>
+                {% endif %}
+          </div>
+          {% if metafields.custom_fields["tab_5_text"] != blank %}
+          {{ metafields.custom_fields["tab_5_text"] }} 
+          {% endif %}
+          <div class="tab-content-btn">
+            {% if metafields.custom_fields["tab_5_button_label_with_url"] != blank %}
+            {{ metafields.custom_fields["tab_5_button_label_with_url"] }}
+            {% endif %}
+          </div>
+          <p class="table-heading">
+            {% if metafields.custom_fields["tab_5_table_label"] != blank %}
+            {{ metafields.custom_fields["tab_5_table_label"] }}
+            {% endif %}
+          </p>
+           <div class="tab-content-table-wrapper">
+          {% if template == 'index' %}
+			{% render "table-2-col-2" with metafields: shop.metafields %}
+		{% elsif template contains 'collection' and collection.handle %}
+    		{% render "table-2-col-2" with metafields: collection.metafields %}
+		{% elsif template contains 'product' %}
+    		{% render "table-2-col-2" with metafields: product.metafields %}
+		{% endif %}
+         
+          </div>
+        </div>
+      </div>
+</div>

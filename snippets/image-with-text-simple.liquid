@@ -1,0 +1,39 @@
+<div class="jb-product-collateral">
+  <div class="tab-content">
+    <div class="tabs" id="tab4" >
+      <div class="container">
+        <div class="row">
+          <div class="feature-item " data-alignment="center">
+            <div class="feature-image">
+              <div class="feature-image-bg" style="height:100%">
+                {% if metafields.custom_fields["tab_4_image"] != blank %}
+                <div class="svg-placeholder">{% render 'cf-image' with image: metafields.custom_fields["tab_4_image"] %} 
+                </div>
+                {% endif %}  
+              </div>
+            </div>
+            <div class="feature-text">
+              <div class="feature-text-wrap">
+                <div class="sec6subtitle">
+                  {% if metafields.custom_fields["tab_4_subheading"] != blank %}
+                  {{ metafields.custom_fields["tab_4_subheading"] }}
+                  {% endif %}  
+                </div>
+                <h2 data-animation="moPopUp" data-animation-delay="0">
+                  {% if metafields.custom_fields["tab_4_title"] != blank %}
+                  {{ metafields.custom_fields["tab_4_title"] }}
+                  {% endif %}  
+                </h2>
+                {% if metafields.custom_fields["tab_4_body"] != blank %}
+                <div class="feature-text__p" data-animation="moPopUp" data-animation-delay="250">
+                  {{ metafields.custom_fields["tab_4_body"] }}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

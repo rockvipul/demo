@@ -1,0 +1,190 @@
+<div class="jb-product-collateral">
+  <div class="tab-content">
+   
+      <div class="tabs jb-tab__ingredients" {% if block.settings.tab_id != blank %}id="{{ block.settings.tab_id }}"{% endif %}  style="background-color: #ebebeb80;">
+        <div class="container">
+        <h2 class="tab-content-title">
+          {% if block.settings.title != blank %}
+          {{ block.settings.title }}
+          {% endif %}
+        </h2>
+        <div class="tab-content-full-inner">
+          <div class="image-section">
+            {% if block.settings.icon1_title != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if block.settings.icon1 != blank %}
+                <img src="{{ block.settings.icon1 | img_url: '1024x'}}">
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if block.settings.icon1_title != blank %}
+                {{ block.settings.icon1_title }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if block.settings.icon1_detail != blank %}
+                {{ block.settings.icon1_detail }}
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+            {% if block.settings.icon2_title != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if block.settings.icon2 != blank %}
+                <img src="{{ block.settings.icon2 | img_url: '1024x'}}">
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if block.settings.icon2_title != blank %}
+                {{ block.settings.icon2_title }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if block.settings.icon2_detail != blank %}
+                {{ block.settings.icon2_detail }}
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+            {% if block.settings.icon3_title != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if block.settings.icon3 != blank %}
+                <img src="{{ block.settings.icon3 | img_url: '1024x'}}">
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if block.settings.icon3_title != blank %}
+                {{ block.settings.icon3_title }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if block.settings.icon3_detail != blank %}
+                {{ block.settings.icon3_detail }}
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          {% if block.settings.detail != blank %}
+          {{ block.settings.detail }} 
+          {% endif %}
+          <div class="tab-content-btn">
+            {% if block.settings.button_link != blank %}
+            <a href="{{ block.settings.button_link }} ">
+              {% if block.settings.button_title != blank %}
+              {{ block.settings.button_title }} 
+              {% endif %}
+            </a>
+
+            {% endif %}
+          </div>
+          <p class="table-heading">
+            {% if block.settings.table_title != blank %}
+            {{ block.settings.table_title }}
+            {% endif %}
+          </p>
+
+          <div class="tab-content-table-wrapper">
+            <div class="tab-content-table-wrapper" id="tab55">
+              <table class="tab-content-table">
+                <tbody>
+                  <tr>
+                    {% if block.settings.table_heading_1 != blank %}
+                    <th>{{ block.settings.table_heading_1 }}</th>
+                    {% endif %}
+                    {% if block.settings.table_heading_2 != blank %}
+                    <th>{{ block.settings.table_heading_2 }}</th>
+                    {% endif %}
+                  </tr>
+                  {% if block.settings.table_row_left1 != blank and block.settings.table_row_right1 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left1 }}</td>
+                    <td>{{ block.settings.table_row_right1 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left2 != blank and block.settings.table_row_right2 != blank%}
+                  <tr>
+                    <td>{{ block.settings.table_row_left2 }}</td>
+                    <td>{{ block.settings.table_row_right2 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left3 != blank and block.settings.table_row_right3 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left3 }}</td>
+                    <td>{{ block.settings.table_row_right3 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left4 != blank and block.settings.table_row_right4 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left4 }}</td>
+                    <td>{{ block.settings.table_row_right4 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left5 != blank and block.settings.table_row_right5 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left5 }}</td>
+                    <td>{{ block.settings.table_row_right5 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left6 != blank and block.settings.table_row_right6 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left6 }}</td>
+                    <td>{{ block.settings.table_row_right6 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left7 != blank and block.settings.table_row_right7 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left7 }}</td>
+                    <td>{{ block.settings.table_row_right7 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left8 != blank and block.settings.table_row_right8 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left8 }}</td>
+                    <td>{{ block.settings.table_row_right8 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left9 != blank and block.settings.table_row_right9 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left9 }}</td>
+                    <td>{{ block.settings.table_row_right9 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left10 != blank and block.settings.table_row_right10 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left10 }}</td>
+                    <td>{{ block.settings.table_row_right10 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left11 != blank and block.settings.table_row_right11 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left11 }}</td>
+                    <td>{{ block.settings.table_row_right11 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_row_left12 != blank and block.settings.table_row_right12 != blank %}
+                  <tr>
+                    <td>{{ block.settings.table_row_left12 }}</td>
+                    <td>{{ block.settings.table_row_right12 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if block.settings.table_heading_1 == blank and block.settings.table_heading_2 == blank %}
+                  <style>
+                    #tab55
+                    { display:none; }
+                    .jb-product-collateral .tab-content .tabs .tab-content-table-wrapper
+                    {
+                      border:none;
+                    }
+                  </style>
+                  {% endif %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div></div>

@@ -1,0 +1,183 @@
+<!-- {%- assign enableSection = section.settings.related_products_enable -%}
+{%- assign heading = section.settings.product_recommendations_heading -%}
+{%- assign subheading = section.settings.product_recommendations_subheading -%}
+{%- assign title_color = section.settings.title_color -%}
+{%- assign sub_title_color = section.settings.sub_title_color -%}
+{%- assign enable_color_swatches = settings.enable_color_swatches -%}
+{%- assign show_reviews = settings.show_reviews -%}
+{%- assign enable_carousel = section.settings.enable_carousel -%}
+
+{% comment %}
+  Set collectionBlock size classes
+  These are applied in the collectionGrid-block.liquid file
+{% endcomment %}
+{%- assign products_rows = settings.products_rows | plus: 0 -%}
+{%- assign products_columns = settings.products_columns | plus: 0 -%}
+{%- assign products_columns_mobile = settings.products_columns_mobile | plus: 0 -%}
+{%- assign products_limit = products_columns | times: products_rows -%}
+{%- assign columns_size = products_columns | replace: '1', '' -%}
+{%- assign columns_size_mobile = products_columns_mobile | replace: '1', '' -%}
+{%- assign collection_block_size = 'lg_s1' | append: columns_size -%}
+{%- assign collection_block_size_mobile = 's1' | append: columns_size_mobile -%}
+
+{% comment %} Set tablet size to be one-half {% endcomment %}
+{%- if products_columns > 2 -%}
+	{%- assign collection_block_size = 'lg_s1' | append: columns_size | append: ' med_s13' -%}
+{%- endif -%}
+
+<section {% if section.settings.background_image %}style="background-image: url({{ section.settings.background_image | img_url: '1500x'}});"{% endif %} class="related-products container-wrap collectionGrid js-collection-grid js-collectionGrid {% unless enableSection %}visually-hidden{% endunless%}"
+	data-columns="{{ products_columns }}"
+	data-section-type="related-products"
+	data-section-id="{{ section.id }}"
+	data-product-id="{{ product.id }}"
+	data-limit="{{ settings.products_columns }}"
+	data-show_quantity="{{ settings.show_quantity }}"
+	data-show_reviews="{{ show_reviews }}"
+	data-yotpo="{{ settings.enable_yotpo }}"
+	data-yotpo-id="{{ settings.yotpo_ID }}"
+	data-enable-color-swatches="{{ enable_color_swatches }}"
+	data-image-aspectratio="{{ settings.image_aspect_ratio }}"
+	data-image-size="{{ settings.image_size }}"
+    data-carousel="{{ enable_carousel }}"
+	data-slides-per-row="4">
+
+	{%- if enableSection -%}
+		{%- if recommendations.performed -%}
+			{%- if recommendations.products_count > 0 -%}
+
+				{%- assign alignCenter = false -%}
+				{%- if recommendations.products_count < products_columns -%}
+					{%- assign alignCenter = true -%}
+				{%- endif -%}
+
+				
+					<div class="page-title">
+						<div class="container">
+                           <div class="row row-sm">
+                             {%- if subheading != blank -%}
+								<h5 {% if sub_title_color %}style="color: {{ sub_title_color }};"{% endif %}>{{subheading}}</h5>
+                             {% endif %}
+							</div>
+						</div>
+							<div class="row row-sm">
+							{%- if heading != blank -%}
+								<h2 {% if title_color %}style="color: {{ title_color }};"{% endif %}>{{ heading }}</h2>
+                              {%- endif -%}
+							</div>
+                         
+					</div>
+
+
+      
+				<div class="collectionGrid-row {% if enable_carousel %}collectionGrid-row--slider collection-slider js-collection-slider{% endif %} {% if alignCenter %}row--center{% endif %}">
+					{%- for product in recommendations.products -%}
+						{%- render 'product-grid-item', product: product, collection_block_size: collection_block_size, collection_block_size_mobile: collection_block_size_mobile, index: forloop.index -%}
+					{%- endfor -%}
+                  
+				</div>
+
+			{%- endif -%}
+		{%- else -%}
+			<div class="related__placeholder"></div>
+		{%- endif -%}
+	{%- endif -%}
+  	{%- if section.settings.button_name -%}
+		<div class="row row-med u-center button-wrapper">
+			<a href="{%- if section.settings.button_url -%}{{ section.settings.button_url }}{% else %}#{%- endif -%}" class="button button--{{ button_style }}" style="margin-bottom: 18px;">
+				
+              		{{ section.settings.button_name }}
+              	
+			</a>
+		</div>
+	{%- endif -%}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   <script type="text/javascript">
+ jQuery(document).ready(function($) {
+   if(jQuery(window).width()<767){
+     $('div#shopify-section-related-products .collectionGrid-row').addClass('owl-carousel');
+     $('div#shopify-section-related-products .owl-carousel').owlCarousel({
+     loop:false,
+     nav:false,
+     dots:false,  
+     responsive:{
+            0:{
+                items:1.3
+            },
+            600:{
+                items:2.3
+            }
+        }
+     });
+   }
+   else {
+   	$('div#shopify-section-related-products .collectionGrid-row.owl-carousel').removeClass('owl-carousel');
+   }
+ });
+</script>
+   
+</section>
+ 
+
+{%- render 'product-quick-view' -%} -->
+
+{% schema %}
+{
+	"name": "Product recommendations",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "related_products_enable",
+			"label": "Show related products",
+			"info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
+			"default": true
+		},
+		{
+			"type": "text",
+			"id": "product_recommendations_heading",
+			"label": "Heading",
+			"default": "Related products"
+		},
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#FFFFFF"
+        },
+		{
+			"type": "text",
+			"id": "product_recommendations_subheading",
+			"label": "Sub Heading"
+		},
+        {
+          "type": "color",
+          "id": "sub_title_color",
+          "label": "Sub Heading Color",
+          "default": "#FFFFFF"
+        },
+		{
+			"type": "image_picker",
+			"id": "background_image",
+			"label": "Background Image"
+		},
+		{
+			"type": "text",
+			"id": "button_name",
+			"label": "Button text",
+			"default": "View All"
+		},
+		{
+			"type": "url",
+			"id": "button_url",
+			"label": "Button Url"
+
+		},
+		{
+			"type": "checkbox",
+			"id": "enable_carousel",
+			"label": "Carousel Enable"
+
+		}
+
+	]
+}
+{% endschema %}

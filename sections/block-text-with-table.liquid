@@ -1,0 +1,119 @@
+<div class="jb-product-collateral">
+  <div class="tab-content">
+  <div class="tabs" id="tab2">
+<div class="container">
+          
+  <div class="tab-content-inner">
+    
+      <div class="tab-content-title">
+            
+          {% if section.settings.title != blank %}
+            {{ section.settings.title }} 
+        {% endif %}
+            
+         </div>
+           {% if section.settings.html_code != blank %}
+            {{ section.settings.html_code }} 
+        {% endif %}
+      
+ <div class="tab-content-table-wrapper" id="tab22">
+          <table class="tab-content-table">
+             <tbody>
+                 {% if section.settings.table_heading_1 != blank %}
+                  <tr>
+                      <th>{{ section.settings.table_heading_1 }}</th>
+                    {% endif %}
+                    {% if section.settings.table_heading_2 != blank %}
+                      <th>{{ section.settings.table_heading_2 }}</th>
+                    {% endif %}
+                  </tr>
+                {%- for block in section.blocks -%}
+                      {% if block.settings.table_row_left != blank and block.settings.table_row_right != blank %}
+                  <tr>
+                      <td>{{ block.settings.table_row_left }}</td>
+                      <td>{{ block.settings.table_row_right }}</td>
+                  </tr>
+                {% endif %}
+                {% endfor %}
+                
+                {% if section.settings.table_heading_1 == blank and section.settings.table_heading_2 == blank %}
+                <style>
+                	#tab55
+                  { display:none; }
+                </style>
+                {% endif %}
+              </tbody>
+          </table>
+</div>
+          
+    
+  </div>
+   		</div></div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Block Text With Table",
+    "settings": [
+		{
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+	{
+      "type": "html",
+      "id": "html_code",
+      "label": "Description"
+    },
+	{
+      "type": "text",
+      "id": "table_heading_1",
+      "label": "Table Heading 1"
+    },
+    {
+      "type": "text",
+      "id": "table_heading_2",
+      "label": "Table Heading 2"
+    }
+	],
+	"blocks": [
+		{
+			"type": "block-text-with-table",
+			"name": "Table Row",
+			"settings": [
+				{
+					"type": "text",
+					"id": "table_row_left",
+					"label": "Table Row Left"
+				},
+				{
+					"type": "text",
+					"id": "table_row_right",
+					"label": "Table Row Right"
+				}
+			]
+		}
+	],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Block Text With Table",
+			"blocks": [
+				{
+					"type": "block-text-with-table"
+				},
+				{
+					"type": "block-text-with-table"
+				}
+			]
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

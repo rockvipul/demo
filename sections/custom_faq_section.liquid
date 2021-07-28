@@ -1,0 +1,19 @@
+{% if template contains 'product' %}
+{%- render 'custom_faq_section' with metafields: product.metafields -%}
+{% elsif template contains 'collection' %}
+{%- render 'custom_faq_section' with metafields: collection.metafields -%}
+{% endif %}
+{% schema %}
+  {
+    "name": "Custom Filed FAQs Section",
+    "settings": [
+		
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

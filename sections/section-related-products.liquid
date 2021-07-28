@@ -1,0 +1,58 @@
+{% render 'section-related-products' with metafields: product.metafields %}
+
+{% schema %}
+  {
+    "name": "Related Products 1",
+    "settings": [
+		{
+			"type": "text",
+			"id": "product_recommendations_heading1",
+			"label": "Heading",
+			"default": "Related products"
+		},
+        {
+          "type": "color",
+          "id": "title_color1",
+          "label": "Title Color",
+          "default": "#FFFFFF"
+        },
+		{
+			"type": "text",
+			"id": "product_recommendations_subheading1",
+			"label": "Sub Heading"
+		},
+        {
+          "type": "color",
+          "id": "sub_title_color1",
+          "label": "Sub Heading Color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "text",
+          "id": "button_title",
+          "label": "Button Title"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+		{
+			"type": "image_picker",
+			"id": "background_image",
+			"label": "Background Image"
+		},
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#FFFFFF"
+        }
+]
+  }
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

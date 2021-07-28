@@ -1,0 +1,93 @@
+{% assign key_1_label = blank %}
+{% assign key_1_number = blank %}
+
+{% if isSection %}
+	{% if section.settings.num1 != blank %}
+		{% assign key_1_number = section.settings.num1 %} 
+	{% endif %}
+
+	{% if section.settings.num1_title != blank %}
+		{% assign key_1_label = section.settings.num1_title %} 
+	{% endif %}
+{% else %}
+	{% if metafields.custom_fields["tab_3_key_figure_1"] != blank %}
+		{% assign key_1_number = metafields.custom_fields["tab_3_key_figure_1"] %} 
+	{% endif %}
+
+	{% if metafields.custom_fields["tab_3_key_figure_1_label"] != blank %}
+		{% assign key_1_label = metafields.custom_fields["tab_3_key_figure_1_label"] %} 
+	{% endif %}
+{% endif %}
+<div class="tabs jb-tab-with__background" id="tab3" style="background-color: #E73439">
+<div class="container">
+      <h2 class="tab-content-title">
+     	{% if metafields.custom_fields["tab_3_main_title"] != blank %}
+            {{ metafields.custom_fields["tab_3_main_title"] }} 
+        {% endif %}
+      </h2>
+      <div class="tab-content-bg-inner">
+  	 <div class="left-section">
+      <div class="left-section-inner">
+         <div class="grid">
+            <div class="grid-number">
+     	{% if key_1_number != blank %}
+            {{ key_1_number }} 
+        {% endif %}
+      </div>
+            <div class="grid-text">
+     	{% if key_1_label != blank %}
+            {{ key_1_label }} 
+        {% endif %}
+           </div>
+            <div class="grid-sub-text">
+     	{% if metafields.custom_fields["tab_3_key_figure_1_label_body"] != blank %}
+            {{ metafields.custom_fields["tab_3_key_figure_1_label_body"] }} 
+        {% endif %}
+           </div>
+         </div>
+         <div class="grid">
+            <div class="grid-number">
+     	{% if metafields.custom_fields["tab_3_key_figure_2"] != blank %}
+            {{ metafields.custom_fields["tab_3_key_figure_2"] }} 
+        {% endif %}
+      </div>
+            <div class="grid-text">
+     	{% if metafields.custom_fields["tab_3_key_figure_2_label"] != blank %}
+            {{ metafields.custom_fields["tab_3_key_figure_2_label"] }} 
+        {% endif %}
+           </div>
+            <div class="grid-sub-text">
+     	{% if metafields.custom_fields["tab_3_key_figure_2_label_body"] != blank %}
+            {{ metafields.custom_fields["tab_3_key_figure_2_label_body"] }} 
+        {% endif %}
+           </div>
+         </div>
+         <div class="grid">
+            <div class="grid-number">
+     	{% if metafields.custom_fields["tab_3_key_figure_3"] != blank %}
+            {{ metafields.custom_fields["tab_3_key_figure_3"] }} 
+        {% endif %}
+      </div>
+            <div class="grid-text">
+     	{% if metafields.custom_fields["tab_3_key_figure_3_label"] != blank %}
+            {{ metafields.custom_fields["tab_3_key_figure_3_label"] }} 
+        {% endif %}
+           </div>
+            <div class="grid-sub-text">
+     	{% if metafields.custom_fields["tab_3_key_figure_3_label_body"] != blank %}
+            {{ metafields.custom_fields["tab_3_key_figure_3_label_body"] }} 
+        {% endif %}
+           </div>
+         </div>
+      </div>
+   </div>
+   <div class="right-section">
+      <div class="right-section-inner">
+     	{% if metafields.custom_fields["tab_3_body"] != blank %}
+            {{ metafields.custom_fields["tab_3_body"] }} 
+        {% endif %}
+      </div>
+   </div>
+</div>
+   </div>
+</div>

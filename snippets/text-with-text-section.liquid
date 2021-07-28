@@ -1,0 +1,70 @@
+<div {% if block.settings.tab_id != blank %}id="{{ block.settings.tab_id }}"{% endif %} class="text-with-grid-section" {% if block.settings.enable_bg_color != blank %}{% if block.settings.bg_color != blank %} style="background: {{ block.settings.bg_color }};"{% endif %}{% endif %}>
+	<div class="container">
+		<div class="grid-section-title">
+          	{% if block.settings.title != blank %}
+          		<h2>{{ block.settings.title }} </h2>
+          	{% endif %}
+        </div>
+		<div class="grid-section-inner">
+			{% if block.settings.html_code1 != blank %}
+          		{{ block.settings.html_code1 }} 
+          	{% endif %}
+		</div>
+		<div class="grid-content-inner">
+			<div class="grid__inner">
+              	<div class="grid__section__left">
+				<div class="grid__section">
+					{% if block.settings.left_title_1 != blank %}
+						<h3 class="grid-title">
+			          		{{ block.settings.left_title_1 }} 
+			          </h3>
+			        {% endif %}
+					<div class="grid-details">
+	                  {% if block.settings.html_code2 != blank %}
+			          	{{ block.settings.html_code2 }} 
+			          {% endif %}
+		      		</div>
+				</div>
+				<div class="grid__section">
+					{% if block.settings.left_title_2 != blank %}
+						<h3 class="grid-title">
+	          				{{ block.settings.left_title_2 }} 
+	          			</h3>
+          			{% endif %}
+          			{% if block.settings.html_code3 != blank %}
+						<div class="grid-details">
+	          				{{ block.settings.html_code3 }} 
+	          			</div>
+          			{% endif %}
+				</div>
+                </div>
+                <div class="grid__section__right">  
+				<div class="grid__section">
+					{% if block.settings.right_title_1 != blank %}
+						<h3 class="grid-title">
+	          				{{ block.settings.right_title_1 }} 
+	          			</h3>
+          			{% endif %}
+          			{% if block.settings.html_code4 != blank %}
+						<div class="grid-details">
+	          				{{ block.settings.html_code4 }} 
+	          			</div>
+          			{% endif %}
+				</div>
+				<div class="grid__section">
+					{% if block.settings.right_title_2 != blank %}
+						<h3 class="grid-title">
+          					{{ block.settings.right_title_2 }} 
+		          		</h3>
+		          	{% endif %}
+		          	{% if block.settings.html_code5 != blank %}
+						<div class="grid-details">
+	          				{{ block.settings.html_code5 }} 
+	          			</div>
+          			{% endif %}
+				</div>
+                </div>
+			</div>
+		</div>
+	</div>	
+</div>

@@ -1,0 +1,317 @@
+<div class="jb-product-collateral">
+  <div class="tab-content">
+   
+      <div class="tabs jb-tab__ingredients" {% if section.settings.tab_id != blank %}id="{{ section.settings.tab_id }}"{% endif %}  style="background-color: #ebebeb80;">
+        <div class="container">
+        <h2 class="tab-content-title">
+          {% if section.settings.title != blank %}
+          {{ section.settings.title }}
+          {% endif %}
+        </h2>
+        <div class="tab-content-full-inner">
+          <div class="image-section">
+            {% if section.settings.icon1_title != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if section.settings.icon1 != blank %}
+                <img src="{{ section.settings.icon1 | img_url: '1024x'}}">
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if section.settings.icon1_title != blank %}
+                {{ section.settings.icon1_title }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if section.settings.icon1_detail != blank %}
+                {{ section.settings.icon1_detail }}
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+            {% if section.settings.icon2_title != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if section.settings.icon2 != blank %}
+                <img src="{{ section.settings.icon2 | img_url: '1024x'}}">
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if section.settings.icon2_title != blank %}
+                {{ section.settings.icon2_title }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if section.settings.icon2_detail != blank %}
+                {{ section.settings.icon2_detail }}
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+            {% if section.settings.icon3_title != blank %}
+            <div class="grid">
+              <div class="grid-image">
+                {% if section.settings.icon3 != blank %}
+                <img src="{{ section.settings.icon3 | img_url: '1024x'}}">
+                {% endif %}
+              </div>
+              <h3 class="grid-heading">
+                {% if section.settings.icon3_title != blank %}
+                {{ section.settings.icon3_title }}
+                {% endif %}
+              </h3>
+              <div class="grid-desc">
+                {% if section.settings.icon3_detail != blank %}
+                {{ section.settings.icon3_detail }}
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+          {% if section.settings.detail != blank %}
+          {{ section.settings.detail }} 
+          {% endif %}
+          <div class="tab-content-btn">
+            {% if section.settings.button_link != blank %}
+            <a href="{{ section.settings.button_link }} ">
+              {% if section.settings.button_title != blank %}
+              {{ section.settings.button_title }} 
+              {% endif %}
+            </a>
+
+            {% endif %}
+          </div>
+          <p class="table-heading">
+            {% if section.settings.table_title != blank %}
+            {{ section.settings.table_title }}
+            {% endif %}
+          </p>
+
+          <div class="tab-content-table-wrapper">
+            <div class="tab-content-table-wrapper" id="tab55">
+              <table class="tab-content-table">
+                <tbody>
+                  <tr>
+                    {% if section.settings.table_heading_1 != blank %}
+                    <th>{{ section.settings.table_heading_1 }}</th>
+                    {% endif %}
+                    {% if section.settings.table_heading_2 != blank %}
+                    <th>{{ section.settings.table_heading_2 }}</th>
+                    {% endif %}
+                  </tr>
+                  {% if section.settings.table_row_left1 != blank and section.settings.table_row_right1 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left1 }}</td>
+                    <td>{{ section.settings.table_row_right1 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left2 != blank and section.settings.table_row_right2 != blank%}
+                  <tr>
+                    <td>{{ section.settings.table_row_left2 }}</td>
+                    <td>{{ section.settings.table_row_right2 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left3 != blank and section.settings.table_row_right3 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left3 }}</td>
+                    <td>{{ section.settings.table_row_right3 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left4 != blank and section.settings.table_row_right4 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left4 }}</td>
+                    <td>{{ section.settings.table_row_right4 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left5 != blank and section.settings.table_row_right5 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left5 }}</td>
+                    <td>{{ section.settings.table_row_right5 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left6 != blank and section.settings.table_row_right6 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left6 }}</td>
+                    <td>{{ section.settings.table_row_right6 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left7 != blank and section.settings.table_row_right7 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left7 }}</td>
+                    <td>{{ section.settings.table_row_right7 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left8 != blank and section.settings.table_row_right8 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left8 }}</td>
+                    <td>{{ section.settings.table_row_right8 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left9 != blank and section.settings.table_row_right9 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left9 }}</td>
+                    <td>{{ section.settings.table_row_right9 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left10 != blank and section.settings.table_row_right10 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left10 }}</td>
+                    <td>{{ section.settings.table_row_right10 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left11 != blank and section.settings.table_row_right11 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left11 }}</td>
+                    <td>{{ section.settings.table_row_right11 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_row_left12 != blank and section.settings.table_row_right12 != blank %}
+                  <tr>
+                    <td>{{ section.settings.table_row_left12 }}</td>
+                    <td>{{ section.settings.table_row_right12 }}</td>
+                  </tr>
+                  {% endif %}
+                  {% if section.settings.table_heading_1 == blank and section.settings.table_heading_2 == blank %}
+                  <style>
+                    #tab55
+                    { display:none; }
+                    .jb-product-collateral .tab-content .tabs .tab-content-table-wrapper
+                    {
+                      border:none;
+                    }
+                  </style>
+                  {% endif %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div></div>
+{% schema %}
+  {
+    "name": "Ingredients",
+	"max_blocks": 12,
+    "settings": [
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+	{
+      "type": "image_picker",
+      "id": "icon1",
+      "label": "Icon 1 Image"
+    },
+	{
+      "type": "text",
+      "id": "icon1_title",
+      "label": "Icon 1 Title"
+    },
+	{
+      "type": "text",
+      "id": "icon1_detail",
+      "label": "Icon 1 Detail"
+    },
+	{
+      "type": "image_picker",
+      "id": "icon2",
+      "label": "Icon 2 Image"
+    },
+	{
+      "type": "text",
+      "id": "icon2_title",
+      "label": "Icon 2 Title"
+    },
+	{
+      "type": "text",
+      "id": "icon2_detail",
+      "label": "Icon 2 Detail"
+    },
+	{
+      "type": "image_picker",
+      "id": "icon3",
+      "label": "Icon 3 Image"
+    },
+	{
+      "type": "text",
+      "id": "icon3_title",
+      "label": "Icon 3 Title"
+    },
+	{
+      "type": "text",
+      "id": "icon3_detail",
+      "label": "Icon 3 Detail"
+    },
+	{
+      "type": "textarea",
+      "id": "detail",
+      "label": "Heading",
+      "default": "Tell a Story"
+	},
+	{
+      "type": "text",
+      "id": "button_title",
+      "label": "Button Title"
+    },
+	{
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+	{
+      "type": "text",
+      "id": "table_title",
+      "label": "Table Title"
+    },
+	{
+      "type": "text",
+      "id": "table_heading_1",
+      "label": "Table Heading 1"
+    },
+    {
+      "type": "text",
+      "id": "table_heading_2",
+      "label": "Table Heading 2"
+    }
+],
+	"blocks": [
+		{
+			"type": "ingredients_table",
+			"name": "Table Row",
+			"settings": [
+				{
+					"type": "text",
+					"id": "table_row_left",
+					"label": "Table Row Left"
+				},
+				{
+					"type": "text",
+					"id": "table_row_right",
+					"label": "Table Row Right"
+				}
+			]
+		}
+	],
+  "presets": [
+    {
+      "category": "Advanced",
+      "name": "Ingredients",
+			"blocks": [
+				{
+					"type": "ingredients_table"
+				},
+				{
+					"type": "ingredients_table"
+				}
+			]
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

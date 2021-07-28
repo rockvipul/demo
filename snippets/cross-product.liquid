@@ -1,0 +1,73 @@
+
+{% if product.metafields.custom_fields["product_bundle"] != blank %}
+<div class="cross-product-block">
+	<div class="cross-products">
+      {% assign product_refs = product.metafields.custom_fields["product_bundle"] | split: "|" %}
+		{% for product_handle in product_refs %}
+      	{% assign product_ref = all_products[product_handle] %}
+      {%- assign first_variant = product_ref.selected_or_first_available_variant -%}
+      		<div class="cross-product">
+			<div class="product-image"><img src="{{ product_ref.featured_image  | img_url: "1024x"  }}"/></div>
+            
+			<div class="product-info">
+				<div class="product-name">{{ product_ref.title | link_to: product_ref.url }}</div>
+				<div class="product-price">
+					<span class="special-price">{{ product_ref.price | money }}</span>
+                  {%- if first_variant.compare_at_price -%}
+					<span class="regural-price" style="margin-left:10px;">{{ first_variant.compare_at_price | money }}</span>
+				  {% endif %}
+              </div>
+			</div>
+              <form method="post" action="/cart/add">
+			<div class="product-qty">
+				<div class="qty__adjust">
+					<input type="number" class="qty__adjust-input" name="quantity" id="quantity--{{ section.id }}" value="1" min="1">
+					<button type="button" class="qty__adjust-btn js-qty__adjust-btn decrease" aria-label="{{ 'general.accessibility.decrease' | t }}">{% render 'icon-minus' %}</button>
+					<button type="button" class="qty__adjust-btn js-qty__adjust-btn increase" aria-label="{{ 'general.accessibility.increase' | t }}">{% render 'icon-plus' %}</button>
+				</div>
+			</div>
+			
+              <input name="id" value="{{ product_ref.variants.first.id }}" type="hidden" />
+              <input name="add" class="product-btn" value="Ajouter au panier" type="submit" />
+            </form>
+		</div>
+      	{% endfor %}
+<!-- 		<div class="cross-product">
+			<div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0571/4034/7059/files/Group_645.png?v=1623667647"/></div>
+			<div class="product-info">
+				<div class="product-name"><a href="#">Pack de digestion</a></div>
+				<div class="product-price">
+					<span class="special-price">15 €</span>
+					<span class="regural-price">20€</span>
+				</div>
+			</div>
+			<div class="product-qty">
+				<div class="qty__adjust">
+					<input type="number" class="qty__adjust-input" name="quantity" id="quantity--{{ section.id }}" value="1" min="1">
+					<button type="button" class="qty__adjust-btn js-qty__adjust-btn decrease" aria-label="{{ 'general.accessibility.decrease' | t }}">{% render 'icon-minus' %}</button>
+					<button type="button" class="qty__adjust-btn js-qty__adjust-btn increase" aria-label="{{ 'general.accessibility.increase' | t }}">{% render 'icon-plus' %}</button>
+				</div>
+			</div>
+			<div class="product-btn"><a href="#">Ajouter au panier</a></div>
+		</div>
+		<div class="cross-product">
+			<div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0571/4034/7059/files/Group_645.png?v=1623667647"/></div>
+			<div class="product-info">
+				<div class="product-name"><a href="#">Pack de digestion</a></div>
+				<div class="product-price">
+					<span class="special-price">15 €</span>
+					<span class="regural-price">20€</span>
+				</div>
+			</div>
+			<div class="product-qty">
+				<div class="qty__adjust">
+					<input type="number" class="qty__adjust-input" name="quantity" id="quantity--{{ section.id }}" value="1" min="1">
+					<button type="button" class="qty__adjust-btn js-qty__adjust-btn decrease" aria-label="{{ 'general.accessibility.decrease' | t }}">{% render 'icon-minus' %}</button>
+					<button type="button" class="qty__adjust-btn js-qty__adjust-btn increase" aria-label="{{ 'general.accessibility.increase' | t }}">{% render 'icon-plus' %}</button>
+				</div>
+			</div>
+			<div class="product-btn"><a href="#">Ajouter au panier</a></div>
+		</div> -->
+	</div>
+</div>
+{% endif %}
