@@ -1,0 +1,10 @@
+git config --global user.name "vipsprajapti.31@gmail.com"
+
+git config --global user.email "vipsprajapti.31@gmail.com"
+
+git remote add [demo] [dev]
+
+
+$ ssh-keygen -t ed25519 -C "vipsprajapti.31@gmail.com"
+
+
