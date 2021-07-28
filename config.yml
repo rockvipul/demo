@@ -1,0 +1,22 @@
+development:
+  password: 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
+  theme_id: "122076790992"
+  store: fortepharma-develop.myshopify.com
+  ignore_files:
+    - config/settings_data.json
+    - snippets/lc-sections.liquid
+    - snippets/cms-head.liquid
+    - assets/lc-cms.js
+    - assets/cm-app.min.js
+    - assets/cm-app-styles.css
+production :
+  password: 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
+  theme_id: "124044705982"
+  store: fortepharmashop-fr.myshopify.com
+  ignore_files:
+    - config/settings_data.json
+    - snippets/lc-sections.liquid
+    - snippets/cms-head.liquid
+    - assets/lc-cms.js
+    - assets/cm-app.min.js
+    - assets/cm-app-styles.css
